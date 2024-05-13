@@ -1,2 +1,2 @@
 # taoxee.github.io/about
-This is the site init for my personal uses
+This is the site init info for my personal informations
