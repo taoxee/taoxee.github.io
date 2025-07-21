@@ -6,18 +6,24 @@ author_profile: true
 classes: wide
 ---
 
-<div style="background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%); color: white; padding: 4rem 2rem; margin: -2rem -2rem 3rem -2rem; text-align: center;">
-  <h1 style="font-size: 3rem; font-weight: 300; margin-bottom: 1rem; color: white;">Tao Xu | 徐涛</h1>
-  <p style="font-size: 1.3rem; font-weight: 300; opacity: 0.9;" data-translate="A Journey Through Technology and Innovation">A Journey Through Technology and Innovation</p>
+<div style="background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%); color: white; padding: 5rem 2rem; margin: 0 0 4rem 0; text-align: center; border-radius: 0 0 30px 30px; box-shadow: 0 10px 30px rgba(116, 185, 255, 0.3);">
+  <h1 style="font-size: 4rem; font-weight: 700; margin-bottom: 1.5rem; color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.1); letter-spacing: -0.02em;">Tao Xu | 徐涛</h1>
+  <p style="font-size: 1.5rem; font-weight: 400; opacity: 0.95; max-width: 600px; margin: 0 auto;" data-translate="A Journey Through Technology and Innovation">A Journey Through Technology and Innovation</p>
 </div>
 
-<div class="bio-container">
+<div class="bio-container" style="padding: 0 2rem;">
 
-<h2 data-translate="Background">Background</h2>
+<h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 3rem 0 2rem 0; text-align: center; position: relative;" data-translate="Background">
+  <span style="background: linear-gradient(135deg, #74b9ff, #0984e3); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Background</span>
+</h2>
 
+<div style="font-size: 1.1rem; line-height: 1.8; color: #4a5568; margin-bottom: 3rem; text-align: center; max-width: 800px; margin-left: auto; margin-right: auto;">
 I'm Tao Xu (徐涛), a technology enthusiast with a passion for creating innovative solutions and meaningful digital experiences. My journey in tech has been driven by curiosity, continuous learning, and a desire to make a positive impact through technology.
+</div>
 
-<h2 data-translate="Professional Experience">Professional Experience</h2>
+<h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center; position: relative;" data-translate="Professional Experience">
+  <span style="background: linear-gradient(135deg, #74b9ff, #0984e3); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Professional Experience</span>
+</h2>
 
 ### Current Focus
 - Developing cutting-edge applications and solutions

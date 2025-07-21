@@ -6,23 +6,25 @@ author_profile: true
 classes: wide
 ---
 
-<div style="background: linear-gradient(135deg, #00c9ff 0%, #92fe9d 100%); color: white; padding: 4rem 2rem; margin: -2rem -2rem 3rem -2rem; text-align: center;">
-  <h1 style="font-size: 3rem; font-weight: 300; margin-bottom: 1rem; color: white;" data-translate="Curriculum Vitae">Curriculum Vitae</h1>
-  <p style="font-size: 1.3rem; font-weight: 300; opacity: 0.9;">Professional Experience & Qualifications</p>
+<div style="background: linear-gradient(135deg, #00c9ff 0%, #92fe9d 100%); color: white; padding: 5rem 2rem; margin: 0 0 4rem 0; text-align: center; border-radius: 0 0 30px 30px; box-shadow: 0 10px 30px rgba(0, 201, 255, 0.3);">
+  <h1 style="font-size: 4rem; font-weight: 700; margin-bottom: 1.5rem; color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.1); letter-spacing: -0.02em;" data-translate="Curriculum Vitae">Curriculum Vitae</h1>
+  <p style="font-size: 1.5rem; font-weight: 400; opacity: 0.95; max-width: 600px; margin: 0 auto;">Professional Experience & Qualifications</p>
 </div>
 
-<div class="cv-container">
+<div class="cv-container" style="padding: 0 2rem;">
 
 <div class="cv-section" style="text-align: center;">
-  <h2 style="color: #007AFF; margin-bottom: 1rem; font-size: 1.5rem;">Download My Resume</h2>
-  <p style="color: #666; margin-bottom: 2rem;">Get the latest version of my CV in PDF format</p>
+  <h2 style="font-size: 2.2rem; font-weight: 600; color: #007AFF; margin-bottom: 1.5rem;">Download My Resume</h2>
+  <p style="color: #666; margin-bottom: 2rem; font-size: 1.1rem;">Get the latest version of my CV in PDF format</p>
   <a href="/assets/files/TaoXu_CV.pdf" download="TaoXu_CV.pdf" class="cv-download-btn">
     📄 Download CV (PDF)
   </a>
   <p style="color: #999; font-size: 0.9rem; margin-top: 1rem;">Last updated: <span id="lastUpdated">[Add update date here]</span></p>
 </div>
 
-## Professional Summary
+<h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
+  <span style="background: linear-gradient(135deg, #00c9ff, #92fe9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Professional Summary</span>
+</h2>
 
 <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07); margin-bottom: 2rem;">
   Passionate technology professional with expertise in software development, UI/UX design, and innovative problem-solving. Committed to creating meaningful digital experiences and contributing to the advancement of technology.
