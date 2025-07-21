@@ -25,7 +25,7 @@ classes: wide
   <a href="/assets/files/TaoXu_CV.pdf" download="TaoXu_CV.pdf" class="cv-download-btn">
     📄 Download CV (PDF)
   </a>
-  <p style="color: #999; font-size: 0.9rem; margin-top: 1rem;">Last updated: <span id="lastUpdated">[Add update date here]</span></p>
+  <p style="color: #999; font-size: 0.9rem; margin-top: 1rem;">Last updated: <span id="lastUpdated">January 2025</span></p>
 </div>
 
 <h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
@@ -33,127 +33,147 @@ classes: wide
 </h2>
 
 <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07); margin-bottom: 2rem;">
-  Passionate technology professional with expertise in software development, UI/UX design, and innovative problem-solving. Committed to creating meaningful digital experiences and contributing to the advancement of technology.
-</div>
-
-## Experience
-
-<div style="margin: 2rem 0;">
-
-### Senior Software Engineer
-**Company Name** | *2020 - Present*
-<div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; margin: 1rem 0;">
-  <ul style="color: #666; line-height: 1.7;">
-    <li>Led development of high-performance web applications using modern frameworks</li>
-    <li>Collaborated with cross-functional teams to deliver user-centered solutions</li>
-    <li>Implemented best practices for code quality, testing, and deployment</li>
-    <li>Mentored junior developers and contributed to team knowledge sharing</li>
-  </ul>
-</div>
-
-### Software Developer
-**Previous Company** | *2018 - 2020*
-<div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; margin: 1rem 0;">
-  <ul style="color: #666; line-height: 1.7;">
-    <li>Developed and maintained scalable backend services</li>
-    <li>Participated in agile development processes and sprint planning</li>
-    <li>Optimized application performance and user experience</li>
-    <li>Contributed to open-source projects and community initiatives</li>
-  </ul>
-</div>
-
+  PMP Certified, Results-driven project manager with 2+ years leading tech and security projects across APAC. Skilled in aligning R&D execution with business strategy, delivering measurable impact (e.g., $30K cost savings, 1.5-month acceleration). Strong foundation in AI, data science, and compliance frameworks (GDPR, NIST, AI Act).
 </div>
 
 ## Education
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0;">
+<div style="margin: 2rem 0;">
 
-<div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);">
-  <h4 style="color: #007AFF; margin-bottom: 0.5rem;">Master's Degree</h4>
-  <p style="font-weight: 600; margin-bottom: 0.5rem;">[Your Field of Study]</p>
-  <p style="color: #666; margin-bottom: 0.5rem;">[University Name]</p>
-  <p style="color: #999; font-size: 0.9rem;">[Year - Year]</p>
-</div>
-
-<div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);">
-  <h4 style="color: #007AFF; margin-bottom: 0.5rem;">Bachelor's Degree</h4>
-  <p style="font-weight: 600; margin-bottom: 0.5rem;">[Your Field of Study]</p>
-  <p style="color: #666; margin-bottom: 0.5rem;">[University Name]</p>
-  <p style="color: #999; font-size: 0.9rem;">[Year - Year]</p>
-</div>
-
-</div>
-
-## Technical Skills
-
-<div class="skills-grid">
-
-<div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);">
-  <h4 style="color: #007AFF; margin-bottom: 1rem;">🚀 Frontend</h4>
-  <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-    <span style="background: #e3f2fd; color: #1976d2; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem;">React</span>
-    <span style="background: #e3f2fd; color: #1976d2; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem;">Vue.js</span>
-    <span style="background: #e3f2fd; color: #1976d2; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem;">TypeScript</span>
-    <span style="background: #e3f2fd; color: #1976d2; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem;">CSS3</span>
+<div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07); margin: 1rem 0;">
+  <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+    <div>
+      <h3 style="color: #007AFF; margin-bottom: 0.5rem;">Master of Computing (Data Science)</h3>
+      <h4 style="color: #2d3748; margin-bottom: 0.5rem;">Australian National University (QS:32)</h4>
+      <p style="color: #666; margin: 0;">ACT, Australia</p>
+    </div>
+    <span style="background: #f0f8ff; color: #007AFF; padding: 0.5rem 1rem; border-radius: 20px; font-weight: 600;">2022 - 2024</span>
   </div>
 </div>
 
-<div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);">
-  <h4 style="color: #007AFF; margin-bottom: 1rem;">⚙️ Backend</h4>
-  <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-    <span style="background: #e8f5e8; color: #2e7d32; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem;">Node.js</span>
-    <span style="background: #e8f5e8; color: #2e7d32; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem;">Python</span>
-    <span style="background: #e8f5e8; color: #2e7d32; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem;">Java</span>
-    <span style="background: #e8f5e8; color: #2e7d32; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem;">PostgreSQL</span>
-  </div>
-</div>
-
-<div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);">
-  <h4 style="color: #007AFF; margin-bottom: 1rem;">🛠️ Tools</h4>
-  <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-    <span style="background: #fff3e0; color: #f57c00; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem;">Docker</span>
-    <span style="background: #fff3e0; color: #f57c00; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem;">Git</span>
-    <span style="background: #fff3e0; color: #f57c00; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem;">AWS</span>
-    <span style="background: #fff3e0; color: #f57c00; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem;">Figma</span>
+<div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07); margin: 1rem 0;">
+  <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+    <div>
+      <h3 style="color: #007AFF; margin-bottom: 0.5rem;">Bachelor of Business Studies in Management (Honours)</h3>
+      <h4 style="color: #2d3748; margin-bottom: 0.5rem;">University College Dublin (QS:118)</h4>
+      <p style="color: #666; margin: 0;">Dublin, Ireland</p>
+    </div>
+    <span style="background: #f0f8ff; color: #007AFF; padding: 0.5rem 1rem; border-radius: 20px; font-weight: 600;">2019 - 2022</span>
   </div>
 </div>
 
 </div>
 
-## Certifications & Awards
+<h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
+  <span style="background: linear-gradient(135deg, #00c9ff, #92fe9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Research & Publications</span>
+</h2>
 
 <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07); margin: 2rem 0;">
-  <ul style="color: #666; line-height: 1.8;">
-    <li><strong>AWS Certified Solutions Architect</strong> - Amazon Web Services (2023)</li>
-    <li><strong>Google Analytics Certified</strong> - Google (2022)</li>
-    <li><strong>Outstanding Performance Award</strong> - [Company Name] (2021)</li>
-    <li><strong>Dean's List</strong> - [University Name] (2018)</li>
+  <h3 style="color: #007AFF; margin-bottom: 1rem;">Large Language Model Safety Testing Framework</h3>
+  <p style="color: #666; font-style: italic; margin-bottom: 1rem;">(CCLD 2024)</p>
+  <p style="color: #4a5568; line-height: 1.7;">
+    <strong>Summary:</strong> Proposed a compliance-focused evaluation framework for Large Language Models (LLMs), addressing robustness, security, and privacy. Applied global standards (AI Act, GDPR, NIST, TC260-003, WDTA) to guide safe deployment of AI systems.
+  </p>
+</div>
+
+<h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
+  <span style="background: linear-gradient(135deg, #00c9ff, #92fe9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Skills</span>
+</h2>
+
+<div style="margin: 2rem 0;">
+
+### Project Management
+<div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; margin: 1rem 0; border-left: 4px solid #007AFF;">
+  <p style="color: #666; line-height: 1.7; margin: 0;">
+    PMP Certification, Agile, Waterfall, Kanban, Jira, Confluence, Lean Six Sigma, SWOT Analysis
+  </p>
+</div>
+
+### Programming Languages and Tools
+<div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; margin: 1rem 0; border-left: 4px solid #00c851;">
+  <p style="color: #666; line-height: 1.7; margin: 0;">
+    <span class="iconify" data-icon="vscode-icons:file-type-python"></span> Python, 
+    <span class="iconify" data-icon="mdi:language-r"></span> R,
+    <span class="iconify" data-icon="vscode-icons:file-type-js-official"></span> JavaScript, 
+    <span class="iconify" data-icon="vscode-icons:file-type-typescript-official"></span> TypeScript, 
+    <span class="iconify" data-icon="vscode-icons:file-type-sql"></span> PostgreSQL, 
+    <span class="iconify" data-icon="logos:java" data-inline="false"></span> Java,
+    <span class="iconify" data-icon="logos:tableau-icon"></span> Tableau,
+    <span class="iconify" data-icon="logos:git"></span> Git, 
+    <span class="iconify" data-icon="logos:jira"></span> Jira,
+    React.js, JavaFX
+  </p>
+</div>
+
+### AI/ML
+<div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; margin: 1rem 0; border-left: 4px solid #ff6b6b;">
+  <p style="color: #666; line-height: 1.7; margin: 0;">
+    Neural Networks, NLP, PyTorch, LLMs, scikit-learn
+  </p>
+</div>
+
+### Data
+<div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; margin: 1rem 0; border-left: 4px solid #9c27b0;">
+  <p style="color: #666; line-height: 1.7; margin: 0;">
+    Data Wrangling, Warehousing, Mining
+  </p>
+</div>
+
+### Languages
+<div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; margin: 1rem 0; border-left: 4px solid #ffa726;">
+  <p style="color: #666; line-height: 1.7; margin: 0;">
+    English (proficient), Mandarin (native)
+  </p>
+</div>
+
+</div>
+
+<h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
+  <span style="background: linear-gradient(135deg, #00c9ff, #92fe9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Certifications</span>
+</h2>
+
+<div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07); margin: 2rem 0;">
+  <ul style="color: #666; line-height: 1.7; margin: 0; padding-left: 1.5rem;">
+    <li><strong>PMP (Project Management Professional)</strong> - Project Management Institute</li>
+    <li><strong>Lean Six Sigma</strong> - Process Improvement Certification</li>
   </ul>
 </div>
 
-## Languages
+<h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
+  <span style="background: linear-gradient(135deg, #00c9ff, #92fe9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Contact Information</span>
+</h2>
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 2rem 0;">
-  
-<div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); text-align: center;">
-  <h4 style="color: #007AFF; margin-bottom: 0.5rem;">🇨🇳 Chinese</h4>
-  <p style="color: #666;">Native</p>
-</div>
-
-<div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); text-align: center;">
-  <h4 style="color: #007AFF; margin-bottom: 0.5rem;">🇺🇸 English</h4>
-  <p style="color: #666;">Professional</p>
-</div>
-
-</div>
-
----
-
-<div style="text-align: center; margin-top: 3rem; padding: 2rem; background: #f8f9fa; border-radius: 12px;">
-  <p style="color: #666; margin-bottom: 1rem;">Interested in working together?</p>
-  <a href="/contact/" style="display: inline-block; background: #007AFF; color: white; padding: 1rem 2rem; border-radius: 25px; text-decoration: none; font-weight: 600;">
-    Get in Touch
-  </a>
+<div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07); margin: 2rem 0;">
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+    <div>
+      <p style="margin: 0.5rem 0; color: #666;">
+        <span class="iconify" data-icon="tabler:mail"></span> 
+        <strong>Email:</strong><br>
+        <a href="mailto:xutao1486@gmail.com" style="color: #007AFF;">xutao1486@gmail.com</a>
+      </p>
+    </div>
+    <div>
+      <p style="margin: 0.5rem 0; color: #666;">
+        <span class="iconify" data-icon="tabler:world"></span> 
+        <strong>Work Authorization:</strong><br>
+        China | Singapore | Australia | Remote
+      </p>
+    </div>
+    <div>
+      <p style="margin: 0.5rem 0; color: #666;">
+        <span class="iconify" data-icon="tabler:brand-linkedin"></span> 
+        <strong>LinkedIn:</strong><br>
+        <a href="https://www.linkedin.com/in/tao-xee" target="_blank" style="color: #007AFF;">Tao Xu</a>
+      </p>
+    </div>
+    <div>
+      <p style="margin: 0.5rem 0; color: #666;">
+        <span class="iconify" data-icon="tabler:brand-github"></span> 
+        <strong>GitHub:</strong><br>
+        <a href="https://github.com/taoxee" target="_blank" style="color: #007AFF;">taoxee</a>
+      </p>
+    </div>
+  </div>
 </div>
 
 </div>

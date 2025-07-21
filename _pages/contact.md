@@ -23,23 +23,35 @@ classes: wide
   <span style="background: linear-gradient(135deg, #667eea, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Get in Touch</span>
 </h2>
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 2rem 0;">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin: 2rem 0;">
 
 <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07); text-align: center;">
   <div style="font-size: 2.5rem; margin-bottom: 1rem;">📧</div>
   <h3 style="color: #007AFF; margin-bottom: 1rem;">Email</h3>
   <p style="color: #666; margin-bottom: 1rem;">For professional inquiries and collaborations</p>
-  <a href="mailto:your.email@example.com" style="color: #007AFF; font-weight: 600; text-decoration: none;">
-    your.email@example.com
+  <a href="mailto:xutao1486@gmail.com" style="color: #007AFF; font-weight: 600; text-decoration: none;">
+    xutao1486@gmail.com
   </a>
+</div>
+
+<div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07); text-align: center;">
+  <div style="font-size: 2.5rem; margin-bottom: 1rem;">🌍</div>
+  <h3 style="color: #007AFF; margin-bottom: 1rem;">Work Authorization</h3>
+  <p style="color: #666; margin-bottom: 1rem;">Legally authorized to work in</p>
+  <div style="color: #007AFF; font-weight: 600; line-height: 1.6;">
+    <div>🇨🇳 China</div>
+    <div>🇸🇬 Singapore</div>
+    <div>🇦🇺 Australia</div>
+    <div>💻 Remote</div>
+  </div>
 </div>
 
 <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07); text-align: center;">
   <div style="font-size: 2.5rem; margin-bottom: 1rem;">💼</div>
   <h3 style="color: #007AFF; margin-bottom: 1rem;">LinkedIn</h3>
   <p style="color: #666; margin-bottom: 1rem;">Connect with me professionally</p>
-  <a href="https://linkedin.com/in/yourprofile" target="_blank" style="color: #007AFF; font-weight: 600; text-decoration: none;">
-    LinkedIn Profile
+  <a href="https://www.linkedin.com/in/tao-xee" target="_blank" style="color: #007AFF; font-weight: 600; text-decoration: none;">
+    <span class="iconify" data-icon="tabler:brand-linkedin"></span> Tao Xu
   </a>
 </div>
 
@@ -48,101 +60,70 @@ classes: wide
   <h3 style="color: #007AFF; margin-bottom: 1rem;">GitHub</h3>
   <p style="color: #666; margin-bottom: 1rem;">Check out my code and projects</p>
   <a href="https://github.com/taoxee" target="_blank" style="color: #007AFF; font-weight: 600; text-decoration: none;">
-    @taoxee
+    <span class="iconify" data-icon="tabler:brand-github"></span> taoxee
   </a>
 </div>
 
+<div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07); text-align: center;">
+  <div style="font-size: 2.5rem; margin-bottom: 1rem;">💬</div>
+  <h3 style="color: #007AFF; margin-bottom: 1rem;">WeChat</h3>
+  <p style="color: #666; margin-bottom: 1rem;">Connect via WeChat</p>
+  <div style="color: #007AFF; font-weight: 600;">
+    <span class="iconify" data-icon="mingcute:wechat-line"></span> TaoXee
+  </div>
 </div>
 
-## Send a Message
+</div>
+
+<h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
+  <span style="background: linear-gradient(135deg, #667eea, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Send a Message</span>
+</h2>
 
 <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07); margin: 2rem 0;">
-
-<form action="https://formspree.io/f/your-form-id" method="POST" style="max-width: 600px; margin: 0 auto;">
   
-  <div style="margin-bottom: 1.5rem;">
-    <label for="name" style="display: block; color: #333; font-weight: 600; margin-bottom: 0.5rem;">Name</label>
-    <input type="text" id="name" name="name" required 
-           style="width: 100%; padding: 1rem; border: 2px solid #e9ecef; border-radius: 8px; font-size: 1rem; transition: border-color 0.3s ease;"
-           onfocus="this.style.borderColor='#007AFF'" 
-           onblur="this.style.borderColor='#e9ecef'">
+<form action="https://formspree.io/f/xutao1486@gmail.com" method="POST" style="display: grid; gap: 1.5rem;">
+  
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+    <div>
+      <label for="name" style="display: block; margin-bottom: 0.5rem; color: #2d3748; font-weight: 600;">Name</label>
+      <input type="text" id="name" name="name" required style="width: 100%; padding: 0.75rem; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1rem; transition: border-color 0.2s;">
+    </div>
+    <div>
+      <label for="email" style="display: block; margin-bottom: 0.5rem; color: #2d3748; font-weight: 600;">Email</label>
+      <input type="email" id="email" name="email" required style="width: 100%; padding: 0.75rem; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1rem; transition: border-color 0.2s;">
+    </div>
   </div>
   
-  <div style="margin-bottom: 1.5rem;">
-    <label for="email" style="display: block; color: #333; font-weight: 600; margin-bottom: 0.5rem;">Email</label>
-    <input type="email" id="email" name="_replyto" required 
-           style="width: 100%; padding: 1rem; border: 2px solid #e9ecef; border-radius: 8px; font-size: 1rem; transition: border-color 0.3s ease;"
-           onfocus="this.style.borderColor='#007AFF'" 
-           onblur="this.style.borderColor='#e9ecef'">
+  <div>
+    <label for="subject" style="display: block; margin-bottom: 0.5rem; color: #2d3748; font-weight: 600;">Subject</label>
+    <input type="text" id="subject" name="subject" required style="width: 100%; padding: 0.75rem; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1rem; transition: border-color 0.2s;">
   </div>
   
-  <div style="margin-bottom: 1.5rem;">
-    <label for="subject" style="display: block; color: #333; font-weight: 600; margin-bottom: 0.5rem;">Subject</label>
-    <input type="text" id="subject" name="_subject" required 
-           style="width: 100%; padding: 1rem; border: 2px solid #e9ecef; border-radius: 8px; font-size: 1rem; transition: border-color 0.3s ease;"
-           onfocus="this.style.borderColor='#007AFF'" 
-           onblur="this.style.borderColor='#e9ecef'">
+  <div>
+    <label for="message" style="display: block; margin-bottom: 0.5rem; color: #2d3748; font-weight: 600;">Message</label>
+    <textarea id="message" name="message" rows="6" required style="width: 100%; padding: 0.75rem; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1rem; resize: vertical; transition: border-color 0.2s;"></textarea>
   </div>
   
-  <div style="margin-bottom: 2rem;">
-    <label for="message" style="display: block; color: #333; font-weight: 600; margin-bottom: 0.5rem;">Message</label>
-    <textarea id="message" name="message" rows="6" required 
-              style="width: 100%; padding: 1rem; border: 2px solid #e9ecef; border-radius: 8px; font-size: 1rem; resize: vertical; transition: border-color 0.3s ease;"
-              onfocus="this.style.borderColor='#007AFF'" 
-              onblur="this.style.borderColor='#e9ecef'"></textarea>
-  </div>
-  
-  <div style="text-align: center;">
-    <button type="submit" 
-            style="background: #007AFF; color: white; padding: 1rem 3rem; border: none; border-radius: 25px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease;"
-            onmouseover="this.style.background='#0056b3'; this.style.transform='translateY(-2px)'"
-            onmouseout="this.style.background='#007AFF'; this.style.transform='translateY(0)'">
-      Send Message 📨
-    </button>
-  </div>
+  <button type="submit" style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 1rem 2rem; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: transform 0.2s; box-shadow: 0 4px 6px rgba(102, 126, 234, 0.3);">
+    Send Message
+  </button>
   
 </form>
 
 </div>
 
-## Response Time
-
-<div style="background: #f8f9fa; padding: 2rem; border-radius: 12px; margin: 2rem 0; text-align: center;">
-  <h3 style="color: #007AFF; margin-bottom: 1rem;">📅 I typically respond within 24-48 hours</h3>
-  <p style="color: #666; line-height: 1.6;">
-    Whether you're interested in collaboration, have a question about my work, or just want to say hello, 
-    I'd love to hear from you. I read every message personally and do my best to respond promptly.
-  </p>
-</div>
-
-## What I'm Open To
-
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
-
-<div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); text-align: center;">
-  <div style="font-size: 2rem; margin-bottom: 0.5rem;">🤝</div>
-  <h4 style="color: #007AFF; margin-bottom: 0.5rem;">Collaborations</h4>
-  <p style="color: #666; font-size: 0.9rem;">Open source projects and partnerships</p>
-</div>
-
-<div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); text-align: center;">
-  <div style="font-size: 2rem; margin-bottom: 0.5rem;">💼</div>
-  <h4 style="color: #007AFF; margin-bottom: 0.5rem;">Opportunities</h4>
-  <p style="color: #666; font-size: 0.9rem;">Interesting projects and roles</p>
-</div>
-
-<div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); text-align: center;">
-  <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎓</div>
-  <h4 style="color: #007AFF; margin-bottom: 0.5rem;">Mentoring</h4>
-  <p style="color: #666; font-size: 0.9rem;">Helping others in their tech journey</p>
-</div>
-
-<div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); text-align: center;">
-  <div style="font-size: 2rem; margin-bottom: 0.5rem;">💬</div>
-  <h4 style="color: #007AFF; margin-bottom: 0.5rem;">Conversations</h4>
-  <p style="color: #666; font-size: 0.9rem;">Tech discussions and knowledge sharing</p>
-</div>
-
+<div style="text-align: center; margin: 3rem 0; padding: 2rem; background: #f8f9fa; border-radius: 12px;">
+  <h3 style="color: #2d3748; margin-bottom: 1rem;">Quick Response</h3>
+  <p style="color: #666; margin-bottom: 1.5rem;">I typically respond to messages within 24 hours. For urgent matters, please reach out via email or LinkedIn.</p>
+  
+  <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+    <a href="mailto:xutao1486@gmail.com" style="background: #007AFF; color: white; padding: 0.75rem 1.5rem; border-radius: 25px; text-decoration: none; font-weight: 600; transition: background 0.2s;">
+      Quick Email
+    </a>
+    <a href="https://www.linkedin.com/in/tao-xee" target="_blank" style="background: #0077B5; color: white; padding: 0.75rem 1.5rem; border-radius: 25px; text-decoration: none; font-weight: 600; transition: background 0.2s;">
+      LinkedIn Message
+    </a>
+  </div>
 </div>
 
 </div>

@@ -4,9 +4,173 @@ author_profile: true
 classes: wide
 ---
 
+<style>
+  /* FORCE FIX: Author profile photo overlay issue */
+  .sidebar .author__avatar img,
+  .author__avatar img {
+    transition: none !important;
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+  }
+  
+  .sidebar .author__avatar::before,
+  .sidebar .author__avatar::after,
+  .author__avatar::before,
+  .author__avatar::after {
+    display: none !important;
+    content: none !important;
+  }
+  
+  .sidebar .author__avatar:hover img,
+  .author__avatar:hover img {
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+  }
+
+  /* FORCE FIX: Homepage feature grid responsive design */
+  .feature-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+    gap: 1.5rem !important;
+    margin: 2rem 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+  
+  .feature-card {
+    background: white !important;
+    padding: 1.5rem !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07) !important;
+    border: 1px solid #e9ecef !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    min-height: 180px !important;
+    max-height: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+    word-wrap: break-word !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important;
+  }
+  
+  .feature-card .icon {
+    font-size: 2.5rem !important;
+    margin-bottom: 1rem !important;
+    display: block !important;
+    line-height: 1 !important;
+  }
+  
+  .feature-card h3 {
+    color: #007AFF !important;
+    margin: 0 0 1rem 0 !important;
+    font-size: 1.3rem !important;
+    font-weight: 600 !important;
+    line-height: 1.3 !important;
+    word-wrap: break-word !important;
+  }
+  
+  .feature-card p {
+    color: #666 !important;
+    line-height: 1.6 !important;
+    font-size: 1rem !important;
+    flex-grow: 1 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    word-wrap: break-word !important;
+    hyphens: auto !important;
+  }
+
+  /* Homepage container */
+  .hero-section {
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  /* CTA section */
+  .cta-section {
+    background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%) !important;
+    color: white !important;
+    padding: 3rem 2rem !important;
+    border-radius: 20px !important;
+    text-align: center !important;
+    margin: 4rem 0 !important;
+  }
+  
+  .cta-section h2 {
+    font-size: 2rem !important;
+    font-weight: 600 !important;
+    margin-bottom: 1rem !important;
+    color: white !important;
+  }
+  
+  .cta-section p {
+    font-size: 1.1rem !important;
+    opacity: 0.9 !important;
+    margin-bottom: 2rem !important;
+    max-width: 500px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  .cta-button {
+    display: inline-block !important;
+    background: white !important;
+    color: #0984e3 !important;
+    padding: 1rem 2rem !important;
+    border-radius: 25px !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+  }
+  
+  .cta-button:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3) !important;
+  }
+
+  /* Force mobile responsiveness */
+  @media (max-width: 768px) {
+    .feature-grid {
+      grid-template-columns: 1fr !important;
+      gap: 1rem !important;
+    }
+    
+    .feature-card {
+      padding: 1.2rem !important;
+    }
+
+    .hero-section h1 {
+      font-size: 2.5rem !important;
+    }
+    
+    .hero-section p {
+      font-size: 1.2rem !important;
+    }
+  }
+
+  /* Override any conflicting styles */
+  .page__content .feature-grid {
+    display: grid !important;
+  }
+  
+  /* Force container to be properly sized */
+  .page__content {
+    overflow-x: hidden !important;
+  }
+</style>
+
 <div class="hero-section">
-  <h1><span data-translate="Hello, I'm Tao Xu">Hello, I'm</span> <span class="hero-name">Tao Xu</span></h1>
-  <p data-translate="Technology enthusiast crafting innovative solutions with clean design and meaningful impact">Technology enthusiast crafting innovative solutions with clean design and meaningful impact</p>
+  <h1><span data-translate="Hello, I'm">Hello, I'm</span> <span class="hero-name">Tao Xu</span></h1>
+  <p data-translate="PMP Certified project manager leading tech and security projects across APAC, passionate about AI, data science, and creating meaningful digital experiences">PMP Certified project manager leading tech and security projects across APAC, passionate about AI, data science, and creating meaningful digital experiences</p>
   <div class="hero-buttons">
     <a href="/bio/" style="background: rgba(255,255,255,0.2); backdrop-filter: blur(10px); color: white; border: 2px solid rgba(255,255,255,0.3);">
       <span data-translate="Learn About Me">Learn About Me</span>
@@ -17,112 +181,47 @@ classes: wide
   </div>
 </div>
 
-<div style="max-width: 1200px; margin: 0 auto; padding: 4rem 2rem;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
 
 <h2 data-translate="What I Do">What I Do</h2>
 
 <div class="feature-grid">
-
-<div class="feature-card">
-  <div class="icon">🚀</div>
-  <h3 data-translate="Innovation & Development">Innovation & Development</h3>
-  <p>Building cutting-edge applications with modern technologies, focusing on performance, scalability, and user experience.</p>
+  <div class="feature-card">
+    <div class="icon">📊</div>
+    <h3 data-translate="Project Management">Project Management</h3>
+    <p>Leading tech and security projects across APAC with PMP certification, delivering measurable impact through agile methodologies.</p>
+  </div>
+  <div class="feature-card">
+    <div class="icon">🤖</div>
+    <h3 data-translate="AI & Data Science">AI & Data Science</h3>
+    <p>Specialized in Large Language Models, neural networks, and compliance frameworks. Research published in CCLD 2024.</p>
+  </div>
+  <div class="feature-card">
+    <div class="icon">🔒</div>
+    <h3 data-translate="Security & Compliance">Security & Compliance</h3>
+    <p>Expert in compliance frameworks including GDPR, NIST, AI Act, TC260-003, and WDTA for safe AI deployment.</p>
+  </div>
+  <div class="feature-card">
+    <div class="icon">💻</div>
+    <h3 data-translate="Technical Expertise">Technical Expertise</h3>
+    <p>Full-stack development with Python, R, JavaScript, TypeScript, and modern frameworks. Data science with PyTorch.</p>
+  </div>
+  <div class="feature-card">
+    <div class="icon">🌏</div>
+    <h3 data-translate="APAC Leadership">APAC Leadership</h3>
+    <p>Cross-cultural project leadership across Australia, China, and Singapore. Fluent in English and Mandarin.</p>
+  </div>
+  <div class="feature-card">
+    <div class="icon">🎓</div>
+    <h3 data-translate="Research & Education">Research & Education</h3>
+    <p>Master's in Data Science from Australian National University (QS:32), Bachelor's in Management from UCD (QS:118).</p>
+  </div>
 </div>
 
-<div class="feature-card">
-  <div class="icon">🎨</div>
-  <h3 data-translate="Design & UX">Design & UX</h3>
-  <p>Creating beautiful, intuitive interfaces that users love, with attention to detail and accessibility.</p>
-</div>
-
-<div class="feature-card">
-  <div class="icon">💡</div>
-  <h3 data-translate="Problem Solving">Problem Solving</h3>
-  <p>Turning complex challenges into elegant, simple solutions that make a real difference.</p>
-</div>
-
-</div>
-
-## Recent Thoughts
-
-<div style="background: white; padding: 3rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); margin: 3rem 0; text-align: center;">
-  <h3 style="color: #007AFF; margin-bottom: 1.5rem; font-size: 1.8rem;">Welcome to My Digital Space</h3>
-  <p style="color: #666; line-height: 1.7; font-size: 1.2rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-    I share insights about technology, career growth, and the projects I'm passionate about. Join me on this journey of continuous learning and innovation.
-  </p>
-  <a href="/posts/" style="display: inline-block; background: #007AFF; color: white; padding: 1rem 2.5rem; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">
-    Read My Posts
-  </a>
-</div>
-
-## Let's Connect
-
-<div style="background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%); color: white; padding: 4rem 2rem; border-radius: 25px; text-align: center; margin: 4rem 0;">
-  <h3 style="font-size: 2rem; font-weight: 300; margin-bottom: 1rem; color: white;">Ready to Collaborate?</h3>
-  <p style="font-size: 1.2rem; opacity: 0.9; margin-bottom: 2.5rem; max-width: 500px; margin-left: auto; margin-right: auto;">
-    I'm always excited to work on interesting projects and connect with fellow tech enthusiasts.
-  </p>
-  <a href="/contact/" style="display: inline-block; background: white; color: #0984e3; padding: 1rem 2.5rem; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">
-    Get in Touch
-  </a>
+<div class="cta-section">
+  <h2 data-translate="Ready to Collaborate?">Ready to Collaborate?</h2>
+  <p data-translate="I'm always interested in innovative projects and meaningful collaborations">I'm always interested in innovative projects and meaningful collaborations</p>
+  <a href="/contact/" class="cta-button" data-translate="Get in Touch">Get in Touch</a>
 </div>
 
 </div>
-
-<style>
-  .page__content h2 {
-    color: #1d1d1f;
-    font-weight: 600;
-    font-size: 2.5rem;
-    text-align: center;
-    margin: 3rem 0 2rem 0;
-    border: none;
-  }
-  
-  .page__content h3 {
-    font-weight: 600;
-    font-size: 1.3rem;
-  }
-  
-  .page__content p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #515151;
-  }
-  
-  .page__content {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  }
-  
-  .page__content a:hover {
-    transform: translateY(-2px);
-  }
-  
-  /* Posts styling */
-  .entries-list .list__item {
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-    margin-bottom: 2rem;
-    padding: 2.5rem;
-    transition: all 0.3s ease;
-    border: none;
-  }
-  
-  .entries-list .list__item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-  }
-  
-  .entries-list .list__item .archive__item-title {
-    color: #007AFF;
-    font-weight: 600;
-    font-size: 1.4rem;
-  }
-  
-  .entries-list .list__item .archive__item-excerpt {
-    color: #666;
-    font-size: 1.1rem;
-    line-height: 1.6;
-  }
-</style>

@@ -14,7 +14,7 @@
         <ul class="visible-links">
           {%- for link in site.data.navigation.main -%}
             <li class="masthead__menu-item">
-              <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
+              <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}{% if page.url == link.url %} class="current"{% endif %}>{{ link.title }}</a>
             </li>
           {%- endfor -%}
         </ul>
@@ -50,39 +50,95 @@
 }
 
 .lang-btn {
-  background: linear-gradient(135deg, #007AFF, #0056b3);
+  background: #007AFF;
   color: white;
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   min-height: 36px;
-  min-width: 60px;
 }
 
 .lang-btn:hover {
-  background: linear-gradient(135deg, #0056b3, #003d82);
+  background: #005FCC;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
+  box-shadow: 0 2px 8px rgba(0, 122, 255, 0.3);
 }
 
-.lang-btn:active {
-  transform: translateY(0);
+/* Navigation Button Consistency - Override theme defaults */
+.greedy-nav .visible-links a {
+  border-radius: 6px !important;
+  transition: all 0.3s ease !important;
+  padding: 0.5rem 0.75rem !important;
+  margin: 0 0.25rem !important;
+  font-weight: 500 !important;
+  color: #1d1d1f !important;
+  text-decoration: none !important;
+  display: inline-block !important;
 }
 
-@media (max-width: 768px) {
-  .language-toggle {
-    margin-left: 0.5rem;
-  }
-  
-  .lang-btn {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.8rem;
-    min-width: 50px;
-  }
+.greedy-nav .visible-links a:hover {
+  background: rgba(0, 122, 255, 0.1) !important;
+  color: #007AFF !important;
+  transform: none !important;
+}
+
+.greedy-nav .visible-links a.current {
+  background: #007AFF !important;
+  color: white !important;
+  font-weight: 600 !important;
+}
+
+.greedy-nav .visible-links a.current:hover {
+  background: #005FCC !important;
+  color: white !important;
+}
+
+/* Force override any before/after pseudo elements on nav links */
+.greedy-nav .visible-links a::before,
+.greedy-nav .visible-links a::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Ensure all navigation items have same styling */
+.masthead__menu-item a {
+  border-radius: 6px !important;
+  transition: all 0.3s ease !important;
+  padding: 0.5rem 0.75rem !important;
+  margin: 0 0.25rem !important;
+  font-weight: 500 !important;
+  color: #1d1d1f !important;
+  text-decoration: none !important;
+}
+
+.masthead__menu-item a:hover {
+  background: rgba(0, 122, 255, 0.1) !important;
+  color: #007AFF !important;
+}
+
+.masthead__menu-item a.current {
+  background: #007AFF !important;
+  color: white !important;
+  font-weight: 600 !important;
 }
 </style>
+
+<script>
+// Navigation active state handler - DISABLED
+// Removing automatic highlighting so all nav buttons look the same
+document.addEventListener('DOMContentLoaded', function() {
+  // Get all navigation links
+  const navLinks = document.querySelectorAll('.greedy-nav .visible-links a');
+  
+  // Remove any existing current classes to ensure all buttons look the same
+  navLinks.forEach(link => {
+    link.classList.remove('current');
+  });
+  
+  // Note: Not adding current class to any links so they all have consistent styling
+});
+</script>

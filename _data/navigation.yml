@@ -1,5 +1,7 @@
 # main links
 main:
+  - title: '<span data-translate="Home">Home</span>'
+    url: /
   - title: '<span data-translate="About">About</span>'
     url: /about/
   - title: '<span data-translate="Bio">Bio</span>'

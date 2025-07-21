@@ -25,7 +25,7 @@ url                      : "https://taoxee.github.io/" # the base hostname & pro
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "taoxee/taoxee.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+logo                     : "/assets/images/bio-photo.jpg" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -114,22 +114,19 @@ analytics:
 author:
   name             : "Tao Xu"
   avatar           : "/assets/images/bio-photo.jpg"
-  bio              : "Technology enthusiast passionate about **innovation**, **clean design**, and creating meaningful digital experiences. Always learning, always building."
-  location         : "🌍 Remote"
-  email            : "your.email@example.com"
+  bio              : "PMP Certified, Results-driven project manager with 2+ years leading tech and security projects across APAC. Passionate about **AI**, **data science**, and creating meaningful digital experiences."
+  location         : "🌏 China | Singapore | Australia | Remote"
+  email            : "xutao1486@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:your.email@example.com"
+      url: "mailto:xutao1486@gmail.com"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/taoxee"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: "https://linkedin.com/in/yourprofile"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/yourhandle"
+      url: "https://www.linkedin.com/in/tao-xee"
 
 # Site Footer
 footer:

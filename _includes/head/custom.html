@@ -1,45 +1,61 @@
 <!-- Responsive Design Meta Tags -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-<meta name="format-detection" content="telephone=no">
+<meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="apple-mobile-web-app-title" content="Tao Xu">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
 <!-- Touch Icons -->
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/bio-photo.jpg">
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/bio-photo.jpg">
-<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/bio-photo.jpg">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
 
-<!-- Preload Critical Fonts -->
-<link rel="preload" href="//fonts.googleapis.com/css?family=SF+Pro+Display:300,400,500,600,700" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<!-- Preconnect to external domains for performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://api.iconify.design">
+
+<!-- Iconify for Icons -->
+<script src="https://code.iconify.design/3/iconify.min.js"></script>
+
+<!-- Google Analytics (Direct Implementation) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XQZWYLLV49"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XQZWYLLV49');
+</script>
 
 <!-- Performance Optimizations -->
 <meta name="theme-color" content="#007AFF">
-<meta name="msapplication-TileColor" content="#007AFF">
 
+<!-- Apple-inspired Typography -->
 <style>
-/* Critical CSS for Above-the-Fold Content */
-html {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #fafafa;
-}
-
-/* Ensure smooth scrolling on all devices */
-* {
-  box-sizing: border-box;
-}
-
-/* Touch-friendly tap targets */
-a, button, input, textarea, select {
-  min-height: 44px;
-  min-width: 44px;
-}
+  /* Import San Francisco-like fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+  
+  /* Smooth scrolling and momentum */
+  html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Apple-like focus states */
+  button:focus,
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: 2px solid #007AFF;
+    outline-offset: 2px;
+  }
+  
+  /* Enhanced touch targets for mobile */
+  @media (max-width: 768px) {
+    button,
+    .btn,
+    a[role="button"] {
+      min-height: 44px;
+      min-width: 44px;
+    }
+  }
 </style>

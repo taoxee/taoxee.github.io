@@ -6,699 +6,732 @@
 @import "minimal-mistakes"; // main partials
 
 /* ============================================================================
-   APPLE-INSPIRED RESPONSIVE DESIGN SYSTEM
-   "Adaptive beauty, not compromise"
+   APPLE-INSPIRED RESPONSIVE DESIGN SYSTEM - COMPACT VERSION
+   "Adaptive beauty with efficiency"
    ============================================================================ */
 
 /* ============================================================================
-   RESPONSIVE FOUNDATION
+   GLOBAL FIX: Author Profile Photo Overlay Issue
    ============================================================================ */
 
-:root {
-  --apple-blue: #007AFF;
-  --apple-blue-hover: #0056b3;
-  --apple-gray: #666;
-  --apple-light-gray: #f8f9fa;
-  --apple-dark: #1d1d1f;
-  --apple-background: #fafafa;
-  --border-radius: 12px;
-  --shadow-light: 0 4px 20px rgba(0, 0, 0, 0.08);
-  --shadow-medium: 0 8px 25px rgba(0, 0, 0, 0.15);
-  --shadow-heavy: 0 15px 40px rgba(0, 0, 0, 0.15);
-  --transition: all 0.3s ease;
-  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+/* Target all possible author avatar selectors with maximum specificity */
+.sidebar .author__avatar,
+.author__avatar,
+.page__sidebar .author__avatar,
+.layout--single .sidebar .author__avatar,
+.layout--home .sidebar .author__avatar,
+.layout--archive .sidebar .author__avatar {
+  position: relative !important;
+  overflow: visible !important;
 }
 
-/* Base Typography - Using relative units */
+.sidebar .author__avatar img,
+.author__avatar img,
+.page__sidebar .author__avatar img,
+.layout--single .sidebar .author__avatar img,
+.layout--home .sidebar .author__avatar img,
+.layout--archive .sidebar .author__avatar img {
+  opacity: 1 !important;
+  transition: none !important;
+  transform: none !important;
+  filter: none !important;
+  background: none !important;
+  backdrop-filter: none !important;
+  -webkit-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Remove all possible pseudo-elements that could create overlays */
+.sidebar .author__avatar::before,
+.sidebar .author__avatar::after,
+.author__avatar::before,
+.author__avatar::after,
+.page__sidebar .author__avatar::before,
+.page__sidebar .author__avatar::after,
+.layout--single .sidebar .author__avatar::before,
+.layout--single .sidebar .author__avatar::after,
+.layout--home .sidebar .author__avatar::before,
+.layout--home .sidebar .author__avatar::after,
+.layout--archive .sidebar .author__avatar::before,
+.layout--archive .author__avatar::after {
+  display: none !important;
+  content: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+/* CRITICAL: Remove ALL hover effects completely */
+.sidebar .author__avatar:hover,
+.author__avatar:hover,
+.page__sidebar .author__avatar:hover,
+.layout--single .sidebar .author__avatar:hover,
+.layout--home .sidebar .author__avatar:hover,
+.layout--archive .sidebar .author__avatar:hover {
+  opacity: 1 !important;
+  transform: none !important;
+  filter: none !important;
+  background: none !important;
+  backdrop-filter: none !important;
+  -webkit-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  transition: none !important;
+  animation: none !important;
+  -webkit-animation: none !important;
+}
+
+/* Remove hover effects that cause transparency */
+.sidebar .author__avatar:hover img,
+.author__avatar:hover img,
+.page__sidebar .author__avatar:hover img,
+.layout--single .sidebar .author__avatar:hover img,
+.layout--home .sidebar .author__avatar:hover img,
+.layout--archive .sidebar .author__avatar:hover img {
+  opacity: 1 !important;
+  transform: none !important;
+  filter: none !important;
+  background: none !important;
+  backdrop-filter: none !important;
+  -webkit-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  transition: none !important;
+  animation: none !important;
+  -webkit-animation: none !important;
+  scale: 1 !important;
+  -webkit-transform: none !important;
+  -moz-transform: none !important;
+  -ms-transform: none !important;
+  -o-transform: none !important;
+}
+
+/* Remove any overlay classes or effects */
+.sidebar .author__avatar .author__overlay,
+.author__avatar .author__overlay {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+/* Ensure no mask or clip-path effects */
+.sidebar .author__avatar img,
+.author__avatar img {
+  mask: none !important;
+  -webkit-mask: none !important;
+  clip-path: none !important;
+  -webkit-clip-path: none !important;
+}
+
+/* Disable all transform and scale effects */
+.sidebar .author__avatar *,
+.author__avatar * {
+  transition: none !important;
+  transform: none !important;
+  -webkit-transform: none !important;
+  -moz-transform: none !important;
+  -ms-transform: none !important;
+  -o-transform: none !important;
+  animation: none !important;
+  -webkit-animation: none !important;
+}
+
+/* NUCLEAR OPTION: Remove ALL possible hover effects completely */
+.sidebar .author__avatar,
+.author__avatar,
+.sidebar .author__avatar *,
+.author__avatar *,
+.sidebar .author__avatar img,
+.author__avatar img {
+  pointer-events: auto !important;
+  -webkit-filter: none !important;
+  -moz-filter: none !important;
+  -ms-filter: none !important;
+  -o-filter: none !important;
+  filter: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+  -webkit-transform: none !important;
+  -moz-transform: none !important;
+  -ms-transform: none !important;
+  -o-transform: none !important;
+  transition: none !important;
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+  animation: none !important;
+  -webkit-animation: none !important;
+  -moz-animation: none !important;
+  -ms-animation: none !important;
+  -o-animation: none !important;
+}
+
+/* Force remove hover state */
+.sidebar .author__avatar:hover,
+.author__avatar:hover,
+.sidebar .author__avatar:hover *,
+.author__avatar:hover *,
+.sidebar .author__avatar:hover img,
+.author__avatar:hover img,
+.sidebar .author__avatar:active,
+.author__avatar:active,
+.sidebar .author__avatar:focus,
+.author__avatar:focus {
+  -webkit-filter: none !important;
+  -moz-filter: none !important;
+  -ms-filter: none !important;
+  -o-filter: none !important;
+  filter: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+  -webkit-transform: none !important;
+  -moz-transform: none !important;
+  -ms-transform: none !important;
+  -o-transform: none !important;
+  transition: none !important;
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+  animation: none !important;
+  -webkit-animation: none !important;
+  -moz-animation: none !important;
+  -ms-animation: none !important;
+  -o-animation: none !important;
+  background: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+}
+
+/* FINAL OVERRIDE: Target any possible theme classes */
+.author__avatar img:hover,
+.sidebar .author__avatar img:hover,
+.page__sidebar .author__avatar img:hover,
+img.u-photo:hover,
+.h-card .author__avatar img:hover {
+  filter: none !important;
+  -webkit-filter: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+  -webkit-transform: none !important;
+  transition: none !important;
+  -webkit-transition: none !important;
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* ============================================================================
+   COMPACT RESPONSIVE FOUNDATION
+   ============================================================================ */
+
+/* Base Typography - More Compact */
 html {
-  font-family: var(--font-family);
-  font-size: 16px; /* Base for mobile */
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 1.5;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  background-color: var(--apple-background);
-  color: var(--apple-dark);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #1d1d1f;
+  background-color: #fafafa;
   margin: 0;
   padding: 0;
 }
 
-/* Responsive Typography Scale */
-h1 { font-size: 1.8rem; font-weight: 700; line-height: 1.2; }
-h2 { font-size: 1.5rem; font-weight: 600; line-height: 1.3; }
-h3 { font-size: 1.25rem; font-weight: 600; line-height: 1.4; }
-h4 { font-size: 1.1rem; font-weight: 600; line-height: 1.4; }
-
-/* ============================================================================
-   TOUCH-FRIENDLY INTERACTIONS
-   ============================================================================ */
-
-/* Minimum tap target size (44x44px per Apple guidelines) */
-a, button, input, textarea, select, .btn, .archive__item-title {
-  min-height: 44px;
-  display: inline-flex;
-  align-items: center;
-  touch-action: manipulation;
+/* Compact Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 1.5rem 0 1rem 0; /* Reduced margins */
+  color: #1d1d1f;
+  letter-spacing: -0.015em;
 }
 
-/* Enhanced link interactions */
-a {
-  color: var(--apple-blue);
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1.1rem; }
+h6 { font-size: 1rem; }
+
+/* Compact Spacing */
+p, ul, ol, blockquote {
+  margin: 1rem 0; /* Reduced from 1.5rem */
+  line-height: 1.6;
+}
+
+/* ============================================================================
+   RESPONSIVE BREAKPOINTS - COMPACT
+   ============================================================================ */
+
+/* Mobile First - Extra Compact */
+@media (max-width: 480px) {
+  html { font-size: 14px; }
+  
+  h1 { font-size: 2rem; margin: 1rem 0 0.75rem 0; }
+  h2 { font-size: 1.75rem; margin: 1rem 0 0.75rem 0; }
+  h3 { font-size: 1.4rem; margin: 0.75rem 0 0.5rem 0; }
+  
+  p, ul, ol { margin: 0.75rem 0; }
+  
+  /* Compact hero sections */
+  .hero-section {
+    padding: 2rem 1rem !important;
+    margin-bottom: 2rem !important;
+  }
+  
+  .hero-section h1 {
+    font-size: 2.5rem !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .hero-section p {
+    font-size: 1.1rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  /* Compact cards */
+  .feature-grid, .about-grid {
+    gap: 1rem !important;
+    margin: 1.5rem 0 !important;
+  }
+  
+  .feature-card, .about-card {
+    padding: 1rem !important;
+    min-height: 140px !important;
+  }
+  
+  .feature-card h3, .about-card h3 {
+    font-size: 1.1rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .feature-card p, .about-card p {
+    font-size: 0.9rem !important;
+    line-height: 1.4 !important;
+  }
+}
+
+/* Tablet - Compact */
+@media (min-width: 481px) and (max-width: 768px) {
+  html { font-size: 15px; }
+  
+  h1 { font-size: 2.25rem; margin: 1.25rem 0 1rem 0; }
+  h2 { font-size: 1.875rem; margin: 1.25rem 0 1rem 0; }
+  
+  /* Compact hero sections */
+  .hero-section {
+    padding: 3rem 1.5rem !important;
+    margin-bottom: 2.5rem !important;
+  }
+  
+  .hero-section h1 {
+    font-size: 3rem !important;
+    margin-bottom: 1.25rem !important;
+  }
+  
+  /* Compact cards */
+  .feature-grid, .about-grid {
+    gap: 1.25rem !important;
+    margin: 2rem 0 !important;
+  }
+  
+  .feature-card, .about-card {
+    padding: 1.25rem !important;
+    min-height: 160px !important;
+  }
+}
+
+/* Desktop - Efficient Spacing */
+@media (min-width: 769px) {
+  /* Compact hero sections */
+  .hero-section {
+    padding: 4rem 2rem !important;
+    margin-bottom: 3rem !important;
+  }
+  
+  .hero-section h1 {
+    font-size: 3.5rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  /* Efficient card spacing */
+  .feature-grid, .about-grid {
+    gap: 1.5rem !important;
+    margin: 2.5rem 0 !important;
+  }
+  
+  .feature-card, .about-card {
+    padding: 1.5rem !important;
+    min-height: 180px !important;
+  }
+}
+
+/* ============================================================================
+   COMPACT COMPONENT STYLES
+   ============================================================================ */
+
+/* Compact Buttons */
+.btn, .cta-button, a[href*="/contact/"] {
+  display: inline-block;
+  padding: 0.75rem 1.5rem; /* Reduced padding */
+  background: linear-gradient(135deg, #007AFF, #005FCC);
+  color: white !important;
   text-decoration: none;
-  transition: var(--transition);
-}
-
-a:hover {
-  color: var(--apple-blue-hover);
-  transform: translateY(-1px);
-}
-
-/* ============================================================================
-   RESPONSIVE NAVIGATION
-   ============================================================================ */
-
-.masthead {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.masthead .site-title {
+  border-radius: 8px; /* Reduced from 12px */
   font-weight: 600;
-  font-size: 1.25rem;
-  color: var(--apple-dark);
-}
-
-/* Desktop Navigation */
-.greedy-nav .visible-links a {
-  font-weight: 500;
-  color: var(--apple-dark);
-  padding: 0.75rem 1rem;
-  border-radius: 8px;
-  transition: var(--transition);
-  min-height: 44px;
-  display: inline-flex;
-  align-items: center;
-}
-
-.greedy-nav .visible-links a:hover {
-  background: rgba(0, 122, 255, 0.1);
-  color: var(--apple-blue);
-  transform: translateY(0);
-}
-
-/* ============================================================================
-   HOMEPAGE RESPONSIVE DESIGN
-   ============================================================================ */
-
-/* Hero Section - Mobile First */
-.hero-section {
-  background: linear-gradient(135deg, #74b9ff 0%, #ffffff 100%);
-  color: white;
-  padding: 2.5rem 1rem;
+  font-size: 0.95rem; /* Slightly smaller */
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
   text-align: center;
-  position: relative;
-  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 122, 255, 0.25); /* Reduced shadow */
 }
 
-.hero-section h1 {
-  font-size: 2rem;
-  font-weight: 300;
-  margin-bottom: 1rem;
-  color: white;
-  line-height: 1.1;
+.btn:hover, .cta-button:hover {
+  transform: translateY(-1px); /* Reduced from -2px */
+  box-shadow: 0 4px 15px rgba(0, 122, 255, 0.35); /* Reduced shadow */
+  color: white !important;
+  text-decoration: none;
 }
 
-.hero-section .hero-name {
-  font-weight: 600;
-}
-
-.hero-section p {
-  font-size: 1.1rem;
-  font-weight: 300;
-  opacity: 0.95;
-  margin-bottom: 2rem;
-  line-height: 1.4;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.hero-buttons a {
-  padding: 0.875rem 2rem;
-  border-radius: 25px;
-  font-weight: 600;
-  transition: var(--transition);
-  min-height: 48px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%; /* Full width on mobile */
-  max-width: 280px;
-}
-
-/* Feature Cards - Mobile First Grid */
-.feature-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-  margin: 2rem 0;
-  padding: 0 1rem;
-}
-
-.feature-card {
-  background: white;
-  padding: 2rem;
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow-light);
-  text-align: center;
-  transition: var(--transition);
-  border-top: 4px solid var(--apple-light-gray);
-}
-
-.feature-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-medium);
-}
-
-.feature-card .icon {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.feature-card h3 {
-  color: var(--apple-blue);
-  margin-bottom: 1rem;
-  font-size: 1.25rem;
-}
-
-/* ============================================================================
-   BIO PAGE RESPONSIVE DESIGN
-   ============================================================================ */
-
-.bio-container {
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 1.5rem 1rem;
-}
-
-.bio-headshot {
-  width: 100%;
-  max-width: 300px;
-  border-radius: 16px;
-  margin: 0 auto 2rem auto;
-  display: block;
-}
-
-.bio-text {
-  font-size: 1rem;
-  line-height: 1.8;
-  color: var(--apple-gray);
-}
-
-.bio-text p {
-  margin-bottom: 1.5rem;
-  max-width: none; /* Full width on mobile */
-}
-
-/* ============================================================================
-   CV PAGE RESPONSIVE DESIGN
-   ============================================================================ */
-
-.cv-container {
-  max-width: 100%;
-  padding: 1rem;
-}
-
-.cv-section {
-  background: white;
-  padding: 1.5rem;
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow-light);
-  margin-bottom: 2rem;
-}
-
+/* CV Download Button - Specific Styling */
 .cv-download-btn {
-  background: var(--apple-blue);
-  color: white;
-  padding: 1rem 2rem;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 48px;
-  width: 100%; /* Full width on mobile */
-  max-width: 300px;
-  margin: 0 auto;
-  transition: var(--transition);
+  display: inline-block !important;
+  padding: 1rem 2rem !important;
+  background: linear-gradient(135deg, #007AFF, #005FCC) !important;
+  color: white !important;
+  text-decoration: none !important;
+  border-radius: 25px !important;
+  font-weight: 600 !important;
+  font-size: 1.1rem !important;
+  transition: all 0.3s ease !important;
+  border: none !important;
+  cursor: pointer !important;
+  text-align: center !important;
+  box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3) !important;
+  min-height: 48px !important;
+  line-height: 1.4 !important;
 }
 
 .cv-download-btn:hover {
-  background: var(--apple-blue-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 122, 255, 0.3);
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(0, 122, 255, 0.4) !important;
+  color: white !important;
+  text-decoration: none !important;
+  background: linear-gradient(135deg, #0056b3, #004494) !important;
 }
 
-.skills-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  margin: 1rem 0;
+/* Ready to Collaborate Button - Fix Text Contrast */
+a[href="/contact/"],
+a[href*="contact"] {
+  display: inline-block !important;
+  background: white !important;
+  color: #0984e3 !important;
+  padding: 1rem 2rem !important;
+  border-radius: 25px !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+  border: 2px solid white !important;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.3) !important;
 }
 
-.skill-tag {
-  padding: 0.5rem 1rem;
-  border-radius: 15px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  display: inline-block;
-  margin: 0.25rem;
+a[href="/contact/"]:hover,
+a[href*="contact"]:hover {
+  background: rgba(255, 255, 255, 0.9) !important;
+  color: #0756b0 !important;
+  transform: translateY(-1px) !important;
+  text-decoration: none !important;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.4) !important;
 }
 
-/* ============================================================================
-   POSTS PAGE RESPONSIVE DESIGN
-   ============================================================================ */
+/* Navigation Button Consistency - All buttons look the same, NO SHADOWS */
+.greedy-nav .visible-links a {
+  border-radius: 6px !important;
+  transition: all 0.3s ease !important;
+  padding: 0.5rem 0.75rem !important;
+  margin: 0 0.25rem !important;
+  font-weight: 500 !important;
+  color: #1d1d1f !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+}
 
-.entries-list .list__item {
+.greedy-nav .visible-links a:hover {
+  background: rgba(0, 122, 255, 0.1) !important;
+  color: #007AFF !important;
+  transform: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+}
+
+/* Remove current/active state styling - all buttons look the same */
+.greedy-nav .visible-links a.current {
+  background: transparent !important;
+  color: #1d1d1f !important;
+  font-weight: 500 !important;
+  box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
+}
+
+.greedy-nav .visible-links a.current:hover {
+  background: rgba(0, 122, 255, 0.1) !important;
+  color: #007AFF !important;
+  box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
+}
+
+/* Force override any before/after pseudo elements on nav links */
+.greedy-nav .visible-links a::before,
+.greedy-nav .visible-links a::after {
+  display: none !important;
+  content: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Ensure all navigation items have same styling */
+.masthead__menu-item a {
+  border-radius: 6px !important;
+  transition: all 0.3s ease !important;
+  padding: 0.5rem 0.75rem !important;
+  margin: 0 0.25rem !important;
+  font-weight: 500 !important;
+  color: #1d1d1f !important;
+  text-decoration: none !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+}
+
+.masthead__menu-item a:hover {
+  background: rgba(0, 122, 255, 0.1) !important;
+  color: #007AFF !important;
+  box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+}
+
+/* Remove current state from menu items too */
+.masthead__menu-item a.current {
+  background: transparent !important;
+  color: #1d1d1f !important;
+  font-weight: 500 !important;
+  box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
+}
+
+/* FORCE REMOVE ANY REMAINING SHADOWS FROM ALL NAV ELEMENTS */
+.masthead .greedy-nav,
+.masthead .greedy-nav *,
+.greedy-nav,
+.greedy-nav * {
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
+}
+
+/* Remove focus outlines that might look like shadows */
+.greedy-nav .visible-links a:focus,
+.masthead__menu-item a:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Compact Cards */
+.card, .feature-card, .about-card {
   background: white;
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow-light);
-  padding: 2rem;
-  margin-bottom: 2rem;
-  transition: var(--transition);
-  border: none;
-  border-bottom: 3px solid var(--apple-light-gray);
+  border-radius: 10px; /* Reduced from 12px */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Reduced shadow */
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.entries-list .list__item:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-heavy);
+.card:hover, .feature-card:hover, .about-card:hover {
+  transform: translateY(-1px); /* Reduced from -2px */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Reduced shadow */
 }
 
-.entries-list .list__item .archive__item-title {
-  color: var(--apple-blue);
-  font-weight: 600;
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
-  min-height: auto;
-}
-
-.entries-list .list__item .archive__item-title a {
-  color: inherit;
-  text-decoration: none;
-  min-height: auto;
-}
-
-.entries-list .list__item .archive__item-excerpt {
-  color: var(--apple-gray);
+/* Compact Forms */
+.contact-form input,
+.contact-form textarea,
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 0.75rem; /* Reduced padding */
+  border: 2px solid #e5e5e7;
+  border-radius: 8px; /* Reduced from 10px */
   font-size: 1rem;
-  line-height: 1.6;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background: #fafafa;
+  margin-bottom: 0.75rem; /* Reduced margin */
 }
 
-/* ============================================================================
-   SIDEBAR ENHANCEMENTS
-   ============================================================================ */
-
-.sidebar .author__avatar img {
-  border-radius: 50%;
-  box-shadow: var(--shadow-medium);
-  transition: var(--transition);
-  width: 100%;
-  max-width: 200px;
+/* Compact Navigation */
+.masthead {
+  padding: 0.75rem 0; /* Reduced padding */
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.sidebar .author__avatar img:hover {
-  transform: scale(1.05);
-}
-
-.sidebar .author__bio {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: var(--apple-gray);
-  text-align: center;
-  padding: 0 1rem;
-}
-
-.sidebar .author__urls .btn {
-  background: var(--apple-blue);
-  border: none;
-  border-radius: 20px;
-  padding: 0.75rem 1.5rem;
+.masthead__menu-item a {
+  padding: 0.5rem 0.75rem; /* Reduced padding */
+  margin: 0 0.25rem; /* Reduced margin */
   font-weight: 500;
-  transition: var(--transition);
-  width: 100%;
-  margin-bottom: 0.5rem;
-}
-
-.sidebar .author__urls .btn:hover {
-  background: var(--apple-blue-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
+  color: #1d1d1f;
+  text-decoration: none;
+  border-radius: 6px; /* Reduced from 8px */
+  transition: all 0.3s ease;
 }
 
 /* ============================================================================
-   TABLET RESPONSIVE (768px - 1199px)
+   COMPACT PAGE-SPECIFIC STYLES
    ============================================================================ */
 
-@media (min-width: 768px) {
-  html { font-size: 17px; }
+/* Compact Homepage */
+.layout--home .page__content {
+  padding: 1rem; /* Reduced padding */
+}
+
+.layout--home .feature-grid {
+  margin: 2rem 0; /* Reduced margin */
+}
+
+/* Compact About Page */
+.layout--single .page__content {
+  padding: 1rem; /* Reduced padding */
+}
+
+/* Compact Bio/CV Pages */
+.bio-section, .cv-section {
+  margin: 2rem 0; /* Reduced margin */
+  padding: 1.5rem; /* Reduced padding */
+  background: white;
+  border-radius: 10px; /* Reduced from 12px */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Reduced shadow */
+}
+
+/* Compact Contact Page */
+.contact-grid {
+  gap: 1.5rem; /* Reduced gap */
+  margin: 2rem 0; /* Reduced margin */
+}
+
+.contact-card {
+  padding: 1.5rem; /* Reduced padding */
+  text-align: center;
+  background: white;
+  border-radius: 10px; /* Reduced from 12px */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Reduced shadow */
+}
+
+/* ============================================================================
+   MOBILE OPTIMIZATIONS - EXTRA COMPACT
+   ============================================================================ */
+
+@media (max-width: 600px) {
+  .page__content {
+    padding: 0.75rem !important; /* Extra compact */
+  }
   
-  /* Hero Section - Tablet */
   .hero-section {
-    padding: 3.75rem 2rem;
+    padding: 1.5rem 1rem !important; /* Extra compact hero */
+    margin-bottom: 1.5rem !important;
   }
   
   .hero-section h1 {
-    font-size: 2.5rem;
+    font-size: 2rem !important;
+    line-height: 1.2 !important;
+    margin-bottom: 0.75rem !important;
   }
   
   .hero-section p {
-    font-size: 1.2rem;
+    font-size: 1rem !important;
+    margin-bottom: 1rem !important;
   }
   
-  .hero-buttons a {
-    width: auto;
-    min-width: 200px;
+  .feature-grid, .about-grid, .contact-grid {
+    gap: 0.75rem !important; /* Extra compact grid */
+    margin: 1rem 0 !important;
   }
   
-  /* Feature Cards - 2 per row on tablet */
-  .feature-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    padding: 0 2rem;
+  .feature-card, .about-card, .contact-card {
+    padding: 0.75rem !important; /* Extra compact cards */
+    min-height: 120px !important;
   }
   
-  .feature-card {
-    padding: 2rem 1.5rem;
+  .feature-card h3, .about-card h3 {
+    font-size: 1rem !important;
+    margin-bottom: 0.5rem !important;
   }
   
-  /* Bio Page - Single column with larger headshot */
-  .bio-headshot {
-    max-width: 250px;
+  .feature-card p, .about-card p {
+    font-size: 0.85rem !important;
+    line-height: 1.3 !important;
   }
   
-  .bio-text {
-    font-size: 1.1rem;
-    line-height: 1.7;
+  /* Extra compact sections */
+  .bio-section, .cv-section {
+    margin: 1rem 0 !important;
+    padding: 1rem !important;
   }
   
-  /* CV Page - Single column, wider margins */
-  .cv-container {
-    padding: 1.5rem 2rem;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  
-  .cv-section {
-    padding: 2rem;
-  }
-  
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  /* Posts - Remove thumbnails, enlarge titles */
-  .entries-list .list__item .archive__item-title {
-    font-size: 1.4rem;
-  }
-  
-  /* Navigation - Keep desktop style */
-  .greedy-nav .visible-links a {
-    padding: 0.5rem 1rem;
+  /* Extra compact buttons */
+  .btn, .cta-button {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.9rem !important;
   }
 }
 
 /* ============================================================================
-   DESKTOP RESPONSIVE (1200px+)
+   HIDE DEFAULT JEKYLL TITLES (MAINTAINED FROM PREVIOUS VERSION)
    ============================================================================ */
 
-@media (min-width: 1200px) {
-  html { font-size: 18px; }
-  
-  /* Typography scaling */
-  h1 { font-size: 2.5rem; }
-  h2 { font-size: 2rem; }
-  h3 { font-size: 1.5rem; }
-  
-  /* Hero Section - Desktop */
-  .hero-section {
-    padding: 5rem 2rem;
-  }
-  
-  .hero-section h1 {
-    font-size: 3.5rem;
-  }
-  
-  .hero-section p {
-    font-size: 1.5rem;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  /* Feature Cards - 3 per row on desktop */
-  .feature-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 3rem auto;
-    padding: 0 2rem;
-  }
-  
-  .feature-card {
-    padding: 2.5rem;
-    height: 280px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  /* Bio Page - Two column layout */
-  .bio-container {
-    max-width: 1200px;
-    padding: 2rem;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 4rem;
-    align-items: start;
-  }
-  
-  .bio-headshot {
-    max-width: 100%;
-    margin: 0;
-  }
-  
-  .bio-text {
-    font-size: 1.1rem;
-    line-height: 1.6;
-  }
-  
-  /* CV Page - Two column layout */
-  .cv-container {
-    max-width: 1200px;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 3rem;
-    padding: 2rem;
-  }
-  
-  .cv-main-content {
-    order: 1;
-  }
-  
-  .cv-sidebar {
-    order: 2;
-    border-left: 1px solid var(--apple-light-gray);
-    padding-left: 2rem;
-  }
-  
-  .skills-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  
-  .cv-download-btn {
-    width: auto;
-    min-width: 250px;
-  }
-  
-  /* Posts - Two column or grid with thumbnails */
-  .entries-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .entries-list .list__item {
-    margin-bottom: 0;
-  }
-  
-  /* Enhanced navigation spacing */
-  .greedy-nav .visible-links {
-    gap: 0.5rem;
-  }
-}
-
-/* ============================================================================
-   MOBILE-SPECIFIC ENHANCEMENTS (≤767px)
-   ============================================================================ */
-
-@media (max-width: 767px) {
-  /* Enhanced mobile typography */
-  .page__content p {
-    margin-bottom: 1.5rem;
-    line-height: 1.8;
-  }
-  
-  /* Mobile-first spacing */
-  .page__content {
-    padding: 1rem;
-  }
-  
-  /* Simplified gradients for mobile */
-  .hero-section {
-    background: linear-gradient(135deg, #74b9ff 0%, #a8e6cf 100%);
-  }
-  
-  /* Mobile navigation improvements */
-  .masthead {
-    padding: 0.5rem 1rem;
-  }
-  
-  /* Larger touch targets for mobile */
-  .btn, button, input, textarea {
-    min-height: 48px;
-    border-radius: 12px;
-  }
-  
-  /* Mobile-specific post styling */
-  .entries-list .list__item {
-    padding: 1.5rem;
-    border-radius: 8px;
-  }
-  
-  .entries-list .list__item .archive__item-title {
-    font-size: 1.1rem;
-    line-height: 1.4;
-  }
-  
-  /* Contact form mobile optimization */
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%;
-    padding: 1rem;
-    border-radius: 8px;
-    border: 2px solid var(--apple-light-gray);
-    font-size: 1rem;
-  }
-  
-  .contact-form button {
-    width: 100%;
-    padding: 1rem;
-    font-size: 1.1rem;
-  }
-}
-
-/* ============================================================================
-   PERFORMANCE & ACCESSIBILITY
-   ============================================================================ */
-
-/* Reduced motion for accessibility */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-}
-
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --apple-background: #000;
-    --apple-dark: #fff;
-    --apple-gray: #ccc;
-    --apple-light-gray: rgba(255, 255, 255, 0.1);
-  }
-  
-  body {
-    background-color: var(--apple-background);
-    color: var(--apple-dark);
-  }
-  
-  .masthead {
-    background: rgba(0, 0, 0, 0.95);
-    border-bottom-color: rgba(255, 255, 255, 0.1);
-  }
-  
-  .feature-card,
-  .cv-section,
-  .entries-list .list__item {
-    background: rgba(255, 255, 255, 0.05);
-    color: var(--apple-dark);
-  }
-}
-
-/* ============================================================================
-   PRINT STYLES
-   ============================================================================ */
-
-@media print {
-  .masthead,
-  .sidebar,
-  .hero-buttons,
-  .cv-download-btn {
-    display: none !important;
-  }
-  
-  body {
-    background: white !important;
-    color: black !important;
-    font-size: 12pt;
-    line-height: 1.4;
-  }
-  
-  .page__content {
-    max-width: none !important;
-    padding: 0 !important;
-  }
-}
-
-/* Hide default page titles for pages with custom banners */
-.page[class*="page--"] .page__title,
-.page__title + .page__meta {
+.page__title {
   display: none !important;
 }
 
-/* Custom banner pages - hide title specifically */
-.page[itemtype="https://schema.org/CreativeWork"] .page__title {
+.page__meta {
   display: none !important;
 }
 
-/* Hide page meta for banner pages */
-.page__inner-wrap header .page__meta {
+.archive__title {
   display: none !important;
 }
 
-/* Ensure proper spacing after header removal */
-.page__inner-wrap {
-  padding-top: 0 !important;
-}
-
-.page__content {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
+.archive__subtitle {
+  display: none !important;
 }

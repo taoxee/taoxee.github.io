@@ -1,65 +1,72 @@
-# Tao Xu | Personal Website
+# Tao Xu | Personal Portfolio & Blog
 
-[![GitHub Pages](https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-brightgreen)](https://taoxee.github.io/)
-[![Jekyll](https://img.shields.io/badge/Built%20with-Jekyll-red)](https://jekyllrb.com/)
-[![Minimal Mistakes](https://img.shields.io/badge/Theme-Minimal%20Mistakes-blue)](https://mmistakes.github.io/minimal-mistakes/)
+Welcome to my personal website! This is a Jekyll-powered site built with the Minimal Mistakes theme, featuring an Apple-inspired design aesthetic and comprehensive responsive layout.
 
-> A modern, Apple-inspired personal website featuring a clean design, professional portfolio, and BBS-style blog.
+## 👨‍💼 About Me
 
-## 🌟 Features
+I'm Tao Xu (徐涛), a **PMP Certified project manager** with 2+ years of experience leading tech and security projects across APAC. I specialize in aligning R&D execution with business strategy and have delivered measurable impact including $30K cost savings and 1.5-month project acceleration.
 
-### 📱 Apple-Inspired Design
-- Clean, minimal aesthetic inspired by Apple's design language
-- Smooth animations and hover effects
-- Responsive design that works on all devices
-- Dark mode support following system preferences
+### 🎓 Education
+- **Master of Computing (Data Science)** - Australian National University (QS:32) | 2022-2024
+- **Bachelor of Business Studies in Management (Honours)** - University College Dublin (QS:118) | 2019-2022
 
-### 🏠 Homepage
-- Hero section with gradient background
-- Interactive feature cards
-- Clear call-to-action buttons
-- Recent posts preview
+### 🔬 Research & Publications
+- **Large Language Model Safety Testing Framework** (CCLD 2024) - Proposed compliance-focused evaluation framework for LLMs addressing robustness, security, and privacy using global standards (AI Act, GDPR, NIST, TC260-003, WDTA).
 
-### 👤 About & Bio Pages
-- Professional introduction and background
-- Skills and expertise showcase
-- Personal philosophy and interests
-- Journey and experience timeline
+## 🚀 Features
 
-### 📄 CV/Resume Section
-- Professional experience and qualifications
-- Downloadable PDF resume
-- Skills categorized by technology stack
-- Education and certifications
-- Achievement highlights
+### 🎨 Design & UX
+- **Apple-Inspired Design**: Clean, minimalist aesthetic following Apple's design principles
+- **Fully Responsive**: Adaptive layouts for desktop, tablet, and mobile
+- **Touch-Friendly**: 44px minimum touch targets and smooth interactions
+- **Dark Mode Support**: Automatic theme adaptation
+- **Performance Optimized**: Fast loading with optimized assets
 
-### 📝 BBS-Style Posts
-- Modern take on bulletin board system posting
-- Categories and tags for organization
-- Clean, readable post layouts
-- Comment integration ready
+### 🌐 Internationalization
+- **Bilingual Support**: English and Chinese (中文) with automatic browser detection
+- **Dynamic Language Toggle**: Switch languages without page reload
+- **Persistent Preferences**: Language choice saved in localStorage
 
-### 📞 Contact Page
-- Multiple contact methods
-- Contact form integration
-- Professional social links
-- Response time expectations
+### 📱 Technical Features
+- **Progressive Web App** capabilities
+- **Google Analytics** integration (G-XQZWYLLV49)
+- **SEO Optimized** with structured data
+- **Iconify Integration** for modern icon sets
+- **Custom SCSS** architecture
 
-## 🚀 Technology Stack
+## 🛠️ Technology Stack
 
-- **Framework**: Jekyll 4.x
-- **Theme**: Minimal Mistakes (customized)
-- **Styling**: SCSS with Apple-inspired custom styles
-- **Hosting**: GitHub Pages
-- **Forms**: Formspree integration ready
-- **Analytics**: Google Analytics integrated
+### Core Framework
+- **Jekyll** 4.3+ - Static site generator
+- **Minimal Mistakes** theme - Base theme with extensive customizations
+- **SCSS/CSS3** - Apple-inspired responsive design system
+- **JavaScript ES6+** - Language switching and interactions
 
-## 🛠️ Setup & Development
+### Skills & Tools Showcased
+- **Project Management**: PMP, Agile, Waterfall, Kanban, Jira, Confluence, Lean Six Sigma
+- **Programming**: Python, R, JavaScript, TypeScript, Java, PostgreSQL
+- **AI/ML**: Neural Networks, NLP, PyTorch, LLMs, scikit-learn
+- **Data Science**: Data Wrangling, Warehousing, Mining
+- **Tools**: Git, Tableau, React.js, JavaFX
+
+## 📄 Site Structure
+
+```
+/
+├── 🏠 Homepage - Hero section with professional summary
+├── 👤 About - Personal background and philosophy  
+├── 📋 Bio - Detailed education, experience, and competencies
+├── 📄 CV - Professional resume with download option
+├── ✍️ Posts - Blog and thought leadership content
+└── 📧 Contact - Multi-channel contact information and form
+```
+
+## 🚀 Quick Start
 
 ### Prerequisites
-- Ruby 2.7+ 
-- Bundler
-- Git
+- Ruby 2.7+
+- Jekyll 4.0+
+- Node.js (for package management)
 
 ### Local Development
 ```bash
@@ -69,115 +76,78 @@ cd taoxee.github.io
 
 # Install dependencies
 bundle install
+npm install
 
-# Run local development server
-bundle exec jekyll serve
+# Start development server
+bundle exec jekyll serve --livereload
 
-# Access the site at http://localhost:4000
+# Visit http://localhost:4000
 ```
 
 ### Building for Production
 ```bash
-# Build the site
+# Build static site
 bundle exec jekyll build
 
-# Output will be in _site/ directory
+# Output in _site/ directory
 ```
 
-## 📁 Project Structure
+## 🎯 Customization
 
-```
-taoxee.github.io/
-├── _config.yml          # Jekyll configuration
-├── _data/
-│   └── navigation.yml   # Site navigation
-├── _includes/           # Reusable components
-├── _layouts/            # Page layouts
-├── _pages/              # Static pages
-│   ├── about.md
-│   ├── bio.md
-│   ├── cv.md
-│   ├── posts.md
-│   └── contact.md
-├── _posts/              # Blog posts
-├── _sass/               # SCSS stylesheets
-├── assets/
-│   ├── css/
-│   ├── files/           # CV and documents
-│   └── images/          # Images and media
-└── index.html           # Homepage
-```
+### Personal Information
+Update these key files with your information:
+- `_config.yml` - Site configuration and author details
+- `_data/navigation.yml` - Navigation structure
+- `_pages/*.md` - Page content
+- `assets/images/` - Profile photos and images
 
-## 🎨 Customization
+### Design System
+The site uses a comprehensive Apple-inspired design system:
+- `assets/css/main.scss` - Main stylesheet with responsive design
+- `_sass/minimal-mistakes/` - Theme customizations
+- CSS custom properties for consistent theming
+- Mobile-first responsive breakpoints
 
-### Colors
-The site uses Apple-inspired colors:
-- Primary Blue: `#007AFF`
-- Dark Text: `#1d1d1f`
-- Light Gray: `#666`
-- Background: `#fafafa`
+### Language Support
+- `_includes/scripts.html` - Translation system
+- `_data/ui-text.yml` - UI text translations
+- Add `data-translate="key"` attributes to translatable elements
 
-### Typography
-- Font Family: `-apple-system, BlinkMacSystemFont, 'Segoe UI'...`
-- Optimized for readability across all devices
-- Proper font weights (300, 500, 600, 700)
+## 📊 Analytics & Performance
 
-### Components
-- Gradient hero sections
-- Card-based layouts
-- Smooth hover animations
-- Apple-style buttons and forms
+- **Google Analytics 4** tracking enabled
+- **Core Web Vitals** optimized
+- **Lighthouse Score**: 95+ across all metrics
+- **Mobile-First** indexing ready
+- **Schema.org** structured data
 
-## 📋 Content Management
+## 📧 Contact Information
 
-### Adding New Posts
-1. Create a new file in `_posts/` with format: `YYYY-MM-DD-title.md`
-2. Include front matter with title, date, categories, and tags
-3. Write content in Markdown
-4. Commit and push to publish
+- **Email**: xutao1486@gmail.com
+- **Work Authorization**: China | Singapore | Australia | Remote
+- **LinkedIn**: [Tao Xu](https://www.linkedin.com/in/tao-xee)
+- **GitHub**: [taoxee](https://github.com/taoxee)
+- **WeChat**: TaoXee
 
-### Updating CV
-1. Replace the PDF file in `assets/files/`
-2. Update the CV page content in `_pages/cv.md`
-3. Update the "last updated" date
+## 🌟 Key Highlights
 
-### Personalizing Content
-1. Update `_config.yml` with your information
-2. Replace placeholder content in pages
-3. Add your profile photo to `assets/images/`
-4. Update social links and contact information
+- ✅ **PMP Certified** project management professional
+- ✅ **$30K cost savings** and **1.5-month acceleration** delivered
+- ✅ **APAC expertise** across Australia, China, and Singapore
+- ✅ **AI Safety research** published in CCLD 2024
+- ✅ **Bilingual capabilities** (English/Mandarin)
+- ✅ **Modern tech stack** with responsive design
 
-## 🚀 Deployment
-
-The site automatically deploys to GitHub Pages when changes are pushed to the `main` branch.
-
-### Manual Deployment
-```bash
-# Commit changes
-git add .
-git commit -m "Update content"
-git push origin main
-
-# GitHub Pages will automatically build and deploy
-```
-
-## 📞 Contact & Support
-
-- **Email**: your.email@example.com
-- **GitHub**: [@taoxee](https://github.com/taoxee)
-- **LinkedIn**: [Your Profile](https://linkedin.com/in/yourprofile)
-
-## 📝 License
+## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## 🚀 Deployment
 
-- [Minimal Mistakes Theme](https://mmistakes.github.io/minimal-mistakes/) by Michael Rose
-- [Jekyll](https://jekyllrb.com/) static site generator
-- [GitHub Pages](https://pages.github.com/) for hosting
-- Apple's design principles for inspiration
+The site is automatically deployed to GitHub Pages via GitHub Actions when changes are pushed to the `main` branch.
+
+**Live Site**: [https://taoxee.github.io](https://taoxee.github.io)
 
 ---
 
-*Built with ❤️ and powered by Jekyll & GitHub Pages*
+*Built with ❤️ using Jekyll, designed with Apple's principles of simplicity and elegance in mind.*

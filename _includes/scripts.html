@@ -30,112 +30,55 @@ let currentLang = localStorage.getItem('preferred-language') || 'en';
 const translations = {
   en: {
     // Navigation
-    'About': 'About',
-    'Bio': 'Bio', 
-    'CV': 'CV',
-    'Posts': 'Posts',
-    'Contact': 'Contact',
-    
+    "Home": "Home",
+    "About": "About",
+    "Bio": "Bio", 
+    "CV": "CV",
+    "Posts": "Posts",
+    "Contact": "Contact",
     // Homepage
-    'Hello, I\'m Tao Xu': 'Hello, I\'m Tao Xu',
-    'Technology enthusiast crafting innovative solutions with clean design and meaningful impact': 'Technology enthusiast crafting innovative solutions with clean design and meaningful impact',
-    'Learn About Me': 'Learn About Me',
-    'View My CV': 'View My CV',
-    'What I Do': 'What I Do',
-    'Innovation & Development': 'Innovation & Development',
-    'Design & UX': 'Design & UX',
-    'Problem Solving': 'Problem Solving',
-    'Recent Thoughts': 'Recent Thoughts',
-    'Let\'s Connect': 'Let\'s Connect',
-    
-    // Bio Page
-    'Bio': 'Bio',
-    'Background': 'Background',
-    'Professional Experience': 'Professional Experience',
-    'Education & Learning': 'Education & Learning',
-    'Personal Philosophy': 'Personal Philosophy', 
-    'Interests & Hobbies': 'Interests & Hobbies',
-    'Vision': 'Vision',
-    
-    // CV Page
-    'Curriculum Vitae': 'Curriculum Vitae',
-    'Download My Resume': 'Download My Resume',
-    'Professional Summary': 'Professional Summary',
-    'Experience': 'Experience',
-    'Education': 'Education',
-    'Technical Skills': 'Technical Skills',
-    'Certifications & Awards': 'Certifications & Awards',
-    'Languages': 'Languages',
-    
-    // Contact Page
-    'Let\'s Connect': 'Let\'s Connect',
-    'Get in Touch': 'Get in Touch',
-    'Send a Message': 'Send a Message',
-    'Response Time': 'Response Time',
-    'What I\'m Open To': 'What I\'m Open To',
-    
-    // Posts Page
-    'Posts & Thoughts': 'Posts & Thoughts',
-    'Recent Posts': 'Recent Posts',
-    'Categories': 'Categories',
-    
-    // Button
-    'language_toggle': '中文'
+    "Hello, I'm": "Hello, I'm",
+    "PMP Certified project manager leading tech and security projects across APAC, passionate about AI, data science, and creating meaningful digital experiences": "PMP Certified project manager leading tech and security projects across APAC, passionate about AI, data science, and creating meaningful digital experiences",
+    "What I Do": "What I Do",
+    "Project Management": "Project Management",
+    "AI & Data Science": "AI & Data Science", 
+    "Security & Compliance": "Security & Compliance",
+    "Technical Expertise": "Technical Expertise",
+    "APAC Leadership": "APAC Leadership",
+    "Research & Education": "Research & Education",
+    // Common
+    "Get Started": "Get Started",
+    "Learn More": "Learn More",
+    "Learn About Me": "Learn About Me",
+    "Contact Me": "Contact Me",
+    "Download CV": "Download CV",
+    "View My CV": "View My CV"
   },
-  
   zh: {
     // Navigation
-    'About': '关于',
-    'Bio': '个人简介',
-    'CV': '简历', 
-    'Posts': '文章',
-    'Contact': '联系',
-    
+    "Home": "首页",
+    "About": "关于", 
+    "Bio": "简历",
+    "CV": "履历",
+    "Posts": "文章",
+    "Contact": "联系",
     // Homepage
-    'Hello, I\'m Tao Xu': '你好，我是徐涛',
-    'Technology enthusiast crafting innovative solutions with clean design and meaningful impact': '热爱技术的创新者，致力于用简洁设计创造有意义的数字体验',
-    'Learn About Me': '了解我',
-    'View My CV': '查看简历',
-    'What I Do': '我的专长',
-    'Innovation & Development': '创新与开发',
-    'Design & UX': '设计与用户体验',
-    'Problem Solving': '问题解决',
-    'Recent Thoughts': '最新思考',
-    'Let\'s Connect': '联系我',
-    
-    // Bio Page
-    'Bio': '个人简介',
-    'Background': '背景介绍',
-    'Professional Experience': '专业经验',
-    'Education & Learning': '教育与学习',
-    'Personal Philosophy': '个人理念',
-    'Interests & Hobbies': '兴趣爱好',
-    'Vision': '愿景',
-    
-    // CV Page  
-    'Curriculum Vitae': '个人简历',
-    'Download My Resume': '下载我的简历',
-    'Professional Summary': '专业概况',
-    'Experience': '工作经验',
-    'Education': '教育背景',
-    'Technical Skills': '技术技能',
-    'Certifications & Awards': '证书与奖项',
-    'Languages': '语言能力',
-    
-    // Contact Page
-    'Let\'s Connect': '联系我',
-    'Get in Touch': '取得联系',
-    'Send a Message': '发送消息',
-    'Response Time': '回复时间',
-    'What I\'m Open To': '我感兴趣的',
-    
-    // Posts Page
-    'Posts & Thoughts': '文章与思考',
-    'Recent Posts': '最新文章',
-    'Categories': '分类',
-    
-    // Button
-    'language_toggle': 'English'
+    "Hello, I'm": "你好，我是",
+    "PMP Certified project manager leading tech and security projects across APAC, passionate about AI, data science, and creating meaningful digital experiences": "PMP认证项目经理，领导亚太地区技术和安全项目，热衷于人工智能、数据科学和创造有意义的数字体验",
+    "What I Do": "我的专长",
+    "Project Management": "项目管理",
+    "AI & Data Science": "人工智能与数据科学",
+    "Security & Compliance": "安全与合规",
+    "Technical Expertise": "技术专长",
+    "APAC Leadership": "亚太区领导力",
+    "Research & Education": "研究与教育",
+    // Common
+    "Get Started": "开始",
+    "Learn More": "了解更多",
+    "Learn About Me": "了解我",
+    "Contact Me": "联系我",
+    "Download CV": "下载简历",
+    "View My CV": "查看简历"
   }
 };
 
@@ -161,8 +104,8 @@ function updatePageLanguage() {
 // Function to update toggle button
 function updateToggleButton() {
   const langText = document.getElementById('lang-text');
-  if (langText && translations[currentLang]) {
-    langText.textContent = translations[currentLang]['language_toggle'];
+  if (langText) {
+    langText.textContent = currentLang === 'en' ? '中文' : 'English';
   }
 }
 
@@ -178,6 +121,8 @@ if (!localStorage.getItem('preferred-language')) {
   if (browserLang.startsWith('zh')) {
     currentLang = 'zh';
     localStorage.setItem('preferred-language', 'zh');
+    updatePageLanguage();
+    updateToggleButton();
   }
 }
 </script>

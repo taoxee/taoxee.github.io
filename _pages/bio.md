@@ -19,84 +19,127 @@ classes: wide
 
 <div class="bio-container" style="padding: 0 2rem;">
 
-<h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 3rem 0 2rem 0; text-align: center; position: relative;" data-translate="Background">
-  <span style="background: linear-gradient(135deg, #74b9ff, #0984e3); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Background</span>
+<h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 3rem 0 2rem 0; text-align: center; position: relative;" data-translate="Profile">
+  <span style="background: linear-gradient(135deg, #74b9ff, #0984e3); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Profile</span>
 </h2>
 
-<div style="font-size: 1.1rem; line-height: 1.8; color: #4a5568; margin-bottom: 3rem; text-align: center; max-width: 800px; margin-left: auto; margin-right: auto;">
-I'm Tao Xu (徐涛), a technology enthusiast with a passion for creating innovative solutions and meaningful digital experiences. My journey in tech has been driven by curiosity, continuous learning, and a desire to make a positive impact through technology.
+<div style="font-size: 1.1rem; line-height: 1.8; color: #4a5568; margin-bottom: 3rem; text-align: center; max-width: 800px; margin-left: auto; margin-right: auto; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);">
+PMP Certified, Results-driven project manager with 2+ years leading tech and security projects across APAC. Skilled in aligning R&D execution with business strategy, delivering measurable impact (e.g., $30K cost savings, 1.5-month acceleration). Strong foundation in AI, data science, and compliance frameworks (GDPR, NIST, AI Act).
 </div>
 
-<h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center; position: relative;" data-translate="Professional Experience">
-  <span style="background: linear-gradient(135deg, #74b9ff, #0984e3); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Professional Experience</span>
+<h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center; position: relative;" data-translate="Education">
+  <span style="background: linear-gradient(135deg, #74b9ff, #0984e3); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Education</span>
 </h2>
 
-### Current Focus
-- Developing cutting-edge applications and solutions
-- Exploring emerging technologies and their applications
-- Contributing to open-source projects and communities
+<div style="display: grid; gap: 2rem; margin: 2rem 0;">
 
-### Key Areas of Expertise
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+<div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);">
+  <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+    <div>
+      <h3 style="color: #007AFF; margin-bottom: 0.5rem; font-size: 1.4rem;">Master of Computing (Data Science)</h3>
+      <h4 style="color: #2d3748; margin-bottom: 0.5rem; font-size: 1.2rem;">Australian National University (QS:32)</h4>
+      <p style="color: #666; margin: 0;">ACT, Australia</p>
+    </div>
+    <span style="background: #f0f8ff; color: #007AFF; padding: 0.5rem 1rem; border-radius: 20px; font-weight: 600; white-space: nowrap;">2022 - 2024</span>
+  </div>
+</div>
+
+<div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);">
+  <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+    <div>
+      <h3 style="color: #007AFF; margin-bottom: 0.5rem; font-size: 1.4rem;">Bachelor of Business Studies in Management (Honours)</h3>
+      <h4 style="color: #2d3748; margin-bottom: 0.5rem; font-size: 1.2rem;">University College Dublin (QS:118)</h4>
+      <p style="color: #666; margin: 0;">Dublin, Ireland</p>
+    </div>
+    <span style="background: #f0f8ff; color: #007AFF; padding: 0.5rem 1rem; border-radius: 20px; font-weight: 600; white-space: nowrap;">2019 - 2022</span>
+  </div>
+</div>
+
+</div>
+
+<h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center; position: relative;" data-translate="Research & Publications">
+  <span style="background: linear-gradient(135deg, #74b9ff, #0984e3); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Research & Publications</span>
+</h2>
+
+<div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07); margin: 2rem 0;">
+  <h3 style="color: #007AFF; margin-bottom: 1rem; font-size: 1.3rem;">Large Language Model Safety Testing Framework</h3>
+  <p style="color: #666; font-style: italic; margin-bottom: 1rem;">(CCLD 2024)</p>
+  <p style="color: #4a5568; line-height: 1.7;">
+    <strong>Summary:</strong> Proposed a compliance-focused evaluation framework for Large Language Models (LLMs), addressing robustness, security, and privacy. Applied global standards (AI Act, GDPR, NIST, TC260-003, WDTA) to guide safe deployment of AI systems.
+  </p>
+</div>
+
+<h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center; position: relative;" data-translate="Core Competencies">
+  <span style="background: linear-gradient(135deg, #74b9ff, #0984e3); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Core Competencies</span>
+</h2>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0;">
   
-<div style="padding: 1.5rem; background: #f8f9fa; border-radius: 10px; text-align: center;">
-  <div style="font-size: 2rem; margin-bottom: 0.5rem;">💻</div>
-  <h4 style="color: #007AFF; margin-bottom: 0.5rem;">Software Development</h4>
-  <p style="color: #666; font-size: 0.9rem;">Full-stack development with modern technologies</p>
+<div style="padding: 2rem; background: #f8f9fa; border-radius: 12px; border-left: 4px solid #007AFF;">
+  <div style="font-size: 2rem; margin-bottom: 1rem;">📊</div>
+  <h4 style="color: #007AFF; margin-bottom: 1rem; font-size: 1.2rem;">Project Management</h4>
+  <p style="color: #666; font-size: 0.95rem; line-height: 1.6;">PMP Certification, Agile, Waterfall, Kanban, Jira, Confluence, Lean Six Sigma, SWOT Analysis</p>
 </div>
 
-<div style="padding: 1.5rem; background: #f8f9fa; border-radius: 10px; text-align: center;">
-  <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎨</div>
-  <h4 style="color: #007AFF; margin-bottom: 0.5rem;">UI/UX Design</h4>
-  <p style="color: #666; font-size: 0.9rem;">Creating intuitive and beautiful user experiences</p>
+<div style="padding: 2rem; background: #f8f9fa; border-radius: 12px; border-left: 4px solid #00c851;">
+  <div style="font-size: 2rem; margin-bottom: 1rem;">🤖</div>
+  <h4 style="color: #00c851; margin-bottom: 1rem; font-size: 1.2rem;">AI/ML</h4>
+  <p style="color: #666; font-size: 0.95rem; line-height: 1.6;">Neural Networks, NLP, PyTorch, LLMs, scikit-learn, AI Safety, Compliance Frameworks</p>
 </div>
 
-<div style="padding: 1.5rem; background: #f8f9fa; border-radius: 10px; text-align: center;">
-  <div style="font-size: 2rem; margin-bottom: 0.5rem;">⚡</div>
-  <h4 style="color: #007AFF; margin-bottom: 0.5rem;">Performance</h4>
-  <p style="color: #666; font-size: 0.9rem;">Optimizing applications for speed and efficiency</p>
+<div style="padding: 2rem; background: #f8f9fa; border-radius: 12px; border-left: 4px solid #ff6b6b;">
+  <div style="font-size: 2rem; margin-bottom: 1rem;">🔍</div>
+  <h4 style="color: #ff6b6b; margin-bottom: 1rem; font-size: 1.2rem;">Data Science</h4>
+  <p style="color: #666; font-size: 0.95rem; line-height: 1.6;">Data Wrangling, Warehousing, Mining, Statistical Analysis, Predictive Modeling</p>
 </div>
 
-<div style="padding: 1.5rem; background: #f8f9fa; border-radius: 10px; text-align: center;">
-  <div style="font-size: 2rem; margin-bottom: 0.5rem;">🚀</div>
-  <h4 style="color: #007AFF; margin-bottom: 0.5rem;">Innovation</h4>
-  <p style="color: #666; font-size: 0.9rem;">Exploring new technologies and methodologies</p>
+<div style="padding: 2rem; background: #f8f9fa; border-radius: 12px; border-left: 4px solid #9c27b0;">
+  <div style="font-size: 2rem; margin-bottom: 1rem;">💻</div>
+  <h4 style="color: #9c27b0; margin-bottom: 1rem; font-size: 1.2rem;">Programming</h4>
+  <p style="color: #666; font-size: 0.95rem; line-height: 1.6;">Python, R, JavaScript, TypeScript, Java, PostgreSQL, React.js, JavaFX</p>
+</div>
+
+<div style="padding: 2rem; background: #f8f9fa; border-radius: 12px; border-left: 4px solid #007AFF;">
+  <div style="font-size: 2rem; margin-bottom: 1rem;">🌏</div>
+  <h4 style="color: #007AFF; margin-bottom: 1rem; font-size: 1.2rem;">Global Mobility</h4>
+  <p style="color: #666; font-size: 0.95rem; line-height: 1.6;">Work authorization in China, Singapore, and Australia. Experienced in leading cross-cultural teams and managing projects across APAC time zones.</p>
 </div>
 
 </div>
 
-## Education & Learning
+<h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;" data-translate="Languages">
+  <span style="background: linear-gradient(135deg, #74b9ff, #0984e3); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Languages</span>
+</h2>
 
-I believe in lifelong learning and continuously expand my knowledge through:
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
 
-- **Formal Education**: [Add your educational background here]
-- **Self-directed Learning**: Online courses, books, and hands-on projects
-- **Community Engagement**: Tech meetups, conferences, and open-source contributions
-- **Mentorship**: Both learning from mentors and mentoring others
+<div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07); text-align: center;">
+  <div style="font-size: 2rem; margin-bottom: 0.5rem;">🇬🇧</div>
+  <h4 style="color: #007AFF; margin-bottom: 0.5rem;">English</h4>
+  <p style="color: #666; font-size: 0.9rem;">Proficient</p>
+</div>
 
-## Personal Philosophy
+<div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07); text-align: center;">
+  <div style="font-size: 2rem; margin-bottom: 0.5rem;">🇨🇳</div>
+  <h4 style="color: #007AFF; margin-bottom: 0.5rem;">Mandarin</h4>
+  <p style="color: #666; font-size: 0.9rem;">Native</p>
+</div>
 
-> "Technology is best when it brings people together." - Matt Mullenweg
+</div>
 
-I'm driven by the belief that technology should enhance human capabilities and create positive change. My approach to development and design is always user-centered, focusing on creating solutions that are not only technically sound but also intuitive and accessible.
+<h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
+  <span style="background: linear-gradient(135deg, #74b9ff, #0984e3); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Connect With Me</span>
+</h2>
 
-## Interests & Hobbies
-
-When I'm not coding, you can find me:
-
-- 📚 Reading about emerging technologies and industry trends
-- 🎵 Exploring music and audio technologies
-- 🌍 Traveling and experiencing different cultures
-- 📷 Photography and visual storytelling
-- 🏃‍♂️ Staying active and maintaining work-life balance
-
-## Vision
-
-I'm passionate about building technology that matters - solutions that solve real problems and create meaningful value for users and communities. Whether it's through elegant code, thoughtful design, or innovative approaches, I strive to contribute positively to the tech ecosystem.
-
----
-
-*This bio is a living document that grows with my journey. Feel free to reach out if you'd like to connect or collaborate!*
+<div style="background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%); color: white; padding: 3rem 2rem; border-radius: 20px; text-align: center; margin: 3rem 0;">
+  <h3 style="font-size: 1.8rem; font-weight: 600; margin-bottom: 1rem; color: white;">Ready to Collaborate?</h3>
+  <p style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;">
+    Let's explore opportunities for innovation, collaboration, and meaningful projects together.
+  </p>
+  <a href="/contact/" style="display: inline-block; background: white; color: #0984e3; padding: 1rem 2rem; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">
+    Get in Touch
+  </a>
+</div>
 
 </div>
 
