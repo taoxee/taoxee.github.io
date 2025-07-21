@@ -1,12 +1,12 @@
 # main links
 main:
-  - title: "About"
+  - title: '<span data-translate="About">About</span>'
     url: /about/
-  - title: "Bio"
+  - title: '<span data-translate="Bio">Bio</span>'
     url: /bio/
-  - title: "CV"
+  - title: '<span data-translate="CV">CV</span>'
     url: /cv/
-  - title: "Posts"
+  - title: '<span data-translate="Posts">Posts</span>'
     url: /posts/
-  - title: "Contact"
+  - title: '<span data-translate="Contact">Contact</span>'
     url: /contact/

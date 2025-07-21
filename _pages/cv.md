@@ -7,7 +7,7 @@ classes: wide
 ---
 
 <div style="background: linear-gradient(135deg, #00c9ff 0%, #92fe9d 100%); color: white; padding: 4rem 2rem; margin: -2rem -2rem 3rem -2rem; text-align: center;">
-  <h1 style="font-size: 3rem; font-weight: 300; margin-bottom: 1rem; color: white;">Curriculum Vitae</h1>
+  <h1 style="font-size: 3rem; font-weight: 300; margin-bottom: 1rem; color: white;" data-translate="Curriculum Vitae">Curriculum Vitae</h1>
   <p style="font-size: 1.3rem; font-weight: 300; opacity: 0.9;">Professional Experience & Qualifications</p>
 </div>
 

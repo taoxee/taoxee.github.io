@@ -8,16 +8,16 @@ classes: wide
 
 <div style="background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%); color: white; padding: 4rem 2rem; margin: -2rem -2rem 3rem -2rem; text-align: center;">
   <h1 style="font-size: 3rem; font-weight: 300; margin-bottom: 1rem; color: white;">Tao Xu | 徐涛</h1>
-  <p style="font-size: 1.3rem; font-weight: 300; opacity: 0.9;">A Journey Through Technology and Innovation</p>
+  <p style="font-size: 1.3rem; font-weight: 300; opacity: 0.9;" data-translate="A Journey Through Technology and Innovation">A Journey Through Technology and Innovation</p>
 </div>
 
 <div class="bio-container">
 
-## Background
+<h2 data-translate="Background">Background</h2>
 
 I'm Tao Xu (徐涛), a technology enthusiast with a passion for creating innovative solutions and meaningful digital experiences. My journey in tech has been driven by curiosity, continuous learning, and a desire to make a positive impact through technology.
 
-## Professional Experience
+<h2 data-translate="Professional Experience">Professional Experience</h2>
 
 ### Current Focus
 - Developing cutting-edge applications and solutions
