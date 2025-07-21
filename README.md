@@ -123,11 +123,10 @@ The site uses a comprehensive Apple-inspired design system:
 
 ## 📧 Contact Information
 
-- **Email**: xutao1486@gmail.com
+- **Email**: xutao1486 at gmail.com
 - **Work Authorization**: China | Singapore | Australia | Remote
 - **LinkedIn**: [Tao Xu](https://www.linkedin.com/in/tao-xee)
 - **GitHub**: [taoxee](https://github.com/taoxee)
-- **WeChat**: TaoXee
 
 ## 🌟 Key Highlights
 
