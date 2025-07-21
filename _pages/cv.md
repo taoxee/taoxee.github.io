@@ -36,7 +36,9 @@ classes: wide
   PMP Certified, Results-driven project manager with 2+ years leading tech and security projects across APAC. Skilled in aligning R&D execution with business strategy, delivering measurable impact (e.g., $30K cost savings, 1.5-month acceleration). Strong foundation in AI, data science, and compliance frameworks (GDPR, NIST, AI Act).
 </div>
 
-## Education
+<h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
+  <span style="background: linear-gradient(135deg, #00c9ff, #92fe9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Education</span>
+</h2>
 
 <div style="margin: 2rem 0;">
 
@@ -135,7 +137,6 @@ classes: wide
 <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07); margin: 2rem 0;">
   <ul style="color: #666; line-height: 1.7; margin: 0; padding-left: 1.5rem;">
     <li><strong>PMP (Project Management Professional)</strong> - Project Management Institute</li>
-    <li><strong>Lean Six Sigma</strong> - Process Improvement Certification</li>
   </ul>
 </div>
 
