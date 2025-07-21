@@ -6,14 +6,22 @@ author_profile: true
 classes: wide
 ---
 
-<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 4rem 2rem; margin: -2rem -2rem 3rem -2rem; text-align: center; border-radius: 0;">
-  <h1 style="font-size: 3rem; font-weight: 300; margin-bottom: 1rem; color: white;">Hello, I'm Tao Xu</h1>
-  <p style="font-size: 1.3rem; font-weight: 300; opacity: 0.9; max-width: 600px; margin: 0 auto;">Passionate about technology, innovation, and creating meaningful digital experiences</p>
+<!-- Hide default page title -->
+<style>
+  .page__title { display: none !important; }
+  .page__meta { display: none !important; }
+</style>
+
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 5rem 2rem; margin: 0 0 4rem 0; text-align: center; border-radius: 0 0 30px 30px; box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);">
+  <h1 style="font-size: 4rem; font-weight: 700; margin-bottom: 1.5rem; color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.1); letter-spacing: -0.02em;">Hello, I'm Tao Xu</h1>
+  <p style="font-size: 1.5rem; font-weight: 400; opacity: 0.95; max-width: 600px; margin: 0 auto;">Passionate about technology, innovation, and creating meaningful digital experiences</p>
 </div>
 
-<div style="max-width: 800px; margin: 0 auto; padding: 2rem 0;">
+<div style="max-width: 800px; margin: 0 auto; padding: 0 2rem;">
   
-## What I Do
+<h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 3rem 0 2rem 0; text-align: center;">
+  <span style="background: linear-gradient(135deg, #667eea, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">What I Do</span>
+</h2>
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 2rem 0;">
   

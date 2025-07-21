@@ -676,3 +676,29 @@ a:hover {
     padding: 0 !important;
   }
 }
+
+/* Hide default page titles for pages with custom banners */
+.page[class*="page--"] .page__title,
+.page__title + .page__meta {
+  display: none !important;
+}
+
+/* Custom banner pages - hide title specifically */
+.page[itemtype="https://schema.org/CreativeWork"] .page__title {
+  display: none !important;
+}
+
+/* Hide page meta for banner pages */
+.page__inner-wrap header .page__meta {
+  display: none !important;
+}
+
+/* Ensure proper spacing after header removal */
+.page__inner-wrap {
+  padding-top: 0 !important;
+}
+
+.page__content {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}

@@ -7,6 +7,14 @@ entries_layout: list
 classes: wide
 ---
 
+<!-- Hide default page title -->
+<style>
+  .page__title { display: none !important; }
+  .page__meta { display: none !important; }
+  .archive__title { display: none !important; }
+  .archive__subtitle { display: none !important; }
+</style>
+
 <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: white; padding: 5rem 2rem; margin: 0 0 4rem 0; text-align: center; border-radius: 0 0 30px 30px; box-shadow: 0 10px 30px rgba(250, 112, 154, 0.3);">
   <h1 style="font-size: 4rem; font-weight: 700; margin-bottom: 1.5rem; color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.1); letter-spacing: -0.02em;">Posts & Thoughts</h1>
   <p style="font-size: 1.5rem; font-weight: 400; opacity: 0.95; max-width: 600px; margin: 0 auto;">Sharing insights, experiences, and discoveries</p>
