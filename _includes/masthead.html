@@ -128,17 +128,29 @@
 </style>
 
 <script>
-// Navigation active state handler - DISABLED
-// Removing automatic highlighting so all nav buttons look the same
+// Navigation active state handler - RESTORED
 document.addEventListener('DOMContentLoaded', function() {
+  // Get current page URL
+  const currentPath = window.location.pathname;
+  
   // Get all navigation links
   const navLinks = document.querySelectorAll('.greedy-nav .visible-links a');
   
-  // Remove any existing current classes to ensure all buttons look the same
+  // Remove any existing current classes
   navLinks.forEach(link => {
     link.classList.remove('current');
   });
   
-  // Note: Not adding current class to any links so they all have consistent styling
+  // Add current class to matching link
+  navLinks.forEach(link => {
+    const linkPath = link.getAttribute('href');
+    
+    // Handle exact matches and home page
+    if (linkPath === currentPath || 
+        (currentPath === '/' && linkPath === '/') ||
+        (currentPath.startsWith(linkPath) && linkPath !== '/' && linkPath.length > 1)) {
+      link.classList.add('current');
+    }
+  });
 });
 </script>

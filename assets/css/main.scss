@@ -430,6 +430,63 @@ p, ul, ol, blockquote {
   background: linear-gradient(135deg, #0056b3, #004494) !important;
 }
 
+/* Hero Buttons - Primary and Secondary */
+.hero-btn-primary {
+  display: inline-block !important;
+  padding: 1rem 2rem !important;
+  background: linear-gradient(135deg, #007AFF, #005FCC) !important;
+  color: white !important;
+  text-decoration: none !important;
+  border-radius: 25px !important;
+  font-weight: 600 !important;
+  font-size: 1.1rem !important;
+  transition: all 0.3s ease !important;
+  border: none !important;
+  cursor: pointer !important;
+  text-align: center !important;
+  box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3) !important;
+  min-height: 48px !important;
+  line-height: 1.4 !important;
+  margin: 0.5rem !important;
+}
+
+.hero-btn-primary:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(0, 122, 255, 0.4) !important;
+  color: white !important;
+  text-decoration: none !important;
+  background: linear-gradient(135deg, #0056b3, #004494) !important;
+}
+
+.hero-btn-secondary {
+  display: inline-block !important;
+  padding: 1rem 2rem !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(10px) !important;
+  color: #007AFF !important;
+  text-decoration: none !important;
+  border-radius: 25px !important;
+  font-weight: 600 !important;
+  font-size: 1.1rem !important;
+  transition: all 0.3s ease !important;
+  border: 2px solid rgba(255, 255, 255, 0.8) !important;
+  cursor: pointer !important;
+  text-align: center !important;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.4) !important;
+  min-height: 48px !important;
+  line-height: 1.4 !important;
+  margin: 0.5rem !important;
+}
+
+.hero-btn-secondary:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.6) !important;
+  color: #005FCC !important;
+  text-decoration: none !important;
+  background: rgba(255, 255, 255, 1.0) !important;
+  border: 2px solid rgba(255, 255, 255, 1.0) !important;
+}
+
 /* Ready to Collaborate Button - Fix Text Contrast */
 a[href="/contact/"],
 a[href*="contact"] {
@@ -454,7 +511,7 @@ a[href*="contact"]:hover {
   box-shadow: 0 4px 12px rgba(255, 255, 255, 0.4) !important;
 }
 
-/* Navigation Button Consistency - All buttons look the same, NO SHADOWS */
+/* Navigation Button Consistency with Active State */
 .greedy-nav .visible-links a {
   border-radius: 6px !important;
   transition: all 0.3s ease !important;
@@ -483,20 +540,20 @@ a[href*="contact"]:hover {
   -moz-box-shadow: none !important;
 }
 
-/* Remove current/active state styling - all buttons look the same */
+/* RESTORED: Active state styling for current page */
 .greedy-nav .visible-links a.current {
-  background: transparent !important;
-  color: #1d1d1f !important;
-  font-weight: 500 !important;
-  box-shadow: none !important;
+  background: #007AFF !important;
+  color: white !important;
+  font-weight: 600 !important;
+  box-shadow: 0 2px 8px rgba(0, 122, 255, 0.3) !important;
   border: none !important;
   outline: none !important;
 }
 
 .greedy-nav .visible-links a.current:hover {
-  background: rgba(0, 122, 255, 0.1) !important;
-  color: #007AFF !important;
-  box-shadow: none !important;
+  background: #005FCC !important;
+  color: white !important;
+  box-shadow: 0 4px 12px rgba(0, 122, 255, 0.4) !important;
   border: none !important;
   outline: none !important;
 }
@@ -537,12 +594,12 @@ a[href*="contact"]:hover {
   -moz-box-shadow: none !important;
 }
 
-/* Remove current state from menu items too */
+/* RESTORED: Active state for menu items */
 .masthead__menu-item a.current {
-  background: transparent !important;
-  color: #1d1d1f !important;
-  font-weight: 500 !important;
-  box-shadow: none !important;
+  background: #007AFF !important;
+  color: white !important;
+  font-weight: 600 !important;
+  box-shadow: 0 2px 8px rgba(0, 122, 255, 0.3) !important;
   border: none !important;
   outline: none !important;
 }

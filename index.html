@@ -173,16 +173,40 @@ classes: wide
   .page__content {
     overflow-x: hidden !important;
   }
+  
+  /* Hero buttons container styling */
+  .hero-buttons {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 1rem !important;
+    margin-top: 2rem !important;
+  }
+  
+  /* Mobile responsiveness for hero buttons */
+  @media (max-width: 600px) {
+    .hero-buttons {
+      flex-direction: column !important;
+      align-items: center !important;
+      gap: 0.75rem !important;
+    }
+    
+    .hero-buttons a {
+      width: 100% !important;
+      max-width: 280px !important;
+      margin: 0 !important;
+    }
+  }
 </style>
 
 <div class="hero-section">
   <h1><span data-translate="Hello, I'm">Hello, I'm</span> <span class="hero-name">Tao Xu</span></h1>
   <p data-translate="PMP Certified project manager leading tech and security projects across APAC, passionate about AI, data science, and creating meaningful digital experiences">PMP Certified project manager leading tech and security projects across APAC, passionate about AI, data science, and creating meaningful digital experiences</p>
   <div class="hero-buttons">
-    <a href="/bio/" style="background: rgba(255,255,255,0.2); backdrop-filter: blur(10px); color: white; border: 2px solid rgba(255,255,255,0.3);">
+    <a href="/bio/" class="hero-btn-primary">
       <span data-translate="Learn About Me">Learn About Me</span>
     </a>
-    <a href="/cv/" style="background: white; color: #74b9ff;">
+    <a href="/cv/" class="hero-btn-primary">
       <span data-translate="View My CV">View My CV</span>
     </a>
   </div>
