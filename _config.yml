@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "n
 locale                   : "en-US"
 title                    : "Tao Xu | 徐涛"
 title_separator          : "-"
-subtitle                 : "Version 0.0.1" # site tagline that appears below site title in masthead
+subtitle                 : "Version 0.1.0" # site tagline that appears below site title in masthead
 name                     : "Tao Xu"
 description              : "a website all about me."
 url                      : "https://taoxee.github.io/" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
