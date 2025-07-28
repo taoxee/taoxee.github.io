@@ -1,119 +1,118 @@
 ---
-layout: single
-title: "About"
-permalink: /about/
-author_profile: true
-classes: wide
+layout: single # changes page layout
+title: "About" # changes page title
+permalink: /about/ # changes page URL
+author_profile: true # shows/hides author profile
+classes: wide # changes page width/layout
 ---
 
 <!-- Force browser refresh and fix issues -->
 <style>
   /* Hide default page title */
-  .page__title { display: none !important; }
-  .page__meta { display: none !important; }
+  .page__title { display: none !important; } /* show/hide page title */
+  .page__meta { display: none !important; }  /* show/hide meta info */
   
-  /* FORCE FIX: Author profile photo overlay issue */
+  /* Author profile photo overlay fix */
   .sidebar .author__avatar img,
   .author__avatar img {
-    transition: none !important;
-    opacity: 1 !important;
-    filter: none !important;
-    transform: none !important;
+    transition: none !important; /* image transition */
+    opacity: 1 !important;       /* image opacity */
+    filter: none !important;     /* image filter */
+    transform: none !important;  /* image transform */
   }
   
   .sidebar .author__avatar::before,
   .sidebar .author__avatar::after,
   .author__avatar::before,
   .author__avatar::after {
-    display: none !important;
-    content: none !important;
+    display: none !important;    /* pseudo-element display */
+    content: none !important;    /* pseudo-element content */
   }
   
   .sidebar .author__avatar:hover img,
   .author__avatar:hover img {
-    opacity: 1 !important;
-    filter: none !important;
-    transform: none !important;
+    opacity: 1 !important;       /* hover opacity */
+    filter: none !important;     /* hover filter */
+    transform: none !important;  /* hover transform */
   }
   
-  /* FORCE FIX: Responsive card grid that actually works */
+  /* Card grid */
   .about-grid {
-    display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
-    gap: 1.5rem !important;
-    margin: 2rem 0 !important;
-    width: 100% !important;
-    max-width: 100% !important;
+    display: grid !important; /* grid/flex layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important; /* card min width/columns */
+    gap: 1.5rem !important; /* space between cards */
+    margin: 3rem 0 !important; /* grid margin */
+    width: 100% !important; /* grid width */
+    max-width: 100% !important; /* max grid width */
   }
   
   .about-card {
-    background: white !important;
-    padding: 1.5rem !important;
-    border-radius: 12px !important;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07) !important;
-    border: 1px solid #e9ecef !important;
-    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
-    min-height: 180px !important;
-    max-height: none !important;
-    display: flex !important;
-    flex-direction: column !important;
-    overflow: hidden !important;
-    word-wrap: break-word !important;
-    box-sizing: border-box !important;
+    background: white !important; /* card background */
+    padding: 1.2rem 1.2rem !important; /* card padding */
+    border-radius: 12px !important; /* card border radius */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07) !important; /* card shadow */
+    border: 4px solid #e9ecef !important; /* card border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important; /* card transition */
+    min-height: 180px !important; /* min card height */
+    max-height: none !important; /* max card height */
+    display: flex !important; /* card layout */
+    flex-direction: column !important; /* card flex direction */
+    overflow: hidden !important; /* card overflow */
+    word-wrap: break-word !important; /* word wrap */
+    box-sizing: border-box !important; /* box sizing */
   }
   
   .about-card:hover {
-    transform: translateY(-2px) !important;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important;
+    transform: translateY(-2px) !important; /* hover move */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important; /* hover shadow */
   }
   
   .about-card-icon {
-    font-size: 2rem !important;
-    margin-bottom: 0.8rem !important;
-    display: block !important;
-    line-height: 1 !important;
+    font-size: 2rem !important; /* icon size */
+    margin-bottom: 0.8rem !important; /* icon margin */
+    display: block !important; /* icon display */
+    line-height: 1 !important; /* icon line height */
   }
   
   .about-card h3 {
-    color: #007AFF !important;
-    margin: 0 0 0.8rem 0 !important;
-    font-size: 1.2rem !important;
-    font-weight: 600 !important;
-    line-height: 1.3 !important;
-    word-wrap: break-word !important;
+    color: #007AFF !important; /* heading color */
+    margin: 0 0 0.8rem 0 !important; /* heading margin */
+    font-size: 1.2rem !important; /* heading size */
+    font-weight: 600 !important; /* heading weight */
+    line-height: 1.3 !important; /* heading line height */
+    word-wrap: break-word !important; /* heading wrap */
   }
   
   .about-card p {
-    color: #666 !important;
-    line-height: 1.5 !important;
-    font-size: 0.95rem !important;
-    flex-grow: 1 !important;
-    margin: 0 !important;
-    overflow: hidden !important;
-    word-wrap: break-word !important;
-    hyphens: auto !important;
+    color: #666 !important; /* text color */
+    line-height: 1.5 !important; /* text line height */
+    font-size: 0.95rem !important; /* text size */
+    flex-grow: 1 !important; /* text flex grow */
+    margin: 0 !important; /* text margin */
+    overflow: hidden !important; /* text overflow */
+    word-wrap: break-word !important; /* text wrap */
+    hyphens: auto !important; /* text hyphenation */
   }
   
-  /* Force mobile responsiveness */
-  @media (max-width: 768px) {
+  /* Mobile responsiveness */
+  @media (max-width: 768px) { /* mobile breakpoint */
     .about-grid {
-      grid-template-columns: 1fr !important;
-      gap: 1rem !important;
+      grid-template-columns: 1fr !important; /* single column */
+      gap: 1rem !important; /* mobile gap */
     }
-    
     .about-card {
-      padding: 1.2rem !important;
+      padding: 1.2rem !important; /* mobile card padding */
     }
   }
   
-  /* Override any conflicting styles */
+  /* Force grid in content */
   .page__content .about-grid {
-    display: grid !important;
+    display: grid !important; /* force grid */
   }
   
-  /* Force container to be properly sized */
+  /* Container sizing */
   .page__content {
-    overflow-x: hidden !important;
+    overflow-x: hidden !important; /* horizontal overflow */
   }
 </style>
 
@@ -171,10 +170,14 @@ classes: wide
   <span style="background: linear-gradient(135deg, #667eea, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">My Journey</span>
 </h2>
 
-<div style="background: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07); margin: 2rem 0;">
-<p style="font-size: 1.1rem; line-height: 1.7; color: #4a5568; margin: 0;">
-Welcome to my personal space on the web. Here, you'll find insights into my professional journey, thoughts on technology, and the projects I'm passionate about. I believe in the power of technology to transform lives and create positive impact.
-</p>
+<div class="about-card">
+  <h3 style="display: flex; align-items: center; justify-content: center;">
+    <span class="icon" style="margin-right: 0.5em;">❤️</span>
+    <span data-translate="Hi There!">Hi There!</span>
+  </h3>
+  <p style="font-size: 1.1rem; line-height: 1.7; color: #4a5568; margin: 0;">
+  Welcome to my personal space on the web. Here, you'll find insights into my professional journey, thoughts on technology, and the projects I'm passionate about. I believe in the power of technology to transform lives and create positive impact.
+  </p>
 </div>
 
 <h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
