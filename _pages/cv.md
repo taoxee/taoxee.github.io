@@ -32,7 +32,7 @@ classes: wide
   <span style="background: linear-gradient(135deg, #00c9ff, #92fe9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Professional Summary</span>
 </h2>
 
-<div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07); margin-bottom: 2rem;">
+<div class="about-card">
   PMP Certified, Results-driven project manager with 2+ years leading tech and security projects across APAC. Skilled in aligning R&D execution with business strategy, delivering measurable impact (e.g., $30K cost savings, 1.5-month acceleration). Strong foundation in AI, data science, and compliance frameworks (GDPR, NIST, AI Act).
 </div>
 
@@ -42,7 +42,7 @@ classes: wide
 
 <div style="margin: 2rem 0;">
 
-<div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07); margin: 1rem 0;">
+<div class="about-card">
   <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
     <div>
       <h3 style="color: #007AFF; margin-bottom: 0.5rem;">Master of Computing (Data Science)</h3>
@@ -53,7 +53,7 @@ classes: wide
   </div>
 </div>
 
-<div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07); margin: 1rem 0;">
+<div class="about-card">
   <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
     <div>
       <h3 style="color: #007AFF; margin-bottom: 0.5rem;">Bachelor of Business Studies in Management (Honours)</h3>
@@ -70,7 +70,7 @@ classes: wide
   <span style="background: linear-gradient(135deg, #00c9ff, #92fe9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Research & Publications</span>
 </h2>
 
-<div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07); margin: 2rem 0;">
+<div class="about-card">
   <h3 style="color: #007AFF; margin-bottom: 1rem;">Large Language Model Safety Testing Framework</h3>
   <p style="color: #666; font-style: italic; margin-bottom: 1rem;">(CCLD 2024)</p>
   <p style="color: #4a5568; line-height: 1.7;">
@@ -134,7 +134,7 @@ classes: wide
   <span style="background: linear-gradient(135deg, #00c9ff, #92fe9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Certifications</span>
 </h2>
 
-<div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07); margin: 2rem 0;">
+<div class="about-card">
   <ul style="color: #666; line-height: 1.7; margin: 0; padding-left: 1.5rem;">
     <li><strong>PMP (Project Management Professional)</strong> - Project Management Institute</li>
   </ul>
@@ -144,7 +144,7 @@ classes: wide
   <span style="background: linear-gradient(135deg, #00c9ff, #92fe9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Contact Information</span>
 </h2>
 
-<div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07); margin: 2rem 0;">
+<div class="about-card">
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
     <div>
       <p style="margin: 0.5rem 0; color: #666;">

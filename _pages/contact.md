@@ -23,9 +23,9 @@ classes: wide
   <span style="background: linear-gradient(135deg, #667eea, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Get in Touch</span>
 </h2>
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin: 2rem 0;">
+<div class="about-grid">
 
-<div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07); text-align: center;">
+<div class="about-card" style="text-align: center;">
   <div style="font-size: 2.5rem; margin-bottom: 1rem;">📧</div>
   <h3 style="color: #007AFF; margin-bottom: 1rem;">Email</h3>
   <p style="color: #666; margin-bottom: 1rem;">For professional inquiries and collaborations</p>
@@ -34,7 +34,7 @@ classes: wide
   </a>
 </div>
 
-<div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07); text-align: center;">
+<div class="about-card" style="text-align: center;">
   <div style="font-size: 2.5rem; margin-bottom: 1rem;">🌍</div>
   <h3 style="color: #007AFF; margin-bottom: 1rem;">Work Authorization</h3>
   <p style="color: #666; margin-bottom: 1rem;">Legally authorized to work in</p>
@@ -46,7 +46,7 @@ classes: wide
   </div>
 </div>
 
-<div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07); text-align: center;">
+<div class="about-card" style="text-align: center;">
   <div style="font-size: 2.5rem; margin-bottom: 1rem;">💼</div>
   <h3 style="color: #007AFF; margin-bottom: 1rem;">LinkedIn</h3>
   <p style="color: #666; margin-bottom: 1rem;">Connect with me professionally</p>
@@ -55,7 +55,7 @@ classes: wide
   </a>
 </div>
 
-<div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07); text-align: center;">
+<div class="about-card" style="text-align: center;">
   <div style="font-size: 2.5rem; margin-bottom: 1rem;">🐙</div>
   <h3 style="color: #007AFF; margin-bottom: 1rem;">GitHub</h3>
   <p style="color: #666; margin-bottom: 1rem;">Check out my code and projects</p>
@@ -64,7 +64,7 @@ classes: wide
   </a>
 </div>
 
-<div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07); text-align: center;">
+<div class="about-card" style="text-align: center;">
   <div style="font-size: 2.5rem; margin-bottom: 1rem;">💬</div>
   <h3 style="color: #007AFF; margin-bottom: 1rem;">WeChat</h3>
   <p style="color: #666; margin-bottom: 1rem;">Connect via WeChat</p>
@@ -79,7 +79,7 @@ classes: wide
   <span style="background: linear-gradient(135deg, #667eea, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Send a Message</span>
 </h2>
 
-<div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07); margin: 2rem 0;">
+<div class="about-card">
   
 <form action="https://formspree.io/f/xutao1486@gmail.com" method="POST" style="display: grid; gap: 1.5rem;">
   
@@ -112,7 +112,7 @@ classes: wide
 
 </div>
 
-<div style="text-align: center; margin: 3rem 0; padding: 2rem; background: #f8f9fa; border-radius: 12px;">
+<div class="about-card" style="text-align: center; background: #f8f9fa;">
   <h3 style="color: #2d3748; margin-bottom: 1rem;">Quick Response</h3>
   <p style="color: #666; margin-bottom: 1.5rem;">I typically respond to messages within 24 hours. For urgent matters, please reach out via email or LinkedIn.</p>
   

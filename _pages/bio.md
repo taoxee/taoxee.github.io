@@ -23,8 +23,10 @@ classes: wide
   <span style="background: linear-gradient(135deg, #74b9ff, #0984e3); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Profile</span>
 </h2>
 
-<div style="font-size: 1.1rem; line-height: 1.8; color: #4a5568; margin-bottom: 3rem; text-align: center; max-width: 800px; margin-left: auto; margin-right: auto; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);">
-PMP Certified, Results-driven project manager with 2+ years leading tech and security projects across APAC. Skilled in aligning R&D execution with business strategy, delivering measurable impact (e.g., $30K cost savings, 1.5-month acceleration). Strong foundation in AI, data science, and compliance frameworks (GDPR, NIST, AI Act).
+<div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07); margin: 2rem 0; text-align: center;">
+  <p style="color: #4a5568; line-height: 1.7;">
+    PMP Certified, Results-driven project manager with 2+ years leading tech and security projects across APAC. Skilled in aligning R&D execution with business strategy, delivering measurable impact (e.g., $30K cost savings, 1.5-month acceleration). Strong foundation in AI, data science, and compliance frameworks (GDPR, NIST, AI Act).
+  </p>
 </div>
 
 <h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center; position: relative;" data-translate="Education">
@@ -61,7 +63,7 @@ PMP Certified, Results-driven project manager with 2+ years leading tech and sec
   <span style="background: linear-gradient(135deg, #74b9ff, #0984e3); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Research & Publications</span>
 </h2>
 
-<div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07); margin: 2rem 0;">
+<div class="about-card">
   <h3 style="color: #007AFF; margin-bottom: 1rem; font-size: 1.3rem;">Large Language Model Safety Testing Framework</h3>
   <p style="color: #666; font-style: italic; margin-bottom: 1rem;">(CCLD 2024)</p>
   <p style="color: #4a5568; line-height: 1.7;">
@@ -73,9 +75,9 @@ PMP Certified, Results-driven project manager with 2+ years leading tech and sec
   <span style="background: linear-gradient(135deg, #74b9ff, #0984e3); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Core Competencies</span>
 </h2>
 
-<div class="about-grid">
-  
-  <div class="about-card">
+<div class="about-grid" style="gap: 14px;">
+
+  <div class="about-card" style="margin-bottom: 0;">
     <h3><span class="icon">📊</span> <span data-translate="Project Management">Project Management</span></h3>
     <p>PMP Certification, Agile, Waterfall, Kanban, Jira, Confluence, Lean Six Sigma, SWOT Analysis</p>
   </div>
