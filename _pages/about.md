@@ -120,6 +120,14 @@ classes: wide
 <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 5rem 2rem; margin: 0 0 4rem 0; text-align: center; border-radius: 0 0 30px 30px; box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);">
   <h1 style="font-size: 4rem; font-weight: 700; margin-bottom: 1.5rem; color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.1); letter-spacing: -0.02em;">Hello, I'm Tao Xu</h1>
   <p style="font-size: 1.5rem; font-weight: 400; opacity: 0.95; max-width: 600px; margin: 0 auto;">Passionate about technology, innovation, and creating meaningful digital experiences</p>
+  <div class="hero-buttons" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 2rem;">
+    <a href="/bio/" style="display: inline-block; background: white; color: #764ba2; padding: 1rem 2rem; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255,255,255,0.9)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='white'; this.style.transform='translateY(0)'">
+      <span data-translate="Learn About Me">Learn About Me</span>
+    </a>
+    <a href="/cv/" style="display: inline-block; background: white; color: #764ba2; padding: 1rem 2rem; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255,255,255,0.9)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='white'; this.style.transform='translateY(0)'">
+      <span data-translate="View My CV">View My CV</span>
+    </a>
+  </div>
 </div>
 
 <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
@@ -128,42 +136,33 @@ classes: wide
   <span style="background: linear-gradient(135deg, #667eea, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">What I Do</span>
 </h2>
 
-<div class="about-grid">
   
-<div class="about-card">
-  <span class="about-card-icon">📊</span>
-  <h3>Project Management</h3>
-  <p>Leading tech and security projects across APAC with PMP certification, delivering measurable impact through agile methodologies.</p>
-</div>
-
-<div class="about-card">
-  <span class="about-card-icon">🤖</span>
-  <h3>AI & Data Science</h3>
-  <p>Specialized in Large Language Models, neural networks, and compliance frameworks. Research published in CCLD 2024.</p>
-</div>
-
-<div class="about-card">
-  <span class="about-card-icon">🔒</span>
-  <h3>Security & Compliance</h3>
-  <p>Expert in compliance frameworks including GDPR, NIST, AI Act, TC260-003, and WDTA for safe AI deployment.</p>
-</div>
-
-<div class="about-card">
-  <span class="about-card-icon">💻</span>
-  <h3>Technical Expertise</h3>
-  <p>Full-stack development with Python, R, JavaScript, TypeScript, and modern frameworks. Data science with PyTorch.</p>
-</div>
-
-<div class="about-card">
-  <span class="about-card-icon">🌏</span>
-  <h3>APAC Leadership</h3>
-  <p>Cross-cultural project leadership across Australia, China, and Singapore. Fluent in English and Mandarin.</p>
-</div>
-
-<div class="about-card">
-  <span class="about-card-icon">🎓</span>
-  <h3>Research & Education</h3>
-  <p>Master's in Data Science from Australian National University (QS:32), Bachelor's in Management from UCD (QS:118).</p>
+<div class="about-grid">
+  <!-- CHANGED: Icons moved inside h3 tags -->
+  <div class="about-card">
+    <h3><span class="icon">📊</span> <span data-translate="Project Management">Project Management</span></h3>
+    <p>Leading tech and security projects across APAC with PMP certification, delivering measurable impact through agile methodologies.</p>
+  </div>
+  <div class="about-card">
+    <h3><span class="icon">🤖</span> <span data-translate="AI & Data Science">AI & Data Science</span></h3>
+    <p>Specialized in Large Language Models, neural networks, and compliance frameworks. Research published in CCLD 2024.</p>
+  </div>
+  <div class="about-card">
+    <h3><span class="icon">🔒</span> <span data-translate="Security & Compliance">Security & Compliance</span></h3>
+    <p>Expert in compliance frameworks including GDPR, NIST, AI Act, TC260-003, and WDTA for safe AI deployment.</p>
+  </div>
+  <div class="about-card">
+    <h3><span class="icon">💻</span> <span data-translate="Technical Expertise">Technical Expertise</span></h3>
+    <p>Full-stack development with Python, R, JavaScript, TypeScript, and modern frameworks. Data science with PyTorch.</p>
+  </div>
+  <div class="about-card">
+    <h3><span class="icon">🌏</span> <span data-translate="APAC Leadership">APAC Leadership</span></h3>
+    <p>Cross-cultural project leadership across Australia, China, and Singapore. Fluent in English and Mandarin.</p>
+  </div>
+  <div class="about-card">
+    <h3><span class="icon">🎓</span> <span data-translate="Research & Education">Research & Education</span></h3>
+    <p>Master's in Data Science from Australian National University (QS:32), Bachelor's in Management from UCD (QS:118).</p>
+  </div>
 </div>
 
 </div>

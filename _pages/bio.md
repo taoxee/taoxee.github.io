@@ -73,37 +73,32 @@ PMP Certified, Results-driven project manager with 2+ years leading tech and sec
   <span style="background: linear-gradient(135deg, #74b9ff, #0984e3); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Core Competencies</span>
 </h2>
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0;">
+<div class="about-grid">
   
-<div style="padding: 2rem; background: #f8f9fa; border-radius: 12px; border-left: 4px solid #007AFF;">
-  <div style="font-size: 2rem; margin-bottom: 1rem;">📊</div>
-  <h4 style="color: #007AFF; margin-bottom: 1rem; font-size: 1.2rem;">Project Management</h4>
-  <p style="color: #666; font-size: 0.95rem; line-height: 1.6;">PMP Certification, Agile, Waterfall, Kanban, Jira, Confluence, Lean Six Sigma, SWOT Analysis</p>
-</div>
+  <div class="about-card">
+    <h3><span class="icon">📊</span> <span data-translate="Project Management">Project Management</span></h3>
+    <p>PMP Certification, Agile, Waterfall, Kanban, Jira, Confluence, Lean Six Sigma, SWOT Analysis</p>
+  </div>
 
-<div style="padding: 2rem; background: #f8f9fa; border-radius: 12px; border-left: 4px solid #00c851;">
-  <div style="font-size: 2rem; margin-bottom: 1rem;">🤖</div>
-  <h4 style="color: #00c851; margin-bottom: 1rem; font-size: 1.2rem;">AI/ML</h4>
-  <p style="color: #666; font-size: 0.95rem; line-height: 1.6;">Neural Networks, NLP, PyTorch, LLMs, scikit-learn, AI Safety, Compliance Frameworks</p>
-</div>
+  <div class="about-card">
+    <h3><span class="icon">🤖</span> <span data-translate="AI/ML">AI/ML</span></h3>
+    <p>Neural Networks, NLP, PyTorch, LLMs, scikit-learn, AI Safety, Compliance Frameworks</p>
+  </div>
 
-<div style="padding: 2rem; background: #f8f9fa; border-radius: 12px; border-left: 4px solid #ff6b6b;">
-  <div style="font-size: 2rem; margin-bottom: 1rem;">🔍</div>
-  <h4 style="color: #ff6b6b; margin-bottom: 1rem; font-size: 1.2rem;">Data Science</h4>
-  <p style="color: #666; font-size: 0.95rem; line-height: 1.6;">Data Wrangling, Warehousing, Mining, Statistical Analysis, Predictive Modeling</p>
-</div>
+  <div class="about-card">
+    <h3><span class="icon">🔍</span> <span data-translate="Data Science">Data Science</span></h3>
+    <p>Data Wrangling, Warehousing, Mining, Statistical Analysis, Predictive Modeling</p>
+  </div>
 
-<div style="padding: 2rem; background: #f8f9fa; border-radius: 12px; border-left: 4px solid #9c27b0;">
-  <div style="font-size: 2rem; margin-bottom: 1rem;">💻</div>
-  <h4 style="color: #9c27b0; margin-bottom: 1rem; font-size: 1.2rem;">Programming</h4>
-  <p style="color: #666; font-size: 0.95rem; line-height: 1.6;">Python, R, JavaScript, TypeScript, Java, PostgreSQL, React.js, JavaFX</p>
-</div>
+  <div class="about-card">
+    <h3><span class="icon">💻</span> <span data-translate="Programming">Programming</span></h3>
+    <p>Python, R, JavaScript, TypeScript, Java, PostgreSQL, React.js, JavaFX</p>
+  </div>
 
-<div style="padding: 2rem; background: #f8f9fa; border-radius: 12px; border-left: 4px solid #007AFF;">
-  <div style="font-size: 2rem; margin-bottom: 1rem;">🌏</div>
-  <h4 style="color: #007AFF; margin-bottom: 1rem; font-size: 1.2rem;">Global Mobility</h4>
-  <p style="color: #666; font-size: 0.95rem; line-height: 1.6;">Work authorization in China, Singapore, and Australia. Experienced in leading cross-cultural teams and managing projects across APAC time zones.</p>
-</div>
+  <div class="about-card">
+    <h3><span class="icon">🌏</span> <span data-translate="Global Mobility">Global Mobility</span></h3>
+    <p>Work authorization in China, Singapore, and Australia. Experienced in leading cross-cultural teams and managing projects across APAC time zones.</p>
+  </div>
 
 </div>
 

@@ -46,7 +46,9 @@ classes: wide
   </div>
 </div>
 
-## Recent Posts
+<h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 3rem 0 2rem 0; text-align: center; position: relative;">
+  <span style="background: linear-gradient(135deg, #fa709a, #fee140); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Recent Posts</span>
+</h2>
 
 <div id="posts-container">
   <!-- Posts will be automatically populated here by Jekyll -->
@@ -55,8 +57,8 @@ classes: wide
 <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07); margin: 3rem 0; text-align: center;">
   <h3 style="color: #007AFF; margin-bottom: 1rem;">No Posts Yet?</h3>
   <p style="color: #666; margin-bottom: 2rem;">I'm just getting started! Check back soon for fresh content, or feel free to reach out with topics you'd like me to explore.</p>
-  <a href="/contact/" style="display: inline-block; background: #007AFF; color: white; padding: 1rem 2rem; border-radius: 25px; text-decoration: none; font-weight: 600;">
-    Suggest a Topic
+  <a href="/contact/" style="display: inline-block; background: #e8f5e8; color: #2e7d32; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; cursor: pointer; border: 1px solid #c8e6c9;" onmouseover="this.style.backgroundColor='#c8e6c9'; this.style.transform='translateY(-2px)'" onmouseout="this.style.backgroundColor='#e8f5e8'; this.style.transform='translateY(0)'">
+      Suggest a Topic
   </a>
 </div>
 

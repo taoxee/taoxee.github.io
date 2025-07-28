@@ -45,6 +45,7 @@
         </li>
       {% endif %}
 
+      {% comment %}
       {% if author.email %}
         <li>
           <a href="mailto:{{ author.email }}" rel="me" class="u-email">
@@ -53,6 +54,7 @@
           </a>
         </li>
       {% endif %}
+      {% endcomment %}
 
       {% if author.keybase %}
         <li>
