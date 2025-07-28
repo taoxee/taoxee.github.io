@@ -171,9 +171,13 @@ classes: wide # changes page width/layout
 </h2>
 
 <div class="about-card">
-<p style="font-size: 1.1rem; line-height: 1.7; color: #4a5568; margin: 0;">
-Welcome to my personal space on the web. Here, you'll find insights into my professional journey, thoughts on technology, and the projects I'm passionate about. I believe in the power of technology to transform lives and create positive impact.
-</p>
+  <h3 style="display: flex; align-items: center; justify-content: center;">
+    <span class="icon" style="margin-right: 0.5em;">❤️</span>
+    <span data-translate="Hi There!">Hi There!</span>
+  </h3>
+  <p style="font-size: 1.1rem; line-height: 1.7; color: #4a5568; margin: 0;">
+  Welcome to my personal space on the web. Here, you'll find insights into my professional journey, thoughts on technology, and the projects I'm passionate about. I believe in the power of technology to transform lives and create positive impact.
+  </p>
 </div>
 
 <h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
