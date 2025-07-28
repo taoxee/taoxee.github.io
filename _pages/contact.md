@@ -10,6 +10,68 @@ classes: wide
 <style>
   .page__title { display: none !important; }
   .page__meta { display: none !important; }
+  
+  /* Enhanced card styling to match About page "What I Do" section */
+  .about-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+    gap: 1.5rem !important;
+    margin: 3rem 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .about-card {
+    background: white !important;
+    padding: 1.2rem 1.2rem !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07) !important;
+    border: 4px solid #e9ecef !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    min-height: 180px !important;
+    max-height: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+    word-wrap: break-word !important;
+    box-sizing: border-box !important;
+  }
+  
+  .about-card:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important;
+  }
+  
+  .about-card h3 {
+    color: #007AFF !important;
+    margin: 0 0 0.8rem 0 !important;
+    font-size: 1.2rem !important;
+    font-weight: 600 !important;
+    line-height: 1.3 !important;
+    word-wrap: break-word !important;
+  }
+  
+  .about-card p {
+    color: #666 !important;
+    line-height: 1.5 !important;
+    font-size: 0.95rem !important;
+    flex-grow: 1 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    word-wrap: break-word !important;
+    hyphens: auto !important;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .about-grid {
+      grid-template-columns: 1fr !important;
+      gap: 1rem !important;
+    }
+    .about-card {
+      padding: 1.2rem !important;
+    }
+  }
 </style>
 
 <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 5rem 2rem; margin: 0 0 4rem 0; text-align: center; border-radius: 0 0 30px 30px; box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);">
