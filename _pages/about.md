@@ -194,8 +194,6 @@ classes: wide # changes page width/layout
   </a>
 </div>
 
-</div>
-
 <!-- Force refresh cache -->
 <script>
 // Add timestamp to force cache invalidation

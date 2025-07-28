@@ -82,19 +82,16 @@ classes: wide
   <span style="background: linear-gradient(135deg, #00c9ff, #92fe9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Skills</span>
 </h2>
 
-<div style="margin: 2rem 0;">
+<div class="about-grid">
 
-### Project Management
-<div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; margin: 1rem 0; border-left: 4px solid #007AFF;">
-  <p style="color: #666; line-height: 1.7; margin: 0;">
-    PMP Certification, Agile, Waterfall, Kanban, Jira, Confluence, Lean Six Sigma, SWOT Analysis
-  </p>
+<div class="about-card">
+  <h3><span class="icon">📋</span> Project Management</h3>
+  <p>PMP Certification, Agile, Waterfall, Kanban, Jira, Confluence, Lean Six Sigma, SWOT Analysis</p>
 </div>
 
-### Programming Languages and Tools
-<div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; margin: 1rem 0; border-left: 4px solid #00c851;">
-  <p style="color: #666; line-height: 1.7; margin: 0;">
-    <span class="iconify" data-icon="vscode-icons:file-type-python"></span> Python, 
+<div class="about-card">
+  <h3><span class="icon">💻</span> Programming Languages and Tools</h3>
+  <p><span class="iconify" data-icon="vscode-icons:file-type-python"></span> Python, 
     <span class="iconify" data-icon="mdi:language-r"></span> R,
     <span class="iconify" data-icon="vscode-icons:file-type-js-official"></span> JavaScript, 
     <span class="iconify" data-icon="vscode-icons:file-type-typescript-official"></span> TypeScript, 
@@ -103,29 +100,22 @@ classes: wide
     <span class="iconify" data-icon="logos:tableau-icon"></span> Tableau,
     <span class="iconify" data-icon="logos:git"></span> Git, 
     <span class="iconify" data-icon="logos:jira"></span> Jira,
-    React.js, JavaFX
-  </p>
+    React.js, JavaFX</p>
 </div>
 
-### AI/ML
-<div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; margin: 1rem 0; border-left: 4px solid #ff6b6b;">
-  <p style="color: #666; line-height: 1.7; margin: 0;">
-    Neural Networks, NLP, PyTorch, LLMs, scikit-learn
-  </p>
+<div class="about-card">
+  <h3><span class="icon">🤖</span> AI/ML</h3>
+  <p>Neural Networks, NLP, PyTorch, LLMs, scikit-learn</p>
 </div>
 
-### Data
-<div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; margin: 1rem 0; border-left: 4px solid #9c27b0;">
-  <p style="color: #666; line-height: 1.7; margin: 0;">
-    Data Wrangling, Warehousing, Mining
-  </p>
+<div class="about-card">
+  <h3><span class="icon">📊</span> Data</h3>
+  <p>Data Wrangling, Warehousing, Mining</p>
 </div>
 
-### Languages
-<div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; margin: 1rem 0; border-left: 4px solid #ffa726;">
-  <p style="color: #666; line-height: 1.7; margin: 0;">
-    English (proficient), Mandarin (native)
-  </p>
+<div class="about-card">
+  <h3><span class="icon">🌏</span> Languages</h3>
+  <p>English (proficient), Mandarin (native)</p>
 </div>
 
 </div>
