@@ -22,11 +22,12 @@ classes: wide
 
 <div style="max-width: 900px; margin: 0 auto; padding: 0 2rem;">
 
-<div class="about-card" style="text-align: center; margin-bottom: 3rem;">
-  <h2 style="color: #007AFF; margin-bottom: 1rem; font-size: 1.8rem; font-weight: 600;">
-    <span class="icon">📖</span> Welcome to My Digital Journal
-  </h2>
-  <p style="color: #666; margin-bottom: 2rem; line-height: 1.6; font-size: 1.1rem;">Here you'll find my thoughts on technology, career insights, project updates, and personal reflections. Think of it as a modern bulletin board where I share what's on my mind.</p>
+<h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 3rem 0 2rem 0; text-align: center; position: relative;">
+  <span style="background: linear-gradient(135deg, #fa709a, #fee140); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;"><span class="icon">📖</span> Welcome to My Digital Journal</span>
+</h2>
+
+<div class="about-card" style="text-align: center ;">
+  <p style="color: #666; margin-bottom: 1rem; line-height: 1.6; font-size: 1.1rem;">Here you'll find my thoughts on technology, career insights, project updates, and personal reflections. Think of it as a modern bulletin board where I share what's on my mind.</p>
 </div>
 
 <div class="about-grid" style="margin-bottom: 3rem;">

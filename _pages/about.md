@@ -41,14 +41,14 @@ classes: wide # changes page width/layout
     display: grid !important; /* grid/flex layout */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important; /* card min width/columns */
     gap: 1.5rem !important; /* space between cards */
-    margin: 3rem 0 !important; /* grid margin */
+    margin: 2rem 0 !important; /* grid margin */
     width: 100% !important; /* grid width */
     max-width: 100% !important; /* max grid width */
   }
   
   .about-card {
     background: white !important; /* card background */
-    padding: 1.2rem 1.2rem !important; /* card padding */
+    padding: 1.2rem 1.2rem; /* card padding */
     border-radius: 12px !important; /* card border radius */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07) !important; /* card shadow */
     border: 4px solid #e9ecef !important; /* card border */
