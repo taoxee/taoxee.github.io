@@ -6,9 +6,142 @@
 @import "minimal-mistakes"; // main partials
 
 /* ============================================================================
-   ENHANCED CARD STYLING - Applied globally to all .about-card elements
+   CONSOLIDATED SITE STYLES - All custom styling in one place
    ============================================================================ */
 
+/* Hide elements */
+.page__title,
+.page__meta,
+.archive__title,
+.archive__subtitle {
+  display: none !important;
+}
+
+/* Hero sections */
+.hero-section {
+  color: white !important;
+  padding: 5rem 2rem !important;
+  margin: 0 0 4rem 0 !important;
+  text-align: center !important;
+  border-radius: 0 0 30px 30px !important;
+}
+
+.hero-section--contact {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3) !important;
+}
+
+.hero-section--about {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3) !important;
+}
+
+.hero-section--bio {
+  background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%) !important;
+  box-shadow: 0 10px 30px rgba(116, 185, 255, 0.3) !important;
+}
+
+.hero-section--posts {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%) !important;
+  box-shadow: 0 10px 30px rgba(250, 112, 154, 0.3) !important;
+}
+
+.hero-section--cv {
+  background: linear-gradient(135deg, #00c9ff 0%, #92fe9d 100%) !important;
+  box-shadow: 0 10px 30px rgba(0, 201, 255, 0.3) !important;
+}
+
+.hero__title {
+  font-size: 4rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 1.5rem !important;
+  color: white !important;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+  letter-spacing: -0.02em !important;
+}
+
+.hero__subtitle {
+  font-size: 1.5rem !important;
+  font-weight: 400 !important;
+  opacity: 0.95 !important;
+  max-width: 600px !important;
+  margin: 0 auto !important;
+}
+
+.hero-buttons {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 1rem !important;
+  margin-top: 2rem !important;
+}
+
+.hero-btn {
+  display: inline-block !important;
+  background: white !important;
+  color: #764ba2 !important;
+  padding: 1rem 2rem !important;
+  border-radius: 25px !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+}
+
+.hero-btn:hover {
+  background: rgba(255,255,255,0.9) !important;
+  transform: translateY(-2px) !important;
+  color: #764ba2 !important;
+}
+
+/* Section titles with gradients */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 3rem 0 2rem 0;
+  text-align: center;
+}
+
+.section-title--contact .gradient-text {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-title--bio .gradient-text {
+  background: linear-gradient(135deg, #74b9ff, #0984e3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-title--posts .gradient-text {
+  background: linear-gradient(135deg, #fa709a, #fee140);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-title--cv .gradient-text {
+  background: linear-gradient(135deg, #00c9ff, #92fe9d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Container */
+.content-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.content-container--wide {
+  max-width: 1200px;
+}
+
+/* Card grid system */
 .about-grid {
   display: grid !important;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
@@ -16,6 +149,236 @@
   margin: 3rem 0 !important;
   width: 100% !important;
   max-width: 100% !important;
+}
+
+/* Form styles */
+.contact-form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #2d3748;
+  font-weight: 600;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.form-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  resize: vertical;
+  transition: border-color 0.2s;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn--primary {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  box-shadow: 0 4px 6px rgba(102, 126, 234, 0.3);
+}
+
+.btn--blue {
+  background: #007AFF;
+  color: white;
+}
+
+.btn--linkedin {
+  background: #0077B5;
+  color: white;
+}
+
+.btn--submit {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(102, 126, 234, 0.3);
+}
+
+/* Contact cards */
+.contact-card {
+  text-align: center;
+}
+
+.contact-card__icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-card__title {
+  color: #007AFF;
+  margin-bottom: 1rem;
+}
+
+.contact-card__description {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.contact-card__link {
+  color: #007AFF;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Work authorization flags */
+.work-auth {
+  color: #007AFF;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+/* Quick response section */
+.quick-response {
+  text-align: center;
+  background: #f8f9fa;
+}
+
+.quick-response__actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* CV specific styles */
+.cv-download-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #00c9ff, #92fe9d);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 201, 255, 0.3);
+}
+
+.cv-section {
+  text-align: center;
+}
+
+/* Education cards */
+.education-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.education-badge {
+  background: #f0f8ff;
+  color: #007AFF;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+/* Language cards */
+.language-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.language-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  text-align: center;
+}
+
+.language-flag {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.language-name {
+  color: #007AFF;
+  margin-bottom: 0.5rem;
+}
+
+.language-level {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* CTA sections */
+.cta-section {
+  background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+  color: white;
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.cta-section--bio {
+  background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+}
+
+.cta-section--about {
+  background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+}
+
+.cta__title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.cta__description {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta__button {
+  display: inline-block;
+  background: white;
+  color: #0984e3;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
 .about-card {

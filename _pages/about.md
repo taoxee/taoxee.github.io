@@ -6,11 +6,13 @@ author_profile: true # shows/hides author profile
 classes: wide # changes page width/layout
 ---
 
-<!-- Force browser refresh and fix issues -->
+<!-- 
+OLD DUPLICATED CSS - MOVED TO assets/css/main.scss
+TODO: Remove this commented block after confirming new CSS classes work
+
 <style>
-  /* Hide default page title */
-  .page__title { display: none !important; } /* show/hide page title */
-  .page__meta { display: none !important; }  /* show/hide meta info */
+  .page__title { display: none !important; }
+  .page__meta { display: none !important; }
   
   /* Author profile photo overlay fix */
   .sidebar .author__avatar img,
@@ -110,20 +112,20 @@ classes: wide # changes page width/layout
     display: grid !important; /* force grid */
   }
   
-  /* Container sizing */
   .page__content {
-    overflow-x: hidden !important; /* horizontal overflow */
+    overflow-x: hidden !important;
   }
 </style>
+-->
 
-<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 5rem 2rem; margin: 0 0 4rem 0; text-align: center; border-radius: 0 0 30px 30px; box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);">
-  <h1 style="font-size: 4rem; font-weight: 700; margin-bottom: 1.5rem; color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.1); letter-spacing: -0.02em;">Hello, I'm Tao Xu</h1>
-  <p style="font-size: 1.5rem; font-weight: 400; opacity: 0.95; max-width: 600px; margin: 0 auto;">Passionate about technology, innovation, and creating meaningful digital experiences</p>
-  <div class="hero-buttons" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 2rem;">
-    <a href="/bio/" style="display: inline-block; background: white; color: #764ba2; padding: 1rem 2rem; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255,255,255,0.9)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='white'; this.style.transform='translateY(0)'">
+<div class="hero-section hero-section--about">
+  <h1 class="hero__title">Hello, I'm Tao Xu</h1>
+  <p class="hero__subtitle">Passionate about technology, innovation, and creating meaningful digital experiences</p>
+  <div class="hero-buttons">
+    <a href="/bio/" class="hero-btn">
       <span data-translate="Learn About Me">Learn About Me</span>
     </a>
-    <a href="/cv/" style="display: inline-block; background: white; color: #764ba2; padding: 1rem 2rem; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255,255,255,0.9)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='white'; this.style.transform='translateY(0)'">
+    <a href="/cv/" class="hero-btn">
       <span data-translate="View My CV">View My CV</span>
     </a>
   </div>
