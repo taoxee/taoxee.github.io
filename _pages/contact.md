@@ -257,7 +257,7 @@ TODO: Remove after confirming new classes work
 
 </div>
 
-<style>
+<!-- <style>
   .page__content h2 {
     color: #1d1d1f;
     font-weight: 600;
@@ -291,4 +291,4 @@ TODO: Remove after confirming new classes work
   .page__content {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   }
-</style> 
+</style>  -->

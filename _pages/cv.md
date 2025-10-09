@@ -17,7 +17,7 @@ classes: wide
   <p style="font-size: 1.5rem; font-weight: 400; opacity: 0.95; max-width: 600px; margin: 0 auto;">Professional Experience & Qualifications</p>
 </div>
 
-<div class="cv-container" style="padding: 0 2rem;">
+<div class="cv-container" style="padding: 0 0rem;">
 
 <!-- ==================== 简历下载区域 ==================== -->
 <div class="cv-section" style="text-align: center;">
@@ -158,7 +158,6 @@ classes: wide
             <div class="cert-overlay-content">
               <h3> Project Management Institut  </h3>
               <p>Project Management Professional Certification</p>
-              <span class="view-badge">👁️ View Full Certificate</span>
             </div>
           </div>
         </a>
@@ -296,46 +295,24 @@ classes: wide
 </div>
 
 <style>
-  .page__content h2 {
-    color: #1d1d1f;
-    font-weight: 600;
-    font-size: 2rem;
-    margin-top: 3rem;
-    margin-bottom: 1.5rem;
-    border-bottom: 2px solid #007AFF;
-    padding-bottom: 0.5rem;
-  }
   
-  .page__content h3 {
-    color: #333;
-    font-weight: 600;
-    font-size: 1.5rem;
-    margin-top: 2rem;
-    margin-bottom: 0.5rem;
-  }
   
-  .page__content h4 {
-    font-weight: 600;
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-  }
+  /* ==================== CV Section 卡片样式 ==================== */
   
-  .page__content p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #515151;
-  }
-  
-  .page__content a {
+  /* CV Section 容器 - 与 about-card 保持一致 */
+  .cv-section {
+    background: white;
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
+    margin: 2rem 0;
   }
   
-  .page__content a:hover {
+  /* 悬停效果 - 上移并增强阴影 */
+  .cv-section:hover {
     transform: translateY(-2px);
-  }
-  
-  .page__content {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   }
   
   /* ==================== CV 简历下载按钮样式 ==================== */
@@ -437,7 +414,7 @@ classes: wide
   .certificatesSwiper {
     width: 100%;
     padding: 20px 50px 50px 50px !important;
-    overflow: visible;
+    /* overflow: visible; */ /* ❌ REVIEW: 可能冗余，mask-image 已控制可见性 */
     position: relative;
     /* 左右边缘渐变透明效果（兼容性）- 桌面端10px */
     -webkit-mask-image: linear-gradient(to right, 
@@ -512,7 +489,6 @@ classes: wide
     right: 0;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.6) 70%, transparent 100%);
     padding: 2rem 1.5rem 1.5rem 1.5rem;
-    transform: translateY(0);
     transition: all 0.4s ease;
   }
   
@@ -617,15 +593,15 @@ classes: wide
   
   /* ==================== 平板端响应式（≤768px）==================== */
   @media (max-width: 768px) {
-    /* 保持负边距对齐 */
-    .certificates-swiper-container {
+    /* ❌ REVIEW: 此处 margin 可能冗余，桌面端已设置 margin: 0 -2rem */
+    /* .certificates-swiper-container {
       margin: 0 -2rem;
-    }
+    } */
     
     /* 调整内边距和渐变区域 */
     .certificatesSwiper {
       padding: 20px 20px 50px 20px !important;
-      /* 渐变区域缩小到 25px（平板端） */
+      /* ✅ 修正注释：渐变区域缩小到 5px（平板端） */
       -webkit-mask-image: linear-gradient(to right, 
         transparent 0%, 
         black 5px, 
@@ -676,10 +652,9 @@ classes: wide
     /* 调整外边距和内边距 */
     .certificates-swiper-container {
       padding: 1rem 0 3rem 0;
-      margin: 0 -2rem;
     }
     
-    /* 渐变区域进一步缩小到 15px（手机端） */
+    /* ✅ 修正注释：渐变区域进一步缩小到 5px（手机端） */
     .certificatesSwiper {
       padding: 10px 10px 40px 10px !important;
       -webkit-mask-image: linear-gradient(to right, 
