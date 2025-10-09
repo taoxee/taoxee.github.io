@@ -116,7 +116,7 @@ TODO: Remove after confirming new classes work
   </a>
 </div>
 
-<div class="about-card contact-card">
+<!-- <div class="about-card contact-card">
   <div class="contact-card__icon">🌍</div>
   <h3 class="contact-card__title">Work Authorization</h3>
   <p class="contact-card__description">Legally authorized to work in</p>
@@ -126,7 +126,7 @@ TODO: Remove after confirming new classes work
     <div>🇦🇺 Australia</div>
     <div>💻 Remote</div>
   </div>
-</div>
+</div> -->
 
 <div class="about-card contact-card">
   <div class="contact-card__icon">

@@ -19,13 +19,25 @@ classes: wide
 
 <div class="cv-container" style="padding: 0 2rem;">
 
+<!-- ==================== 简历下载区域 ==================== -->
 <div class="cv-section" style="text-align: center;">
   <h2 style="font-size: 2.2rem; font-weight: 600; color: #007AFF; margin-bottom: 1.5rem;">Download My Resume</h2>
   <p style="color: #666; margin-bottom: 2rem; font-size: 1.1rem;">Get the latest version of my CV in PDF format</p>
-  <a href="/assets/files/TaoXu_CV.pdf" download="TaoXu_CV.pdf" class="cv-download-btn">
-    📄 Download CV (PDF)
-  </a>
-  <p style="color: #999; font-size: 0.9rem; margin-top: 1rem;">Last updated: <span id="lastUpdated">January 2025</span></p>
+  
+  <!-- 下载按钮容器 - 中英文简历 -->
+  <div class="cv-buttons-container">
+    <!-- 英文简历下载按钮 -->
+    <a href="/assets/files/CV_Intl.pdf" download="TaoXu_CV_EN.pdf" class="cv-download-btn cv-btn-english">
+      📄 English Resume
+    </a>
+    <!-- 中文简历下载按钮 -->
+    <a href="/assets/files/CV_CN.pdf" download="TaoXu_CV_CN.pdf" class="cv-download-btn cv-btn-chinese">
+      🇨🇳 中文简历
+    </a>
+  </div>
+  
+  <!-- 更新日期 -->
+  <p style="color: #999; font-size: 0.9rem; margin-top: 1rem;">Last updated: <span id="lastUpdated">24 July 2025</span></p>
 </div>
 
 <h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
@@ -124,48 +136,162 @@ classes: wide
   <span style="background: linear-gradient(135deg, #00c9ff, #92fe9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Certifications</span>
 </h2>
 
-<div class="about-card">
-  <ul style="color: #666; line-height: 1.7; margin: 0; padding-left: 1.5rem;">
-    <li><strong>PMP (Project Management Professional)</strong> - Project Management Institute</li>
-  </ul>
-</div>
+<!-- ==================== 证书轮播组件 ==================== -->
 
-<h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
-  <span style="background: linear-gradient(135deg, #00c9ff, #92fe9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Contact Information</span>
-</h2>
+<!-- Swiper CSS 样式库（CDN） -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-<div class="about-card">
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
-    <div>
-      <p style="margin: 0.5rem 0; color: #666;">
-        <span class="iconify" data-icon="tabler:mail"></span> 
-        <strong>Email:</strong><br>
-        <a href="mailto:xutao1486@gmail.com" style="color: #007AFF;">xutao1486@gmail.com</a>
-      </p>
+<!-- 证书轮播外层容器 -->
+<div class="certificates-swiper-container">
+  <!-- Swiper 主容器 -->
+  <div class="swiper certificatesSwiper">
+    <!-- 滑块包裹容器 -->
+    <div class="swiper-wrapper">
+      
+      <!-- Certificate 1: PMP -->
+      <div class="swiper-slide">
+        <a href="/assets/files/Certificates/Project Management Professional (PMP).pdf" target="_blank" class="certificate-photo-card">
+          <div class="cert-pdf-preview">
+            <iframe src="/assets/files/Certificates/Project Management Professional (PMP).pdf#toolbar=0&navpanes=0&scrollbar=0" frameborder="0"></iframe>
+          </div>
+          <div class="cert-overlay">
+            <div class="cert-overlay-content">
+              <h3> Project Management Institut  </h3>
+              <p>Project Management Professional Certification</p>
+              <span class="view-badge">👁️ View Full Certificate</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Certificate 2: Accenture -->
+      <div class="swiper-slide">
+        <a href="/assets/files/Certificates/Accenture Technology Consulting Job Simulation.pdf" target="_blank" class="certificate-photo-card">
+          <div class="cert-pdf-preview">
+            <iframe src="/assets/files/Certificates/Accenture Technology Consulting Job Simulation.pdf#toolbar=0&navpanes=0&scrollbar=0" frameborder="0"></iframe>
+          </div>
+          <div class="cert-overlay">
+            <div class="cert-overlay-content">
+              <h3> Accenture </h3>
+              <p>Technology Consulting Job Simulation</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Certificate 3: Deloitte -->
+      <div class="swiper-slide">
+        <a href="/assets/files/Certificates/Deloitte Technology Job Simulation.pdf" target="_blank" class="certificate-photo-card">
+          <div class="cert-pdf-preview">
+            <iframe src="/assets/files/Certificates/Deloitte Technology Job Simulation.pdf#toolbar=0&navpanes=0&scrollbar=0" frameborder="0"></iframe>
+          </div>
+          <div class="cert-overlay">
+            <div class="cert-overlay-content">
+              <h3> Deloitte </h3>
+              <p>Technology Job Simulation</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Certificate 4: Finance -->
+      <div class="swiper-slide">
+        <a href="/assets/files/Certificates/Global Derivative Contracts Bonds & Mutual Funds 101 level.pdf" target="_blank" class="certificate-photo-card">
+          <div class="cert-pdf-preview">
+            <iframe src="/assets/files/Certificates/Global Derivative Contracts Bonds & Mutual Funds 101 level.pdf#toolbar=0&navpanes=0&scrollbar=0" frameborder="0"></iframe>
+          </div>
+          <div class="cert-overlay">
+            <div class="cert-overlay-content">
+              <h3> Udemy </h3>
+              <p>Global Derivative Contracts,Bonds & Mutual Funds 101 level</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Certificate 5: Neural Networks -->
+      <div class="swiper-slide">
+        <a href="/assets/files/Certificates/Neural Networks and Deep Learning.pdf" target="_blank" class="certificate-photo-card">
+          <div class="cert-pdf-preview">
+            <iframe src="/assets/files/Certificates/Neural Networks and Deep Learning.pdf#toolbar=0&navpanes=0&scrollbar=0" frameborder="0"></iframe>
+          </div>
+          <div class="cert-overlay">
+            <div class="cert-overlay-content">
+              <h3> Deeplearning.ai </h3>
+              <p>Neural Networks and Deep Learning</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
     </div>
-    <div>
-      <p style="margin: 0.5rem 0; color: #666;">
-        <span class="iconify" data-icon="tabler:world"></span> 
-        <strong>Work Authorization:</strong><br>
-        China | Singapore | Australia | Remote
-      </p>
-    </div>
-    <div>
-      <p style="margin: 0.5rem 0; color: #666;">
-        <span class="iconify" data-icon="tabler:brand-linkedin"></span> 
-        <strong>LinkedIn:</strong><br>
-        <a href="https://www.linkedin.com/in/tao-xee" target="_blank" style="color: #007AFF;">Tao Xu</a>
-      </p>
-    </div>
-    <div>
-      <p style="margin: 0.5rem 0; color: #666;">
-        <img src="/assets/images/github-logo.svg" alt="GitHub" width="16" height="16" style="vertical-align: middle; margin-right: 0.5rem;"> 
-        <strong>GitHub:</strong><br>
-        <a href="https://github.com/taoxee" target="_blank" style="color: #007AFF;">taoxee</a>
-      </p>
-    </div>
+    
+    <!-- 左右导航按钮 -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    
+    <!-- 底部分页指示器 -->
+    <div class="swiper-pagination"></div>
   </div>
 </div>
+
+<!-- Swiper JS 脚本库（CDN） -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- 初始化证书轮播 Swiper -->
+<script>
+  // 等待 DOM 完全加载后初始化
+  document.addEventListener('DOMContentLoaded', function() {
+    var swiper = new Swiper('.certificatesSwiper', {
+      slidesPerView: 'auto',    // 自动计算每屏显示的滑块数量
+      spaceBetween: 20,         // 滑块之间的间距（桌面端）
+      centeredSlides: false,    // 不居中对齐
+      grabCursor: true,         // 鼠标悬停时显示抓手光标
+      loop: false,              // 循环播放
+      
+      // 分页器配置
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,        // 允许点击分页器切换
+        dynamicBullets: true,   // 动态显示分页器圆点
+      },
+      
+      // 导航按钮配置
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      
+      // 响应式断点设置
+      breakpoints: {
+        // 手机端（≥320px）
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 15,
+          centeredSlides: true,
+        },
+        // 平板端（≥640px）
+        640: {
+          slidesPerView: 'auto',
+          spaceBetween: 20,
+          centeredSlides: false,
+        },
+        // 桌面端（≥1024px）
+        1024: {
+          slidesPerView: 'auto',
+          spaceBetween: 30,
+          centeredSlides: false,
+        }
+      },
+      
+      // 懒加载配置 - 优化 PDF 加载性能
+      preloadImages: false,
+      lazy: {
+        loadPrevNext: true,     // 预加载前后一张
+      }
+    });
+  });
+</script>
 
 </div>
 
@@ -210,5 +336,393 @@ classes: wide
   
   .page__content {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+  
+  /* ==================== CV 简历下载按钮样式 ==================== */
+  
+  /* 按钮容器 - 水平排列，居中对齐 */
+  .cv-buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 600px;
+  }
+  
+  /* 下载按钮基础样式 */
+  .cv-download-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 122, 255, 0.2);
+    flex: 1 1 auto;
+    min-width: 180px;
+    max-width: 250px;
+  }
+  
+  /* 中文简历按钮 - 紫色渐变 */
+  .cv-btn-chinese {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+  }
+  
+  /* 中文简历按钮悬停效果 */
+  .cv-btn-chinese:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+  }
+  
+  /* 英文简历按钮 - 蓝绿渐变 */
+  .cv-btn-english {
+    background: linear-gradient(135deg, #00c9ff 0%, #92fe9d 100%);
+    color: white;
+  }
+  
+  /* 英文简历按钮悬停效果 */
+  .cv-btn-english:hover {
+    background: linear-gradient(135deg, #92fe9d 0%, #00c9ff 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 201, 255, 0.4);
+  }
+  
+  /* 平板端响应式 - 按钮垂直排列 */
+  @media (max-width: 768px) {
+    .cv-buttons-container {
+      flex-direction: column;
+      gap: 1rem;
+      padding: 0 1rem;
+    }
+    
+    .cv-download-btn {
+      width: 100%;
+      max-width: 100%;
+      min-width: auto;
+      padding: 1.2rem 2rem;
+      font-size: 1rem;
+    }
+  }
+  
+  /* 手机端响应式 - 调整间距和字体 */
+  @media (max-width: 480px) {
+    .cv-buttons-container {
+      gap: 0.8rem;
+      padding: 0 0.5rem;
+    }
+    
+    .cv-download-btn {
+      padding: 1rem 1.5rem;
+      font-size: 0.95rem;
+    }
+  }
+  
+  /* ==================== 证书轮播样式 ==================== */
+  
+  /* 轮播外层容器 - 负边距对齐父容器 */
+  .certificates-swiper-container {
+    width: 100%;
+    padding: 2rem 0 4rem 0;
+    overflow: hidden; /* 隐藏超出部分 */
+    margin: 0 0 rem; /* 抵消父容器的 padding */
+    position: relative;
+  }
+  
+  /* Swiper 主容器 - 使用 mask 实现边缘渐变透明 */
+  .certificatesSwiper {
+    width: 100%;
+    padding: 20px 50px 50px 50px !important;
+    overflow: visible;
+    position: relative;
+    /* 左右边缘渐变透明效果（兼容性）- 桌面端10px */
+    -webkit-mask-image: linear-gradient(to right, 
+      transparent 0%, 
+      black 10px, 
+      black calc(100% - 10px), 
+      transparent 100%);
+    /* 左右边缘渐变透明效果（标准）- 桌面端10px */
+    mask-image: linear-gradient(to right, 
+      transparent 0%, 
+      black 10px, 
+      black calc(100% - 10px), 
+      transparent 100%);
+  }
+  
+  /* Swiper 滑块容器 */
+  .certificatesSwiper .swiper-wrapper {
+    align-items: stretch; /* 所有卡片高度一致 */
+  }
+  
+  /* 单个滑块 - 固定宽度 400px */
+  .certificatesSwiper .swiper-slide {
+    width: 400px !important;
+    height: auto;
+  }
+  
+  /* 证书卡片主体 - 可点击链接 */
+  .certificate-photo-card {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 550px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s ease;
+    text-decoration: none;
+    border: 3px solid transparent;
+  }
+  
+  /* 证书卡片悬停效果 - 上移并放大 */
+  .certificate-photo-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 50px rgba(0, 122, 255, 0.3);
+    border-color: #007AFF;
+  }
+  
+  /* PDF 预览容器 */
+  .cert-pdf-preview {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: #f5f5f5;
+    overflow: hidden;
+  }
+  
+  /* PDF iframe - 显示证书内容 */
+  .cert-pdf-preview iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    pointer-events: none; /* 禁用 PDF 内部交互 */
+    transform: scale(1.15); /* 放大以更好展示 */
+    transform-origin: top center;
+  }
+  
+  /* 卡片底部信息遮罩层 */
+  .cert-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.6) 70%, transparent 100%);
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    transform: translateY(0);
+    transition: all 0.4s ease;
+  }
+  
+  /* 悬停时遮罩层变为蓝色渐变 */
+  .certificate-photo-card:hover .cert-overlay {
+    background: linear-gradient(to top, rgba(0, 122, 255, 0.95) 0%, rgba(0, 201, 255, 0.85) 70%, rgba(0, 201, 255, 0.3) 100%);
+  }
+  
+  /* 遮罩层内容容器 */
+  .cert-overlay-content {
+    color: white;
+    text-align: center;
+  }
+  
+  /* 证书标题 */
+  .cert-overlay-content h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    color: white !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* 证书发布机构 */
+  .cert-overlay-content p {
+    font-size: 0.95rem;
+    margin: 0 0 1rem 0;
+    opacity: 0.95;
+    color: white !important;
+  }
+  
+  /* 查看证书徽章按钮 */
+  .view-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 0.6rem 1.5rem;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    color: white;
+  }
+  
+  /* 悬停时徽章变为白底蓝字 */
+  .certificate-photo-card:hover .view-badge {
+    background: white;
+    color: #007AFF;
+    border-color: white;
+    transform: scale(1.05);
+  }
+  
+  /* 轮播导航按钮（左右箭头） - 置于最前 */
+  .certificatesSwiper .swiper-button-next,
+  .certificatesSwiper .swiper-button-prev {
+    color: #007AFF;
+    background: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* 圆形按钮 */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    z-index: 20; /* 提升层级，确保在最前面 */
+  }
+  
+  /* 导航按钮箭头图标大小 */
+  .certificatesSwiper .swiper-button-next:after,
+  .certificatesSwiper .swiper-button-prev:after {
+    font-size: 20px;
+    font-weight: 900;
+  }
+  
+  /* 导航按钮悬停效果 - 蓝底白字 */
+  .certificatesSwiper .swiper-button-next:hover,
+  .certificatesSwiper .swiper-button-prev:hover {
+    background: #007AFF;
+    color: white;
+    transform: scale(1.1);
+  }
+  
+  /* 底部分页器位置 */
+  .certificatesSwiper .swiper-pagination {
+    bottom: 0 !important;
+  }
+  
+  /* 分页器圆点样式 */
+  .certificatesSwiper .swiper-pagination-bullet {
+    background: #007AFF;
+    opacity: 0.3;
+    width: 10px;
+    height: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  /* 当前激活的分页器圆点 - 变长条形 */
+  .certificatesSwiper .swiper-pagination-bullet-active {
+    opacity: 1;
+    width: 30px;
+    border-radius: 5px;
+  }
+  
+  /* ==================== 平板端响应式（≤768px）==================== */
+  @media (max-width: 768px) {
+    /* 保持负边距对齐 */
+    .certificates-swiper-container {
+      margin: 0 -2rem;
+    }
+    
+    /* 调整内边距和渐变区域 */
+    .certificatesSwiper {
+      padding: 20px 20px 50px 20px !important;
+      /* 渐变区域缩小到 25px（平板端） */
+      -webkit-mask-image: linear-gradient(to right, 
+        transparent 0%, 
+        black 5px, 
+        black calc(100% - 5px), 
+        transparent 100%);
+      mask-image: linear-gradient(to right, 
+        transparent 0%, 
+        black 5px, 
+        black calc(100% - 5px), 
+        transparent 100%);
+    }
+    
+    /* 滑块宽度调整为 320px */
+    .certificatesSwiper .swiper-slide {
+      width: 320px !important;
+    }
+    
+    /* 卡片高度调整 */
+    .certificate-photo-card {
+      height: 480px;
+    }
+    
+    /* 字体大小调整 */
+    .cert-overlay-content h3 {
+      font-size: 1.2rem;
+    }
+    
+    .cert-overlay-content p {
+      font-size: 0.85rem;
+    }
+    
+    /* 导航按钮缩小 */
+    .certificatesSwiper .swiper-button-next,
+    .certificatesSwiper .swiper-button-prev {
+      width: 40px;
+      height: 40px;
+    }
+    
+    /* 箭头图标缩小 */
+    .certificatesSwiper .swiper-button-next:after,
+    .certificatesSwiper .swiper-button-prev:after {
+      font-size: 16px;
+    }
+  }
+  
+  /* ==================== 手机端响应式（≤480px）==================== */
+  @media (max-width: 480px) {
+    /* 调整外边距和内边距 */
+    .certificates-swiper-container {
+      padding: 1rem 0 3rem 0;
+      margin: 0 -2rem;
+    }
+    
+    /* 渐变区域进一步缩小到 15px（手机端） */
+    .certificatesSwiper {
+      padding: 10px 10px 40px 10px !important;
+      -webkit-mask-image: linear-gradient(to right, 
+        transparent 0%, 
+        black 5px, 
+        black calc(100% - 5px), 
+        transparent 100%);
+      mask-image: linear-gradient(to right, 
+        transparent 0%, 
+        black 5px, 
+        black calc(100% - 5px), 
+        transparent 100%);
+    }
+    
+    /* 滑块宽度调整为 280px */
+    .certificatesSwiper .swiper-slide {
+      width: 280px !important;
+    }
+    
+    /* 卡片高度进一步降低 */
+    .certificate-photo-card {
+      height: 400px;
+    }
+    
+    /* 遮罩层内边距调整 */
+    .cert-overlay {
+      padding: 1.5rem 1rem 1rem 1rem;
+    }
+    
+    /* 小屏幕字体调整 */
+    .cert-overlay-content h3 {
+      font-size: 1.1rem;
+    }
+    
+    .cert-overlay-content p {
+      font-size: 0.8rem;
+      margin-bottom: 0.8rem;
+    }
+    
+    /* 徽章按钮缩小 */
+    .view-badge {
+      font-size: 0.75rem;
+      padding: 0.5rem 1.2rem;
+    }
   }
 </style> 
