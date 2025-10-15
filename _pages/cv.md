@@ -163,7 +163,68 @@ classes: wide
         </a>
       </div>
 
-      <!-- Certificate 2: Accenture -->
+      <!-- Certificate 2: ANU Master Degree -->
+      <div class="swiper-slide">
+        <a href="/assets/files/Certificates/Master of Computing ANU_testamur.pdf" target="_blank" class="certificate-photo-card">
+          <div class="cert-pdf-preview">
+            <iframe src="/assets/files/Certificates/Master of Computing ANU_testamur.pdf#toolbar=0&navpanes=0&scrollbar=0" frameborder="0"></iframe>
+          </div>
+          <div class="cert-overlay">
+            <div class="cert-overlay-content">
+              <h3> Australian National University </h3>
+              <p>Master of Computing (Data Science)</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Certificate 3: Neural Networks -->
+      <div class="swiper-slide">
+        <a href="/assets/files/Certificates/Neural Networks and Deep Learning.pdf" target="_blank" class="certificate-photo-card">
+          <div class="cert-pdf-preview">
+            <iframe src="/assets/files/Certificates/Neural Networks and Deep Learning.pdf#toolbar=0&navpanes=0&scrollbar=0" frameborder="0"></iframe>
+          </div>
+          <div class="cert-overlay">
+            <div class="cert-overlay-content">
+              <h3> Deeplearning.ai </h3>
+              <p>Neural Networks and Deep Learning</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+
+      <!-- Certificate 4: PTE English Test -->
+      <div class="swiper-slide">
+        <a href="/assets/files/Certificates/PTE_Tao_Xu_479425212.pdf" target="_blank" class="certificate-photo-card">
+          <div class="cert-pdf-preview">
+            <iframe src="/assets/files/Certificates/PTE_Tao_Xu_479425212.pdf#toolbar=0&navpanes=0&scrollbar=0" frameborder="0"></iframe>
+          </div>
+          <div class="cert-overlay">
+            <div class="cert-overlay-content">
+              <h3> Pearson PTE Academic </h3>
+              <p>English Language Proficiency Test</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Certificate 5: UCD Bachelor Degree -->
+      <div class="swiper-slide">
+        <a href="/assets/files/Certificates/UCD_BS_Mgt.pdf" target="_blank" class="certificate-photo-card">
+          <div class="cert-pdf-preview">
+            <iframe src="/assets/files/Certificates/UCD_BS_Mgt.pdf#toolbar=0&navpanes=0&scrollbar=0" frameborder="0"></iframe>
+          </div>
+          <div class="cert-overlay">
+            <div class="cert-overlay-content">
+              <h3> University College Dublin </h3>
+              <p>Bachelor of Business Studies (Management)</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      
+      <!-- Certificate 6: Accenture -->
       <div class="swiper-slide">
         <a href="/assets/files/Certificates/Accenture Technology Consulting Job Simulation.pdf" target="_blank" class="certificate-photo-card">
           <div class="cert-pdf-preview">
@@ -178,7 +239,7 @@ classes: wide
         </a>
       </div>
 
-      <!-- Certificate 3: Deloitte -->
+      <!-- Certificate 7: Deloitte -->
       <div class="swiper-slide">
         <a href="/assets/files/Certificates/Deloitte Technology Job Simulation.pdf" target="_blank" class="certificate-photo-card">
           <div class="cert-pdf-preview">
@@ -193,7 +254,7 @@ classes: wide
         </a>
       </div>
 
-      <!-- Certificate 4: Finance -->
+      <!-- Certificate 8: Finance -->
       <div class="swiper-slide">
         <a href="/assets/files/Certificates/Global Derivative Contracts Bonds & Mutual Funds 101 level.pdf" target="_blank" class="certificate-photo-card">
           <div class="cert-pdf-preview">
@@ -203,21 +264,6 @@ classes: wide
             <div class="cert-overlay-content">
               <h3> Udemy </h3>
               <p>Global Derivative Contracts,Bonds & Mutual Funds 101 level</p>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <!-- Certificate 5: Neural Networks -->
-      <div class="swiper-slide">
-        <a href="/assets/files/Certificates/Neural Networks and Deep Learning.pdf" target="_blank" class="certificate-photo-card">
-          <div class="cert-pdf-preview">
-            <iframe src="/assets/files/Certificates/Neural Networks and Deep Learning.pdf#toolbar=0&navpanes=0&scrollbar=0" frameborder="0"></iframe>
-          </div>
-          <div class="cert-overlay">
-            <div class="cert-overlay-content">
-              <h3> Deeplearning.ai </h3>
-              <p>Neural Networks and Deep Learning</p>
             </div>
           </div>
         </a>
