@@ -218,7 +218,7 @@ classes: wide
           <div class="cert-overlay">
             <div class="cert-overlay-content">
               <h3> University College Dublin </h3>
-              <p>Bachelor of Business Studies (Management)</p>
+              <p>Bachelor of Business Studies in Management (Honours)</p>
             </div>
           </div>
         </a>
