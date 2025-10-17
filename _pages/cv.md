@@ -40,103 +40,10 @@ classes: wide
   <p style="color: #999; font-size: 0.9rem; margin-top: 1rem;">Last updated: <span id="lastUpdated">24 July 2025</span></p>
 </div>
 
-<h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
-  <span style="background: linear-gradient(135deg, #00c9ff, #92fe9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Professional Summary</span>
-</h2>
-
-<div class="about-card">
-  PMP Certified, Results-driven project manager with 2+ years leading tech and security projects across APAC. Skilled in aligning R&D execution with business strategy, delivering measurable impact (e.g., $30K cost savings, 1.5-month acceleration). Strong foundation in AI, data science, and compliance frameworks (GDPR, NIST, AI Act).
-</div>
-
-<h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
-  <span style="background: linear-gradient(135deg, #00c9ff, #92fe9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Education</span>
-</h2>
-
-<div style="margin: 2rem 0;">
-
-<div class="about-card">
-  <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
-    <div>
-      <h3 style="color: #007AFF; margin-bottom: 0.5rem;">Master of Computing (Data Science)</h3>
-      <h4 style="color: #2d3748; margin-bottom: 0.5rem;">Australian National University (QS:32)</h4>
-      <p style="color: #666; margin: 0;">ACT, Australia</p>
-    </div>
-    <span style="background: #f0f8ff; color: #007AFF; padding: 0.5rem 1rem; border-radius: 20px; font-weight: 600;">2022 - 2024</span>
-  </div>
-</div>
-
-<div class="about-card">
-  <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
-    <div>
-      <h3 style="color: #007AFF; margin-bottom: 0.5rem;">Bachelor of Business Studies in Management (Honours)</h3>
-      <h4 style="color: #2d3748; margin-bottom: 0.5rem;">University College Dublin (QS:118)</h4>
-      <p style="color: #666; margin: 0;">Dublin, Ireland</p>
-    </div>
-    <span style="background: #f0f8ff; color: #007AFF; padding: 0.5rem 1rem; border-radius: 20px; font-weight: 600;">2019 - 2022</span>
-  </div>
-</div>
-
-</div>
-
-<h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
-  <span style="background: linear-gradient(135deg, #00c9ff, #92fe9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Research & Publications</span>
-</h2>
-
-<div class="about-card">
-  <h3 style="color: #007AFF; margin-bottom: 1rem;">Large Language Model Safety Testing Framework</h3>
-  <p style="color: #666; font-style: italic; margin-bottom: 1rem;">(CCLD 2024)</p>
-  <p style="color: #4a5568; line-height: 1.7;">
-    <strong>Summary:</strong> Proposed a compliance-focused evaluation framework for Large Language Models (LLMs), addressing robustness, security, and privacy. Applied global standards (AI Act, GDPR, NIST, TC260-003, WDTA) to guide safe deployment of AI systems.
-  </p>
-</div>
-
-<h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
-  <span style="background: linear-gradient(135deg, #00c9ff, #92fe9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Skills</span>
-</h2>
-
-<div class="about-grid">
-
-<div class="about-card">
-  <h3><span class="icon">📋</span> Project Management</h3>
-  <p>PMP Certification, Agile, Waterfall, Kanban, Jira, Confluence, Lean Six Sigma, SWOT Analysis</p>
-</div>
-
-<div class="about-card">
-  <h3><span class="icon">💻</span> Programming Languages and Tools</h3>
-  <p><span class="iconify" data-icon="vscode-icons:file-type-python"></span> Python, 
-    <span class="iconify" data-icon="mdi:language-r"></span> R,
-    <span class="iconify" data-icon="vscode-icons:file-type-js-official"></span> JavaScript, 
-    <span class="iconify" data-icon="vscode-icons:file-type-typescript-official"></span> TypeScript, 
-    <span class="iconify" data-icon="vscode-icons:file-type-sql"></span> PostgreSQL, 
-    <span class="iconify" data-icon="logos:java" data-inline="false"></span> Java,
-    <span class="iconify" data-icon="logos:tableau-icon"></span> Tableau,
-    <span class="iconify" data-icon="logos:git"></span> Git, 
-    <span class="iconify" data-icon="logos:jira"></span> Jira,
-    React.js, JavaFX</p>
-</div>
-
-<div class="about-card">
-  <h3><span class="icon">🤖</span> AI/ML</h3>
-  <p>Neural Networks, NLP, PyTorch, LLMs, scikit-learn</p>
-</div>
-
-<div class="about-card">
-  <h3><span class="icon">📊</span> Data</h3>
-  <p>Data Wrangling, Warehousing, Mining</p>
-</div>
-
-<div class="about-card">
-  <h3><span class="icon">🌏</span> Languages</h3>
-  <p>English (proficient), Mandarin (native)</p>
-</div>
-
-</div>
-
+<!-- ==================== 证书轮播组件 ==================== -->
 <h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
   <span style="background: linear-gradient(135deg, #00c9ff, #92fe9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Certifications</span>
 </h2>
-
-<!-- ==================== 证书轮播组件 ==================== -->
 
 <!-- Swiper CSS 样式库（CDN） -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -280,7 +187,122 @@ classes: wide
   </div>
 </div>
 
-<!-- Swiper JS 脚本库（CDN） -->
+<!-- 以上为证书轮播组建 -->
+
+<h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
+  <span style="background: linear-gradient(135deg, #00c9ff, #92fe9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Professional Summary</span>
+</h2>
+
+<div class="about-card">
+  PMP Certified, Results-driven project manager with 2+ years leading tech and security projects across APAC. Skilled in aligning R&D execution with business strategy, delivering measurable impact (e.g., $30K cost savings, 1.5-month acceleration). Strong foundation in AI, data science, and compliance frameworks (GDPR, NIST, AI Act).
+</div>
+
+<h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
+  <span style="background: linear-gradient(135deg, #00c9ff, #92fe9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Education</span>
+</h2>
+
+<div style="margin: 2rem 0;">
+
+<div class="about-card">
+  <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+    <div>
+      <h3 style="color: #007AFF; margin-bottom: 0.5rem;">Master of Computing (Data Science)</h3>
+      <h4 style="color: #2d3748; margin-bottom: 0.5rem;">Australian National University (QS:32)</h4>
+      <p style="color: #666; margin: 0;">ACT, Australia</p>
+    </div>
+    <span style="background: #f0f8ff; color: #007AFF; padding: 0.5rem 1rem; border-radius: 20px; font-weight: 600;">2022 - 2024</span>
+  </div>
+</div>
+
+<div class="about-card">
+  <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+    <div>
+      <h3 style="color: #007AFF; margin-bottom: 0.5rem;">Bachelor of Business Studies in Management (Honours)</h3>
+      <h4 style="color: #2d3748; margin-bottom: 0.5rem;">University College Dublin (QS:118)</h4>
+      <p style="color: #666; margin: 0;">Dublin, Ireland</p>
+    </div>
+    <span style="background: #f0f8ff; color: #007AFF; padding: 0.5rem 1rem; border-radius: 20px; font-weight: 600;">2019 - 2022</span>
+  </div>
+</div>
+
+</div>
+
+<h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
+  <span style="background: linear-gradient(135deg, #00c9ff, #92fe9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Research & Publications</span>
+</h2>
+
+<div class="about-card">
+  <h3 style="color: #007AFF; margin-bottom: 1rem;">Large Language Model Safety Testing Framework</h3>
+  <p style="color: #666; font-style: italic; margin-bottom: 1rem;">(CCLD 2024)</p>
+  <p style="color: #4a5568; line-height: 1.7;">
+    <strong>Summary:</strong> Proposed a compliance-focused evaluation framework for Large Language Models (LLMs), addressing robustness, security, and privacy. Applied global standards (AI Act, GDPR, NIST, TC260-003, WDTA) to guide safe deployment of AI systems.
+  </p>
+</div>
+
+<h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
+  <span style="background: linear-gradient(135deg, #00c9ff, #92fe9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Skills</span>
+</h2>
+
+<div class="about-grid">
+
+<div class="about-card">
+  <h3><span class="icon">📋</span> Project Management</h3>
+  <p>PMP Certification, Agile, Waterfall, Kanban, Jira, Confluence, Lean Six Sigma, SWOT Analysis</p>
+</div>
+
+<div class="about-card">
+  <h3><span class="icon">🤖</span> AI/ML</h3>
+  <p>Neural Networks, NLP, PyTorch, LLMs, scikit-learn</p>
+</div>
+
+<div class="about-card">
+  <h3><span class="icon">💻</span> Programming Languages and Tools</h3>
+  <p><span class="iconify" data-icon="vscode-icons:file-type-python"></span> Python, 
+    <span class="iconify" data-icon="mdi:language-r"></span> R,
+    <span class="iconify" data-icon="vscode-icons:file-type-js-official"></span> JavaScript, 
+    <span class="iconify" data-icon="vscode-icons:file-type-typescript-official"></span> TypeScript, 
+    <span class="iconify" data-icon="vscode-icons:file-type-sql"></span> PostgreSQL, 
+    <span class="iconify" data-icon="logos:java" data-inline="false"></span> Java,
+    <span class="iconify" data-icon="logos:tableau-icon"></span> Tableau,
+    <span class="iconify" data-icon="logos:git"></span> Git, 
+    <span class="iconify" data-icon="logos:jira"></span> Jira,
+    React.js, JavaFX</p>
+</div>
+
+<div class="about-card">
+  <h3><span class="icon">📊</span> Data Science</h3>
+  <p>Data Wrangling, Warehousing, Mining, Statistical Analysis, Predictive Modeling</p>
+</div>
+
+<div class="about-card">
+  <h3><span class="icon">🌏</span> Languages</h3>
+  <p>English (proficient), Mandarin (native)</p>
+</div>
+
+<div class="about-card">
+  <h3><span class="icon">🌏</span> <span data-translate="Global Mobility">Global Mobility</span></h3>
+  <p>Work authorization in China, Singapore, and Australia. Experienced in leading cross-cultural teams and managing projects across APAC time zones.</p>
+</div>
+
+</div>
+
+
+<h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
+  <span style="background: linear-gradient(135deg, #667eea, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Let's Connect</span>
+</h2>
+
+<div style="background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%); color: white; padding: 3rem 2rem; border-radius: 20px; text-align: center; margin: 3rem 0;">
+  <h3 style="font-size: 1.8rem; font-weight: 600; margin-bottom: 1rem; color: white;">Ready to Collaborate?</h3>
+  <p style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;">
+    I'm always excited to connect with like-minded individuals and explore new opportunities for collaboration and growth.
+  </p>
+  <a href="/contact/" style="display: inline-block; background: white; color: #0984e3; padding: 1rem 2rem; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">
+    Get in Touch
+  </a>
+</div>
+
+
+<!-- 证书轮播 Swiper JS 脚本库（CDN） -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <!-- 初始化证书轮播 Swiper -->

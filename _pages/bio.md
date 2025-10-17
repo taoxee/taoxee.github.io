@@ -4,6 +4,7 @@ title: "Bio"
 permalink: /bio/
 author_profile: true
 classes: wide
+published: false
 ---
 
 <!-- Hide default page title -->
