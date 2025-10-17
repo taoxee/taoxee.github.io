@@ -4,8 +4,8 @@ main:
   #   url: /
   - title: '<span data-translate="About">About</span>'
     url: /about/
-  - title: '<span data-translate="Bio">Bio</span>'
-    url: /bio/
+  # - title: '<span data-translate="Bio">Bio</span>'
+  #   url: /bio/
   - title: '<span data-translate="CV">CV</span>'
     url: /cv/
   - title: '<span data-translate="Posts">Posts</span>'
