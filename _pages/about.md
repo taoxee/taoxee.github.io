@@ -122,8 +122,8 @@ TODO: Remove this commented block after confirming new CSS classes work
   <h1 class="hero__title">Hello, I'm Tao Xu</h1>
   <p class="hero__subtitle">Passionate about technology, innovation, and creating meaningful digital experiences</p>
   <div class="hero-buttons">
-    <a href="/bio/" class="hero-btn">
-      <span data-translate="Learn About Me">Learn About Me</span>
+    <a href="/contact/" class="hero-btn">
+      <span data-translate="Learn About Me">Contact Me</span>
     </a>
     <a href="/cv/" class="hero-btn">
       <span data-translate="View My CV">View My CV</span>
