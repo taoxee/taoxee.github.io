@@ -123,7 +123,7 @@ TODO: Remove this commented block after confirming new CSS classes work
   <p class="hero__subtitle">Passionate about technology, innovation, and creating meaningful digital experiences</p>
   <div class="hero-buttons">
     <a href="/contact/" class="hero-btn">
-      <span data-translate="Learn About Me">Contact Me</span>
+      <span data-translate="Contact Me">Contact Me</span>
     </a>
     <a href="/cv/" class="hero-btn">
       <span data-translate="View My CV">View My CV</span>
