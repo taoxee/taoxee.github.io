@@ -2,10 +2,6 @@
 
 Welcome to my personal website! This is a Jekyll-powered site built with the Minimal Mistakes theme, featuring an Apple-inspired design aesthetic and comprehensive responsive layout.
 
-## 👨‍💼 About Me
-
-I'm Tao Xu (徐涛), a **PMP Certified project manager** with 2+ years of experience leading tech and security projects across APAC. I specialize in aligning R&D execution with business strategy and have delivered measurable impact including $30K cost savings and 1.5-month project acceleration.
-
 ### 🎓 Education
 - **Master of Computing (Data Science)** - Australian National University (QS:32) | 2022-2024
 - **Bachelor of Business Studies in Management (Honours)** - University College Dublin (QS:118) | 2019-2022
@@ -127,15 +123,6 @@ The site uses a comprehensive Apple-inspired design system:
 - **Work Authorization**: China | Singapore | Australia | Remote
 - **LinkedIn**: [Tao Xu](https://www.linkedin.com/in/tao-xee)
 - **GitHub**: [taoxee](https://github.com/taoxee)
-
-## 🌟 Key Highlights
-
-- ✅ **PMP Certified** project management professional
-- ✅ **$30K cost savings** and **1.5-month acceleration** delivered
-- ✅ **APAC expertise** across Australia, China, and Singapore
-- ✅ **AI Safety research** published in CCLD 2024
-- ✅ **Bilingual capabilities** (English/Mandarin)
-- ✅ **Modern tech stack** with responsive design
 
 ## 📄 License
 
