@@ -37,7 +37,7 @@ classes: wide
   </div>
   
   <!-- 更新日期 -->
-  <p style="color: #999; font-size: 0.9rem; margin-top: 1rem;">Last updated: <span id="lastUpdated">24 July 2025</span></p>
+  <p style="color: #999; font-size: 0.9rem; margin-top: 1rem;">Last updated: <span id="lastUpdated">19 November 2025</span></p>
 </div>
 
 <!-- ==================== 证书轮播组件 ==================== -->
