@@ -8,35 +8,35 @@ classes: wide
 
 <div class="hero-section hero-section--cv">
   <h1 class="hero__title" data-translate="Curriculum Vitae">Curriculum Vitae</h1>
-  <p class="hero__subtitle">Professional Experience & Qualifications</p>
+  <p class="hero__subtitle" data-translate="cv_hero_subtitle">Professional Experience & Qualifications</p>
 </div>
 
 <div class="cv-container" style="padding: 0 0rem;">
 
 <!-- ==================== 简历下载区域 ==================== -->
 <div class="cv-section" style="text-align: center;">
-  <h2 style="font-size: 2.2rem; font-weight: 600; color: #007AFF; margin-bottom: 1.5rem;">Download My Resume</h2>
-  <p style="color: #666; margin-bottom: 2rem; font-size: 1.1rem;">Get the latest version of my CV in PDF format</p>
+  <h2 style="font-size: 2.2rem; font-weight: 600; color: #007AFF; margin-bottom: 1.5rem;" data-translate="Download My Resume">Download My Resume</h2>
+  <p style="color: #666; margin-bottom: 2rem; font-size: 1.1rem;" data-translate="cv_download_desc">Get the latest version of my CV in PDF format</p>
   
   <!-- 下载按钮容器 - 中英文简历 -->
   <div class="cv-buttons-container">
     <!-- 英文简历下载按钮 -->
-    <a href="/assets/files/PM-TAO-Intl-Dec-12.pdf" download="TaoXu_CV_EN.pdf" class="cv-download-btn cv-btn-english">
+    <a href="/assets/files/PM-TAO-Intl-Dec-12.pdf" download="TaoXu_CV_EN.pdf" class="cv-download-btn cv-btn-english" data-translate="cv_btn_english">
       📄 English Resume
     </a>
     <!-- 中文简历下载按钮 -->
-    <a href="/assets/files/PM-TAO-中文-Dec-12.pdf" download="TaoXu_CV_CN.pdf" class="cv-download-btn cv-btn-chinese">
+    <a href="/assets/files/PM-TAO-中文-Dec-12.pdf" download="TaoXu_CV_CN.pdf" class="cv-download-btn cv-btn-chinese" data-translate="cv_btn_chinese">
       🇨🇳 中文简历
     </a>
   </div>
   
   <!-- 更新日期 -->
-  <p style="color: #999; font-size: 0.9rem; margin-top: 1rem;">Last updated: <span id="lastUpdated">27 February 2026</span></p>
+  <p style="color: #999; font-size: 0.9rem; margin-top: 1rem;"><span data-translate="Last updated">Last updated</span>: <span id="lastUpdated">27 February 2026</span></p>
 </div>
 
 <!-- ==================== 证书轮播组件 ==================== -->
 <h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
-  <span style="background: linear-gradient(135deg, #00c9ff, #92fe9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Certifications</span>
+  <span style="background: linear-gradient(135deg, #00c9ff, #92fe9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;" data-translate="Certifications">Certifications</span>
 </h2>
 
 <!-- Swiper CSS 样式库（CDN） -->
@@ -57,8 +57,8 @@ classes: wide
           </div>
           <div class="cert-overlay">
             <div class="cert-overlay-content">
-              <h3> Project Management Institut  </h3>
-              <p>Project Management Professional Certification</p>
+              <h3 data-translate="cert_pmi"> Project Management Institut  </h3>
+              <p data-translate="cert_pmp">Project Management Professional Certification</p>
             </div>
           </div>
         </a>
@@ -72,8 +72,8 @@ classes: wide
           </div>
           <div class="cert-overlay">
             <div class="cert-overlay-content">
-              <h3> Australian National University </h3>
-              <p>Master of Computing (Data Science)</p>
+              <h3 data-translate="cert_anu"> Australian National University </h3>
+              <p data-translate="cert_anu_degree">Master of Computing (Data Science)</p>
             </div>
           </div>
         </a>
@@ -87,8 +87,8 @@ classes: wide
           </div>
           <div class="cert-overlay">
             <div class="cert-overlay-content">
-              <h3> Deeplearning.ai </h3>
-              <p>Neural Networks and Deep Learning</p>
+              <h3 data-translate="cert_deeplearning"> Deeplearning.ai </h3>
+              <p data-translate="cert_nn">Neural Networks and Deep Learning</p>
             </div>
           </div>
         </a>
@@ -103,8 +103,8 @@ classes: wide
           </div>
           <div class="cert-overlay">
             <div class="cert-overlay-content">
-              <h3> Pearson PTE Academic </h3>
-              <p>English Language Proficiency Test</p>
+              <h3 data-translate="cert_pte"> Pearson PTE Academic </h3>
+              <p data-translate="cert_pte_desc">English Language Proficiency Test</p>
             </div>
           </div>
         </a>
@@ -118,8 +118,8 @@ classes: wide
           </div>
           <div class="cert-overlay">
             <div class="cert-overlay-content">
-              <h3> University College Dublin </h3>
-              <p>Bachelor of Business Studies in Management (Honours)</p>
+              <h3 data-translate="cert_ucd"> University College Dublin </h3>
+              <p data-translate="cert_ucd_degree">Bachelor of Business Studies in Management (Honours)</p>
             </div>
           </div>
         </a>
@@ -133,8 +133,8 @@ classes: wide
           </div>
           <div class="cert-overlay">
             <div class="cert-overlay-content">
-              <h3> Accenture </h3>
-              <p>Technology Consulting Job Simulation</p>
+              <h3 data-translate="cert_accenture"> Accenture </h3>
+              <p data-translate="cert_accenture_desc">Technology Consulting Job Simulation</p>
             </div>
           </div>
         </a>
@@ -148,8 +148,8 @@ classes: wide
           </div>
           <div class="cert-overlay">
             <div class="cert-overlay-content">
-              <h3> Deloitte </h3>
-              <p>Technology Job Simulation</p>
+              <h3 data-translate="cert_deloitte"> Deloitte </h3>
+              <p data-translate="cert_deloitte_desc">Technology Job Simulation</p>
             </div>
           </div>
         </a>
@@ -163,8 +163,8 @@ classes: wide
           </div>
           <div class="cert-overlay">
             <div class="cert-overlay-content">
-              <h3> Udemy </h3>
-              <p>Global Derivative Contracts,Bonds & Mutual Funds 101 level</p>
+              <h3 data-translate="cert_udemy"> Udemy </h3>
+              <p data-translate="cert_finance">Global Derivative Contracts,Bonds & Mutual Funds 101 level</p>
             </div>
           </div>
         </a>
@@ -184,15 +184,15 @@ classes: wide
 <!-- 以上为证书轮播组建 -->
 
 <h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
-  <span style="background: linear-gradient(135deg, #00c9ff, #92fe9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Professional Summary</span>
+  <span style="background: linear-gradient(135deg, #00c9ff, #92fe9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;" data-translate="Professional Summary">Professional Summary</span>
 </h2>
 
-<div class="about-card">
+<div class="about-card" data-translate="cv_summary">
   PMP Certified, Results-driven project manager with 2+ years leading tech and security projects across APAC. Skilled in aligning R&D execution with business strategy, delivering measurable impact (e.g., $30K cost savings, 1.5-month acceleration). Strong foundation in AI, data science, and compliance frameworks (GDPR, NIST, AI Act).
 </div>
 
 <h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
-  <span style="background: linear-gradient(135deg, #00c9ff, #92fe9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Education</span>
+  <span style="background: linear-gradient(135deg, #00c9ff, #92fe9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;" data-translate="Education">Education</span>
 </h2>
 
 <div style="margin: 2rem 0;">
@@ -200,9 +200,9 @@ classes: wide
 <div class="about-card">
   <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
     <div>
-      <h3 style="color: #007AFF; margin-bottom: 0.5rem;">Master of Computing (Data Science)</h3>
-      <h4 style="color: #2d3748; margin-bottom: 0.5rem;">Australian National University (QS:32)</h4>
-      <p style="color: #666; margin: 0;">ACT, Australia</p>
+      <h3 style="color: #007AFF; margin-bottom: 0.5rem;" data-translate="cv_master_degree">Master of Computing (Data Science)</h3>
+      <h4 style="color: #2d3748; margin-bottom: 0.5rem;" data-translate="cv_anu">Australian National University (QS:32)</h4>
+      <p style="color: #666; margin: 0;" data-translate="cv_anu_location">ACT, Australia</p>
     </div>
     <span style="background: #f0f8ff; color: #007AFF; padding: 0.5rem 1rem; border-radius: 20px; font-weight: 600;">2022 - 2024</span>
   </div>
@@ -211,9 +211,9 @@ classes: wide
 <div class="about-card">
   <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
     <div>
-      <h3 style="color: #007AFF; margin-bottom: 0.5rem;">Bachelor of Business Studies in Management (Honours)</h3>
-      <h4 style="color: #2d3748; margin-bottom: 0.5rem;">University College Dublin (QS:118)</h4>
-      <p style="color: #666; margin: 0;">Dublin, Ireland</p>
+      <h3 style="color: #007AFF; margin-bottom: 0.5rem;" data-translate="cv_bachelor_degree">Bachelor of Business Studies in Management (Honours)</h3>
+      <h4 style="color: #2d3748; margin-bottom: 0.5rem;" data-translate="cv_ucd">University College Dublin (QS:118)</h4>
+      <p style="color: #666; margin: 0;" data-translate="cv_ucd_location">Dublin, Ireland</p>
     </div>
     <span style="background: #f0f8ff; color: #007AFF; padding: 0.5rem 1rem; border-radius: 20px; font-weight: 600;">2019 - 2022</span>
   </div>
@@ -222,35 +222,35 @@ classes: wide
 </div>
 
 <h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
-  <span style="background: linear-gradient(135deg, #00c9ff, #92fe9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Research & Publications</span>
+  <span style="background: linear-gradient(135deg, #00c9ff, #92fe9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;" data-translate="Research & Publications">Research & Publications</span>
 </h2>
 
 <div class="about-card">
-  <h3 style="color: #007AFF; margin-bottom: 1rem;">Large Language Model Safety Testing Framework</h3>
+  <h3 style="color: #007AFF; margin-bottom: 1rem;" data-translate="cv_llm_title">Large Language Model Safety Testing Framework</h3>
   <p style="color: #666; font-style: italic; margin-bottom: 1rem;">(CCLD 2024)</p>
   <p style="color: #4a5568; line-height: 1.7;">
-    <strong>Summary:</strong> Proposed a compliance-focused evaluation framework for Large Language Models (LLMs), addressing robustness, security, and privacy. Applied global standards (AI Act, GDPR, NIST, TC260-003, WDTA) to guide safe deployment of AI systems.
+    <strong data-translate="Summary">Summary:</strong> <span data-translate="cv_llm_summary">Proposed a compliance-focused evaluation framework for Large Language Models (LLMs), addressing robustness, security, and privacy. Applied global standards (AI Act, GDPR, NIST, TC260-003, WDTA) to guide safe deployment of AI systems.</span>
   </p>
 </div>
 
 <h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
-  <span style="background: linear-gradient(135deg, #00c9ff, #92fe9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Skills</span>
+  <span style="background: linear-gradient(135deg, #00c9ff, #92fe9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;" data-translate="Skills">Skills</span>
 </h2>
 
 <div class="about-grid">
 
 <div class="about-card">
-  <h3><span class="icon">📋</span> Project Management</h3>
-  <p>PMP Certification, Agile, Waterfall, Kanban, Jira, Confluence, Lean Six Sigma, SWOT Analysis</p>
+  <h3><span class="icon">📋</span> <span data-translate="Project Management">Project Management</span></h3>
+  <p data-translate="cv_pm_skills">PMP Certification, Agile, Waterfall, Kanban, Jira, Confluence, Lean Six Sigma, SWOT Analysis</p>
 </div>
 
 <div class="about-card">
-  <h3><span class="icon">🤖</span> AI/ML</h3>
-  <p>Neural Networks, NLP, PyTorch, LLMs, scikit-learn</p>
+  <h3><span class="icon">🤖</span> <span data-translate="AI/ML">AI/ML</span></h3>
+  <p data-translate="cv_aiml_skills">Neural Networks, NLP, PyTorch, LLMs, scikit-learn</p>
 </div>
 
 <div class="about-card">
-  <h3><span class="icon">💻</span> Programming Languages and Tools</h3>
+  <h3><span class="icon">💻</span> <span data-translate="Programming Languages and Tools">Programming Languages and Tools</span></h3>
   <p><span class="iconify" data-icon="vscode-icons:file-type-python"></span> Python, 
     <span class="iconify" data-icon="mdi:language-r"></span> R,
     <span class="iconify" data-icon="vscode-icons:file-type-js-official"></span> JavaScript, 
@@ -264,31 +264,31 @@ classes: wide
 </div>
 
 <div class="about-card">
-  <h3><span class="icon">📊</span> Data Science</h3>
-  <p>Data Wrangling, Warehousing, Mining, Statistical Analysis, Predictive Modeling</p>
+  <h3><span class="icon">📊</span> <span data-translate="Data Science">Data Science</span></h3>
+  <p data-translate="cv_ds_skills">Data Wrangling, Warehousing, Mining, Statistical Analysis, Predictive Modeling</p>
 </div>
 
 <div class="about-card">
-  <h3><span class="icon">🌏</span> Languages</h3>
-  <p>English (proficient), Mandarin (native)</p>
+  <h3><span class="icon">🌏</span> <span data-translate="Languages">Languages</span></h3>
+  <p data-translate="cv_languages">English (proficient), Mandarin (native)</p>
 </div>
 
 <div class="about-card">
   <h3><span class="icon">🌏</span> <span data-translate="Global Mobility">Global Mobility</span></h3>
-  <p>Work authorization in China, Singapore, and Australia. Experienced in leading cross-cultural teams and managing projects across APAC time zones.</p>
+  <p data-translate="cv_mobility_desc">Work authorization in China, Singapore, and Australia. Experienced in leading cross-cultural teams and managing projects across APAC time zones.</p>
 </div>
 
 </div>
 
 
 <h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
-  <span style="background: linear-gradient(135deg, #00c9ff, #92fe9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Let's Connect</span>
+  <span style="background: linear-gradient(135deg, #00c9ff, #92fe9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;" data-translate="Let's Connect">Let's Connect</span>
 </h2>
 
 <div class="cta-card cta-card--cv">
-  <h3>Ready to Collaborate?</h3>
-  <p>I'm always excited to connect with like-minded individuals and explore new opportunities for collaboration and growth.</p>
-  <a href="/contact/" class="cta__button">Get in Touch</a>
+  <h3 data-translate="Ready to Collaborate?">Ready to Collaborate?</h3>
+  <p data-translate="cta_collaborate_text">I'm always excited to connect with like-minded individuals and explore new opportunities for collaboration and growth.</p>
+  <a href="/contact/" class="cta__button" data-translate="Get in Touch">Get in Touch</a>
 </div>
 
 
