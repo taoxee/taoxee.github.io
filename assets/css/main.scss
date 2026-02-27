@@ -17,6 +17,419 @@
   display: none !important;
 }
 
+/* ============================================================================
+   PAGE CONTENT TYPOGRAPHY (consolidated from inline styles)
+   ============================================================================ */
+
+.page__content h2 {
+  color: #1d1d1f;
+  font-weight: 600;
+  font-size: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #007AFF;
+  padding-bottom: 0.5rem;
+}
+
+.page__content h3 {
+  color: #333;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.page__content h4 {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.page__content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #515151;
+  margin-bottom: 1.5rem;
+}
+
+.page__content ul,
+.page__content ol {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #515151;
+}
+
+.page__content blockquote {
+  border-left: 4px solid #007AFF;
+  background: #f8f9fa;
+  padding: 1rem 2rem;
+  margin: 2rem 0;
+  font-style: italic;
+  border-radius: 0 8px 8px 0;
+}
+
+.page__content strong {
+  color: #007AFF;
+  font-weight: 600;
+}
+
+.page__content {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* Posts list styling */
+.entries-list .list__item {
+  background: white !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07) !important;
+  border: 4px solid #e9ecef !important;
+  margin-bottom: 2rem !important;
+  padding: 2rem !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.entries-list .list__item:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.entries-list .list__item .archive__item-title {
+  color: #007AFF !important;
+  font-weight: 600 !important;
+  font-size: 1.3rem !important;
+  margin-bottom: 0.8rem !important;
+}
+
+.entries-list .list__item .archive__item-excerpt {
+  color: #666 !important;
+  line-height: 1.6 !important;
+  font-size: 1rem !important;
+}
+
+.entries-list .list__item .page__meta {
+  color: #999 !important;
+  font-size: 0.9rem !important;
+  margin-top: 1rem !important;
+}
+
+/* ============================================================================
+   CV PAGE STYLES (consolidated from cv.md inline styles)
+   ============================================================================ */
+
+/* CV Section card */
+.cv-section {
+  background: white;
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.cv-section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* CV download buttons */
+.cv-buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.cv-btn-chinese {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.cv-btn-chinese:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.cv-btn-english {
+  background: linear-gradient(135deg, #00c9ff 0%, #92fe9d 100%);
+  color: white;
+}
+
+.cv-btn-english:hover {
+  background: linear-gradient(135deg, #92fe9d 0%, #00c9ff 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 201, 255, 0.4);
+}
+
+@media (max-width: 768px) {
+  .cv-buttons-container {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+
+  .cv-download-btn {
+    width: 100%;
+    max-width: 100%;
+    min-width: auto;
+    padding: 1.2rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cv-buttons-container {
+    gap: 0.8rem;
+    padding: 0 0.5rem;
+  }
+
+  .cv-download-btn {
+    padding: 1rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Certificate carousel */
+.certificates-swiper-container {
+  width: 100%;
+  padding: 2rem 0 4rem 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.certificatesSwiper {
+  width: 100%;
+  padding: 20px 50px 50px 50px !important;
+  position: relative;
+  -webkit-mask-image: linear-gradient(to right,
+    transparent 0%, black 10px, black calc(100% - 10px), transparent 100%);
+  mask-image: linear-gradient(to right,
+    transparent 0%, black 10px, black calc(100% - 10px), transparent 100%);
+}
+
+.certificatesSwiper .swiper-wrapper {
+  align-items: stretch;
+}
+
+.certificatesSwiper .swiper-slide {
+  width: 400px !important;
+  height: auto;
+}
+
+.certificate-photo-card {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 550px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s ease;
+  text-decoration: none;
+  border: 3px solid transparent;
+}
+
+.certificate-photo-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 50px rgba(0, 122, 255, 0.3);
+  border-color: #007AFF;
+}
+
+.cert-pdf-preview {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #f5f5f5;
+  overflow: hidden;
+}
+
+.cert-pdf-preview iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  pointer-events: none;
+  transform: scale(1.15);
+  transform-origin: top center;
+}
+
+.cert-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.6) 70%, transparent 100%);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  transition: all 0.4s ease;
+}
+
+.certificate-photo-card:hover .cert-overlay {
+  background: linear-gradient(to top, rgba(0, 122, 255, 0.95) 0%, rgba(0, 201, 255, 0.85) 70%, rgba(0, 201, 255, 0.3) 100%);
+}
+
+.cert-overlay-content {
+  color: white;
+  text-align: center;
+}
+
+.cert-overlay-content h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  color: white !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.cert-overlay-content p {
+  font-size: 0.95rem;
+  margin: 0 0 1rem 0;
+  opacity: 0.95;
+  color: white !important;
+}
+
+.view-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 0.6rem 1.5rem;
+  border-radius: 25px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.certificate-photo-card:hover .view-badge {
+  background: white;
+  color: #007AFF;
+  border-color: white;
+  transform: scale(1.05);
+}
+
+.certificatesSwiper .swiper-button-next,
+.certificatesSwiper .swiper-button-prev {
+  color: #007AFF;
+  background: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  z-index: 20;
+}
+
+.certificatesSwiper .swiper-button-next:after,
+.certificatesSwiper .swiper-button-prev:after {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.certificatesSwiper .swiper-button-next:hover,
+.certificatesSwiper .swiper-button-prev:hover {
+  background: #007AFF;
+  color: white;
+  transform: scale(1.1);
+}
+
+.certificatesSwiper .swiper-pagination {
+  bottom: 0 !important;
+}
+
+.certificatesSwiper .swiper-pagination-bullet {
+  background: #007AFF;
+  opacity: 0.3;
+  width: 10px;
+  height: 10px;
+  transition: all 0.3s ease;
+}
+
+.certificatesSwiper .swiper-pagination-bullet-active {
+  opacity: 1;
+  width: 30px;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .certificatesSwiper {
+    padding: 20px 20px 50px 20px !important;
+    -webkit-mask-image: linear-gradient(to right,
+      transparent 0%, black 5px, black calc(100% - 5px), transparent 100%);
+    mask-image: linear-gradient(to right,
+      transparent 0%, black 5px, black calc(100% - 5px), transparent 100%);
+  }
+
+  .certificatesSwiper .swiper-slide {
+    width: 320px !important;
+  }
+
+  .certificate-photo-card {
+    height: 480px;
+  }
+
+  .cert-overlay-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .cert-overlay-content p {
+    font-size: 0.85rem;
+  }
+
+  .certificatesSwiper .swiper-button-next,
+  .certificatesSwiper .swiper-button-prev {
+    width: 40px;
+    height: 40px;
+  }
+
+  .certificatesSwiper .swiper-button-next:after,
+  .certificatesSwiper .swiper-button-prev:after {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .certificates-swiper-container {
+    padding: 1rem 0 3rem 0;
+  }
+
+  .certificatesSwiper {
+    padding: 10px 10px 40px 10px !important;
+    -webkit-mask-image: linear-gradient(to right,
+      transparent 0%, black 5px, black calc(100% - 5px), transparent 100%);
+    mask-image: linear-gradient(to right,
+      transparent 0%, black 5px, black calc(100% - 5px), transparent 100%);
+  }
+
+  .certificatesSwiper .swiper-slide {
+    width: 280px !important;
+  }
+
+  .certificate-photo-card {
+    height: 400px;
+  }
+
+  .cert-overlay {
+    padding: 1.5rem 1rem 1rem 1rem;
+  }
+
+  .cert-overlay-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .cert-overlay-content p {
+    font-size: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .view-badge {
+    font-size: 0.75rem;
+    padding: 0.5rem 1.2rem;
+  }
+}
+
 /* Hero sections */
 .hero-section {
   color: white !important;
@@ -63,9 +476,10 @@
 .hero__subtitle {
   font-size: 1.5rem !important;
   font-weight: 400 !important;
-  opacity: 0.95 !important;
   max-width: 600px !important;
   margin: 0 auto !important;
+  color: rgba(255, 255, 255, 0.95) !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
 }
 
 .hero-buttons {
@@ -339,11 +753,17 @@
 /* CTA sections */
 .cta-section {
   background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
-  color: white;
+  color: white !important;
   padding: 3rem 2rem;
   border-radius: 20px;
   text-align: center;
   margin: 3rem 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .cta-section--bio {
@@ -358,27 +778,127 @@
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: white;
+  color: white !important;
 }
 
 .cta__description {
   font-size: 1.1rem;
-  opacity: 0.9;
   margin-bottom: 2rem;
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
+  text-align: center !important;
+  color: rgba(255, 255, 255, 0.95) !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.cta-section,
+.cta-section * {
+  text-align: center !important;
+}
+
+/* CTA card - about-card variant with gradient background */
+.cta-card {
+  background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%) !important;
+  border: none !important;
+  text-align: center !important;
+  padding: 3rem 2rem !important;
+  border-radius: 20px !important;
+  margin: 3rem 0 !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+.cta-card:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.cta-card h3 {
+  color: white !important;
+  font-size: 1.8rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 1rem !important;
+  text-align: center !important;
+}
+
+.cta-card p {
+  color: rgba(255, 255, 255, 0.95) !important;
+  font-size: 1.1rem !important;
+  margin-bottom: 2rem !important;
+  max-width: 500px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.cta-card a,
+.cta-card a:visited,
+.cta-card a:link {
+  display: inline-block !important;
+  background: white !important;
+  color: #0984e3 !important;
+  padding: 1rem 2rem !important;
+  border-radius: 25px !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+  border: none !important;
+  box-shadow: none !important;
+  font-size: 1rem !important;
+  margin: 0.25rem !important;
+}
+
+.cta-card a:hover {
+  background: rgba(255, 255, 255, 0.85) !important;
+  color: #0756b0 !important;
+  transform: translateY(-1px) !important;
+  text-decoration: none !important;
+}
+
+/* CTA card page variants */
+.cta-card--about {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+.cta-card--cv {
+  background: linear-gradient(135deg, #00c9ff 0%, #92fe9d 100%) !important;
+}
+
+.cta-card--bio {
+  background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%) !important;
+}
+
+.cta-card--contact {
+  background: linear-gradient(135deg, #42f4fa 0%, #f95ada 100%) !important;
+}
+
+.cta-card--posts {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%) !important;
 }
 
 .cta__button {
-  display: inline-block;
-  background: white;
-  color: #0984e3;
-  padding: 1rem 2rem;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
+  display: inline-block !important;
+  background: white !important;
+  color: #0984e3 !important;
+  padding: 1rem 2rem !important;
+  border-radius: 25px !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.cta__button:hover {
+  background: rgba(255, 255, 255, 0.9) !important;
+  color: #0756b0 !important;
+  transform: translateY(-1px) !important;
+  text-decoration: none !important;
 }
 
 .about-card {
@@ -808,7 +1328,7 @@ p, ul, ol, blockquote {
    ============================================================================ */
 
 /* Compact Buttons */
-.btn, .cta-button, a[href*="/contact/"] {
+.btn, .cta-button {
   display: inline-block;
   padding: 0.75rem 1.5rem; /* Reduced padding */
   background: linear-gradient(135deg, #007AFF, #005FCC);
@@ -915,9 +1435,9 @@ p, ul, ol, blockquote {
   border: 2px solid rgba(255, 255, 255, 1.0) !important;
 }
 
-/* Ready to Collaborate Button - Fix Text Contrast */
-a[href="/contact/"],
-a[href*="contact"] {
+/* Ready to Collaborate Button - scoped to CTA cards only */
+.cta-card a[href*="contact"],
+.cta-section a[href*="contact"] {
   display: inline-block !important;
   background: white !important;
   color: #0984e3 !important;
@@ -926,17 +1446,16 @@ a[href*="contact"] {
   text-decoration: none !important;
   font-weight: 600 !important;
   transition: all 0.3s ease !important;
-  border: 2px solid white !important;
-  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.3) !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
-a[href="/contact/"]:hover,
-a[href*="contact"]:hover {
+.cta-card a[href*="contact"]:hover,
+.cta-section a[href*="contact"]:hover {
   background: rgba(255, 255, 255, 0.9) !important;
   color: #0756b0 !important;
   transform: translateY(-1px) !important;
   text-decoration: none !important;
-  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.4) !important;
 }
 
 /* Navigation Button Consistency with Active State */

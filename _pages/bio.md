@@ -7,11 +7,7 @@ classes: wide
 published: false
 ---
 
-<!-- Hide default page title -->
-<style>
-  .page__title { display: none !important; }
-  .page__meta { display: none !important; }
-</style>
+
 
 <div style="background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%); color: white; padding: 5rem 2rem; margin: 0 0 4rem 0; text-align: center; border-radius: 0 0 30px 30px; box-shadow: 0 10px 30px rgba(116, 185, 255, 0.3);">
   <h1 style="font-size: 4rem; font-weight: 700; margin-bottom: 1.5rem; color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.1); letter-spacing: -0.02em;">Tao Xu | 徐涛</h1>
@@ -130,60 +126,12 @@ published: false
   <span style="background: linear-gradient(135deg, #74b9ff, #0984e3); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Connect With Me</span>
 </h2>
 
-<div style="background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%); color: white; padding: 3rem 2rem; border-radius: 20px; text-align: center; margin: 3rem 0;">
-  <h3 style="font-size: 1.8rem; font-weight: 600; margin-bottom: 1rem; color: white;">Ready to Collaborate?</h3>
-  <p style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;">
-    Let's explore opportunities for innovation, collaboration, and meaningful projects together.
-  </p>
-  <a href="/contact/" style="display: inline-block; background: white; color: #0984e3; padding: 1rem 2rem; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">
-    Get in Touch
-  </a>
+<div class="cta-card cta-card--bio">
+  <h3>Ready to Collaborate?</h3>
+  <p>Let's explore opportunities for innovation, collaboration, and meaningful projects together.</p>
+  <a href="/contact/" class="cta__button">Get in Touch</a>
 </div>
 
 </div>
 
-<style>
-  .page__content h2 {
-    color: #1d1d1f;
-    font-weight: 600;
-    font-size: 2rem;
-    margin-top: 3rem;
-    margin-bottom: 1.5rem;
-    border-bottom: 2px solid #007AFF;
-    padding-bottom: 0.5rem;
-  }
-  
-  .page__content h3 {
-    color: #333;
-    font-weight: 600;
-    font-size: 1.5rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-  }
-  
-  .page__content h4 {
-    font-weight: 600;
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .page__content p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #515151;
-    margin-bottom: 1.5rem;
-  }
-  
-  .page__content blockquote {
-    border-left: 4px solid #007AFF;
-    background: #f8f9fa;
-    padding: 1rem 2rem;
-    margin: 2rem 0;
-    font-style: italic;
-    border-radius: 0 8px 8px 0;
-  }
-  
-  .page__content {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  }
-</style> 
+ 

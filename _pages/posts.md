@@ -7,13 +7,7 @@ entries_layout: list
 classes: wide
 ---
 
-<!-- Hide default page title -->
-<style>
-  .page__title { display: none !important; }
-  .page__meta { display: none !important; }
-  .archive__title { display: none !important; }
-  .archive__subtitle { display: none !important; }
-</style>
+
 
 <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: white; padding: 5rem 2rem; margin: 0 0 4rem 0; text-align: center; border-radius: 0 0 30px 30px; box-shadow: 0 10px 30px rgba(250, 112, 154, 0.3);">
   <h1 style="font-size: 4rem; font-weight: 700; margin-bottom: 1.5rem; color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.1); letter-spacing: -0.02em;">Posts & Thoughts</h1>
@@ -82,72 +76,4 @@ classes: wide
 
 </div>
 
-<style>
-  .page__content h2 {
-    color: #1d1d1f;
-    font-weight: 600;
-    font-size: 2rem;
-    margin-top: 3rem;
-    margin-bottom: 1.5rem;
-    border-bottom: 2px solid #007AFF;
-    padding-bottom: 0.5rem;
-  }
-  
-  .page__content h3 {
-    color: #333;
-    font-weight: 600;
-    font-size: 1.5rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-  }
-  
-  .page__content h4 {
-    font-weight: 600;
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .page__content p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #515151;
-  }
-  
-  .page__content {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  }
-  
-  .entries-list .list__item {
-    background: white !important;
-    border-radius: 12px !important;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07) !important;
-    border: 4px solid #e9ecef !important;
-    margin-bottom: 2rem !important;
-    padding: 2rem !important;
-    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
-  }
-  
-  .entries-list .list__item:hover {
-    transform: translateY(-2px) !important;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important;
-  }
-  
-  .entries-list .list__item .archive__item-title {
-    color: #007AFF !important;
-    font-weight: 600 !important;
-    font-size: 1.3rem !important;
-    margin-bottom: 0.8rem !important;
-  }
-  
-  .entries-list .list__item .archive__item-excerpt {
-    color: #666 !important;
-    line-height: 1.6 !important;
-    font-size: 1rem !important;
-  }
-  
-  .entries-list .list__item .page__meta {
-    color: #999 !important;
-    font-size: 0.9rem !important;
-    margin-top: 1rem !important;
-  }
-</style> 
+ 

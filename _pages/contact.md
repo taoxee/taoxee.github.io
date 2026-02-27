@@ -103,15 +103,15 @@ classes: wide
 </form>
 </div> -->
 
-<div class="about-card quick-response">
-  <h3 style="color: #2d3748; margin-bottom: 1rem;">Quick Response</h3>
-  <p style="color: #666; margin-bottom: 1.5rem;">I typically respond to messages within 24 hours. For urgent matters, please reach out via email or LinkedIn.</p>
+<div class="cta-card cta-card--contact">
+  <h3>Quick Response</h3>
+  <p>I typically respond to messages within 24 hours. For urgent matters, please reach out via email or LinkedIn.</p>
   
   <div class="quick-response__actions">
-    <a href="mailto:xutao1486@gmail.com" class="btn btn--blue">
+    <a href="mailto:xutao1486@gmail.com" class="cta__button">
       Quick Email
     </a>
-    <a href="https://www.linkedin.com/in/tao-xee" target="_blank" class="btn btn--linkedin">
+    <a href="https://www.linkedin.com/in/tao-xee" target="_blank" class="cta__button">
       LinkedIn Message
     </a>
   </div>
