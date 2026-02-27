@@ -293,6 +293,10 @@ function toggleLangDropdown(e) {
   const btn = document.getElementById('lang-toggle');
   dropdown.classList.toggle('show');
   btn.classList.toggle('active');
+  
+  // Hide Google Translate widget when opening dropdown
+  var gtEl = document.getElementById('google_translate_element');
+  if (gtEl) gtEl.style.display = 'none';
 }
 
 // Close dropdown when clicking outside
@@ -356,23 +360,34 @@ function updateToggleButton() {
 // Google Translate integration
 var googleTranslateLoaded = false;
 
-function openGoogleTranslate() {
-  // Close dropdown
-  document.getElementById('lang-dropdown').classList.remove('show');
-  document.getElementById('lang-toggle').classList.remove('active');
+function openGoogleTranslate(silent) {
+  // Close dropdown (only if it's open)
+  var dropdown = document.getElementById('lang-dropdown');
+  var btn = document.getElementById('lang-toggle');
+  if (dropdown) dropdown.classList.remove('show');
+  if (btn) btn.classList.remove('active');
+  
+  // Always reset to English first so Google Translate has the correct source text
+  currentLang = 'en';
+  localStorage.setItem('preferred-language', 'en');
+  updatePageLanguage();
   
   if (!googleTranslateLoaded) {
     // Load Google Translate script dynamically
     var script = document.createElement('script');
     script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
     script.onerror = function() {
-      alert('Unable to load Google Translate. Please check your internet connection.');
+      if (!silent) alert('Unable to load Google Translate. Please check your internet connection.');
     };
     document.head.appendChild(script);
     googleTranslateLoaded = true;
+    // If silent (auto-reload), don't show the widget popup
+    if (silent) {
+      window._gtSilent = true;
+    }
   } else {
-    // Already loaded, just show the widget
-    showGoogleTranslateWidget();
+    // Already loaded, show widget only if not silent
+    if (!silent) showGoogleTranslateWidget();
   }
 }
 
@@ -384,8 +399,11 @@ function googleTranslateElementInit() {
     autoDisplay: false
   }, 'google_translate_element');
   
-  // Show the widget after init
-  setTimeout(showGoogleTranslateWidget, 300);
+  // Show the widget after init (only if user clicked, not auto-reload)
+  if (!window._gtSilent) {
+    setTimeout(showGoogleTranslateWidget, 300);
+  }
+  window._gtSilent = false;
 }
 
 function showGoogleTranslateWidget() {
@@ -443,6 +461,15 @@ function resetGoogleTranslate() {
 document.addEventListener('DOMContentLoaded', function() {
   updatePageLanguage();
   updateToggleButton();
+  
+  // If Google Translate was active (cookie exists), auto-reload it
+  var googCookie = document.cookie.match(/googtrans=([^;]+)/);
+  if (googCookie && googCookie[1] && googCookie[1] !== '/en/en') {
+    // Ensure page is in English before Google Translate processes it
+    currentLang = 'en';
+    updatePageLanguage();
+    openGoogleTranslate(true);
+  }
 });
 
 // Auto-detect browser language on first visit
