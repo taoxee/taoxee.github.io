@@ -1301,6 +1301,7 @@ p, ul, ol, blockquote {
   margin-left: 1rem;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .lang-btn {
@@ -1314,12 +1315,111 @@ p, ul, ol, blockquote {
   cursor: pointer;
   transition: all 0.3s ease;
   min-height: 36px;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.lang-arrow {
+  font-size: 0.7rem;
+  transition: transform 0.2s ease;
+}
+
+.lang-btn.active .lang-arrow {
+  transform: rotate(180deg);
 }
 
 .lang-btn:hover {
   background: #005FCC;
   transform: translateY(-1px);
   box-shadow: 0 2px 8px rgba(0, 122, 255, 0.3);
+}
+
+.lang-dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  min-width: 180px;
+  z-index: 9999;
+  overflow: hidden;
+  animation: langDropIn 0.2s ease;
+}
+
+.lang-dropdown.show {
+  display: block;
+}
+
+@keyframes langDropIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.lang-option {
+  display: block;
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: none;
+  background: none;
+  text-align: left;
+  font-size: 0.9rem;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.lang-option:hover {
+  background: #f0f4ff;
+}
+
+.lang-option.active-lang {
+  color: #007AFF;
+  font-weight: 600;
+  background: #f0f7ff;
+}
+
+.lang-divider {
+  height: 1px;
+  background: #e9ecef;
+  margin: 0.25rem 0;
+}
+
+.lang-option--more {
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.lang-option--more:hover {
+  color: #007AFF;
+}
+
+/* Hide Google Translate top bar only, not the widget */
+.goog-te-banner-frame {
+  display: none !important;
+}
+body { top: 0 !important; }
+/* Hide the default Google branding but keep the select dropdown */
+#google_translate_element .goog-te-gadget > span {
+  display: none;
+}
+#google_translate_element .goog-te-gadget {
+  font-size: 0;
+  color: transparent;
+}
+#google_translate_element .goog-te-combo {
+  font-size: 0.95rem;
+  padding: 0.5rem 0.75rem;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  background: white;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+  width: 100%;
+  min-width: 200px;
 }
 
 /* Navigation Button Consistency with Active State */

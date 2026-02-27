@@ -8,14 +8,14 @@ classes: wide
 
 
 <div class="hero-section hero-section--contact">
-  <h1 class="hero__title">Let's Connect</h1>
-  <p class="hero__subtitle">I'd love to hear from you</p>
+  <h1 class="hero__title" data-translate="Let's Connect">Let's Connect</h1>
+  <p class="hero__subtitle" data-translate="contact_hero_subtitle">I'd love to hear from you</p>
 </div>
 
 <div class="content-container">
 
 <h2 class="section-title section-title--contact">
-  <span class="gradient-text">Get in Touch</span>
+  <span class="gradient-text" data-translate="Get in Touch">Get in Touch</span>
 </h2>
 
 
@@ -23,8 +23,8 @@ classes: wide
 
 <div class="about-card contact-card">
   <div class="contact-card__icon">📧</div>
-  <h3 class="contact-card__title">Email</h3>
-  <p class="contact-card__description">For professional inquiries and collaborations</p>
+  <h3 class="contact-card__title" data-translate="Email">Email</h3>
+  <p class="contact-card__description" data-translate="contact_email_desc">For professional inquiries and collaborations</p>
   <a href="mailto:xutao1486@gmail.com" class="contact-card__link">
     xutao1486@gmail.com
   </a>
@@ -35,8 +35,8 @@ classes: wide
   <div class="contact-card__icon">
     <img src="/assets/images/linkedin-logo.svg" alt="LinkedIn" width="40" height="40">
   </div>
-  <h3 class="contact-card__title">LinkedIn</h3>
-  <p class="contact-card__description">Connect with me professionally</p>
+  <h3 class="contact-card__title" data-translate="LinkedIn">LinkedIn</h3>
+  <p class="contact-card__description" data-translate="contact_linkedin_desc">Connect with me professionally</p>
   <a href="https://www.linkedin.com/in/tao-xee" target="_blank" class="contact-card__link">
     <span class="iconify" data-icon="tabler:brand-linkedin"></span> Tao Xu
   </a>
@@ -46,8 +46,8 @@ classes: wide
   <div class="contact-card__icon">
     <img src="/assets/images/github-logo.svg" alt="GitHub" width="40" height="40">
   </div>
-  <h3 class="contact-card__title">GitHub</h3>
-  <p class="contact-card__description">Check out my code and projects</p>
+  <h3 class="contact-card__title" data-translate="GitHub">GitHub</h3>
+  <p class="contact-card__description" data-translate="contact_github_desc">Check out my code and projects</p>
   <a href="https://github.com/taoxee" target="_blank" class="contact-card__link">
     <img src="/assets/images/github-logo.svg" alt="GitHub" width="16" height="16" style="vertical-align: middle; margin-right: 0.5rem;"> taoxee
   </a>
@@ -57,8 +57,8 @@ classes: wide
   <div class="contact-card__icon">
     <img src="/assets/images/wechat-logo.svg" alt="WeChat" width="48" height="48">
   </div>
-  <h3 class="contact-card__title">WeChat</h3>
-  <p class="contact-card__description">Connect via WeChat</p>
+  <h3 class="contact-card__title" data-translate="WeChat">WeChat</h3>
+  <p class="contact-card__description" data-translate="contact_wechat_desc">Connect via WeChat</p>
   <div class="contact-card__link">
     <span class="iconify" data-icon="mingcute:wechat-line"></span> TaoXee
   </div>
@@ -67,7 +67,7 @@ classes: wide
 </div>
 
 <h2 class="section-title section-title--contact">
-  <span class="gradient-text">Send a Message</span>
+  <span class="gradient-text" data-translate="Send a Message">Send a Message</span>
 </h2>
 
 
@@ -104,14 +104,14 @@ classes: wide
 </div> -->
 
 <div class="cta-card cta-card--contact">
-  <h3>Quick Response</h3>
-  <p>I typically respond to messages within 24 hours. For urgent matters, please reach out via email or LinkedIn.</p>
+  <h3 data-translate="Quick Response">Quick Response</h3>
+  <p data-translate="contact_quick_response_text">I typically respond to messages within 24 hours. For urgent matters, please reach out via email or LinkedIn.</p>
   
   <div class="quick-response__actions">
-    <a href="mailto:xutao1486@gmail.com" class="cta__button">
+    <a href="mailto:xutao1486@gmail.com" class="cta__button" data-translate="Quick Email">
       Quick Email
     </a>
-    <a href="https://www.linkedin.com/in/tao-xee" target="_blank" class="cta__button">
+    <a href="https://www.linkedin.com/in/tao-xee" target="_blank" class="cta__button" data-translate="LinkedIn Message">
       LinkedIn Message
     </a>
   </div>

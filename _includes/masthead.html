@@ -23,12 +23,28 @@
           {%- endfor -%}
         </ul>
         
-        <!-- Language Toggle Button -->
+        <!-- Language Toggle Dropdown -->
         <div class="language-toggle">
-          <button id="lang-toggle" class="lang-btn" onclick="toggleLanguage()">
-            <span id="lang-text">中文</span>
+          <button id="lang-toggle" class="lang-btn" onclick="toggleLangDropdown(event)">
+            <span id="lang-text">🌐 EN</span>
+            <span class="lang-arrow">▾</span>
           </button>
+          <div id="lang-dropdown" class="lang-dropdown">
+            <button class="lang-option" data-lang="en" onclick="switchLanguage('en')">
+              🇬🇧 English
+            </button>
+            <button class="lang-option" data-lang="zh" onclick="switchLanguage('zh')">
+              🇨🇳 中文
+            </button>
+            <div class="lang-divider"></div>
+            <button class="lang-option lang-option--more" onclick="openGoogleTranslate()">
+              🌐 More Languages...
+            </button>
+          </div>
         </div>
+        
+        <!-- Hidden Google Translate Element -->
+        <div id="google_translate_element" style="display:none;"></div>
         
         {% if site.search == true %}
         <button class="search__toggle" type="button">

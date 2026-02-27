@@ -26,48 +26,148 @@
 // Language Toggle System
 let currentLang = localStorage.getItem('preferred-language') || 'en';
 
-// Translation data
+// Translation data - Full bilingual support
 const translations = {
   en: {
     // Navigation
     "Home": "Home",
     "About": "About",
-    "Bio": "Bio", 
+    "Bio": "Bio",
     "CV": "CV",
     "Posts": "Posts",
     "Contact": "Contact",
-    // Homepage
+    // About page - hero
     "Hello, I'm": "Hello, I'm",
-    "PMP Certified project manager leading tech and security projects across APAC, passionate about AI, data science, and creating meaningful digital experiences": "PMP Certified project manager leading tech and security projects across APAC, passionate about AI, data science, and creating meaningful digital experiences",
+    "about_hero_subtitle": "Passionate about technology, innovation, and creating meaningful digital experiences",
+    // About page - What I Do
     "What I Do": "What I Do",
     "Project Management": "Project Management",
-    "AI & Data Science": "AI & Data Science", 
+    "AI & Data Science": "AI & Data Science",
     "Security & Compliance": "Security & Compliance",
     "Technical Expertise": "Technical Expertise",
     "APAC Leadership": "APAC Leadership",
     "Research & Education": "Research & Education",
-    // Common
+    "about_pm_desc": "Leading tech and security projects across APAC with PMP certification, delivering measurable impact through agile methodologies.",
+    "about_ai_desc": "Specialized in Large Language Models, neural networks, and compliance frameworks. Research published in CCLD 2024.",
+    "about_security_desc": "Expert in compliance frameworks including GDPR, NIST, AI Act, TC260-003, and WDTA for safe AI deployment.",
+    "about_tech_desc": "Full-stack development with Python, R, JavaScript, TypeScript, and modern frameworks. Data science with PyTorch.",
+    "about_apac_desc": "Cross-cultural project leadership across Australia, China, and Singapore. Fluent in English and Mandarin.",
+    "about_edu_desc": "Master's in Data Science from Australian National University (QS:32), Bachelor's in Management from UCD (QS:118).",
+    // About page - My Journey
+    "My Journey": "My Journey",
+    "Hi There!": "Hi There!",
+    "about_welcome_text": "Welcome to my personal space on the web. Here, you'll find insights into my professional journey, thoughts on technology, and the projects I'm passionate about. I believe in the power of technology to transform lives and create positive impact.",
+    // Common CTA
+    "Let's Connect": "Let's Connect",
+    "Ready to Collaborate?": "Ready to Collaborate?",
+    "cta_collaborate_text": "I'm always excited to connect with like-minded individuals and explore new opportunities for collaboration and growth.",
+    "Get in Touch": "Get in Touch",
     "Get Started": "Get Started",
     "Learn More": "Learn More",
     "Learn About Me": "Learn About Me",
     "Contact Me": "Contact Me",
     "Download CV": "Download CV",
     "View My CV": "View My CV",
-    "Ready to Collaborate?": "Ready to Collaborate?",
-    "I'm always interested in innovative projects and meaningful collaborations": "I'm always interested in innovative projects and meaningful collaborations",
-    "Get in Touch": "Get in Touch"
+    // Contact page
+    "contact_hero_subtitle": "I'd love to hear from you",
+    "Email": "Email",
+    "contact_email_desc": "For professional inquiries and collaborations",
+    "LinkedIn": "LinkedIn",
+    "contact_linkedin_desc": "Connect with me professionally",
+    "GitHub": "GitHub",
+    "contact_github_desc": "Check out my code and projects",
+    "WeChat": "WeChat",
+    "contact_wechat_desc": "Connect via WeChat",
+    "Send a Message": "Send a Message",
+    "Quick Response": "Quick Response",
+    "contact_quick_response_text": "I typically respond to messages within 24 hours. For urgent matters, please reach out via email or LinkedIn.",
+    "Quick Email": "Quick Email",
+    "LinkedIn Message": "LinkedIn Message",
+    // CV page
+    "Curriculum Vitae": "Curriculum Vitae",
+    "cv_hero_subtitle": "Professional Experience & Qualifications",
+    "Download My Resume": "Download My Resume",
+    "cv_download_desc": "Get the latest version of my CV in PDF format",
+    "cv_btn_english": "📄 English Resume",
+    "cv_btn_chinese": "🇨🇳 中文简历",
+    "Last updated": "Last updated",
+    "Certifications": "Certifications",
+    "cert_pmi": "Project Management Institute",
+    "cert_pmp": "Project Management Professional Certification",
+    "cert_anu": "Australian National University",
+    "cert_anu_degree": "Master of Computing (Data Science)",
+    "cert_deeplearning": "Deeplearning.ai",
+    "cert_nn": "Neural Networks and Deep Learning",
+    "cert_pte": "Pearson PTE Academic",
+    "cert_pte_desc": "English Language Proficiency Test",
+    "cert_ucd": "University College Dublin",
+    "cert_ucd_degree": "Bachelor of Business Studies in Management (Honours)",
+    "cert_accenture": "Accenture",
+    "cert_accenture_desc": "Technology Consulting Job Simulation",
+    "cert_deloitte": "Deloitte",
+    "cert_deloitte_desc": "Technology Job Simulation",
+    "cert_udemy": "Udemy",
+    "cert_finance": "Global Derivative Contracts, Bonds & Mutual Funds 101 level",
+    "Professional Summary": "Professional Summary",
+    "cv_summary": "PMP Certified, Results-driven project manager with 2+ years leading tech and security projects across APAC. Skilled in aligning R&D execution with business strategy, delivering measurable impact (e.g., $30K cost savings, 1.5-month acceleration). Strong foundation in AI, data science, and compliance frameworks (GDPR, NIST, AI Act).",
+    "Education": "Education",
+    "cv_master_degree": "Master of Computing (Data Science)",
+    "cv_anu": "Australian National University (QS:32)",
+    "cv_anu_location": "ACT, Australia",
+    "cv_bachelor_degree": "Bachelor of Business Studies in Management (Honours)",
+    "cv_ucd": "University College Dublin (QS:118)",
+    "cv_ucd_location": "Dublin, Ireland",
+    "Research & Publications": "Research & Publications",
+    "cv_llm_title": "Large Language Model Safety Testing Framework",
+    "Summary": "Summary:",
+    "cv_llm_summary": "Proposed a compliance-focused evaluation framework for Large Language Models (LLMs), addressing robustness, security, and privacy. Applied global standards (AI Act, GDPR, NIST, TC260-003, WDTA) to guide safe deployment of AI systems.",
+    "Skills": "Skills",
+    "AI/ML": "AI/ML",
+    "cv_pm_skills": "PMP Certification, Agile, Waterfall, Kanban, Jira, Confluence, Lean Six Sigma, SWOT Analysis",
+    "cv_aiml_skills": "Neural Networks, NLP, PyTorch, LLMs, scikit-learn",
+    "Programming Languages and Tools": "Programming Languages and Tools",
+    "Data Science": "Data Science",
+    "cv_ds_skills": "Data Wrangling, Warehousing, Mining, Statistical Analysis, Predictive Modeling",
+    "Languages": "Languages",
+    "cv_languages": "English (proficient), Mandarin (native)",
+    "Global Mobility": "Global Mobility",
+    "cv_mobility_desc": "Work authorization in China, Singapore, and Australia. Experienced in leading cross-cultural teams and managing projects across APAC time zones.",
+    // Posts page
+    "Posts & Thoughts": "Posts & Thoughts",
+    "posts_hero_subtitle": "Sharing insights, experiences, and discoveries",
+    "Welcome to My Digital Journal": "Welcome to My Digital Journal",
+    "posts_journal_desc": "Here you'll find my thoughts on technology, career insights, project updates, and personal reflections. Think of it as a modern bulletin board where I share what's on my mind.",
+    "Tech Insights": "Tech Insights",
+    "posts_tech_desc": "Deep dives into AI, data science, emerging technologies, and industry trends that shape our digital future.",
+    "Project Updates": "Project Updates",
+    "posts_project_desc": "Behind-the-scenes look at my latest projects, development progress, and lessons learned along the way.",
+    "Learning Notes": "Learning Notes",
+    "posts_learning_desc": "Knowledge sharing from courses, research, certifications, and continuous learning adventures.",
+    "Life & Career": "Life & Career",
+    "posts_life_desc": "Personal reflections on career growth, work-life balance, and navigating the tech industry.",
+    "Recent Posts": "Recent Posts",
+    "No Posts Yet?": "No Posts Yet?",
+    "posts_no_posts_desc": "I'm just getting started! Check back soon for fresh content, or feel free to reach out with topics you'd like me to explore.",
+    "Suggest a Topic": "Suggest a Topic",
+    "Categories": "Categories",
+    "Technology": "Technology",
+    "Career": "Career",
+    "Projects": "Projects",
+    "Learning": "Learning",
+    "Life": "Life"
   },
   zh: {
-    // Navigation
+    // 导航
     "Home": "首页",
-    "About": "关于", 
-    "Bio": "简历",
+    "About": "关于",
+    "Bio": "简介",
     "CV": "履历",
     "Posts": "文章",
     "Contact": "联系",
-    // Homepage
+    // 关于页面 - 头部
     "Hello, I'm": "你好，我是",
-    "PMP Certified project manager leading tech and security projects across APAC, passionate about AI, data science, and creating meaningful digital experiences": "PMP认证项目经理，领导亚太地区技术和安全项目，热衷于人工智能、数据科学和创造有意义的数字体验",
+    "about_hero_subtitle": "热衷于技术、创新，致力于打造有价值的数字化体验",
+    // 关于页面 - 我的专长
     "What I Do": "我的专长",
     "Project Management": "项目管理",
     "AI & Data Science": "人工智能与数据科学",
@@ -75,25 +175,159 @@ const translations = {
     "Technical Expertise": "技术专长",
     "APAC Leadership": "亚太区领导力",
     "Research & Education": "研究与教育",
-    // Common
+    "about_pm_desc": "持有PMP认证，在亚太地区领导技术与安全项目，通过敏捷方法论交付可量化的业务成果。",
+    "about_ai_desc": "专注于大语言模型、神经网络和合规框架研究，论文发表于CCLD 2024国际会议。",
+    "about_security_desc": "精通GDPR、NIST、AI Act、TC260-003、WDTA等合规框架，保障AI系统安全部署。",
+    "about_tech_desc": "全栈开发能力，熟练掌握Python、R、JavaScript、TypeScript及主流框架，擅长PyTorch数据科学应用。",
+    "about_apac_desc": "具备澳大利亚、中国、新加坡跨文化项目领导经验，中英文双语流利。",
+    "about_edu_desc": "澳大利亚国立大学数据科学硕士（QS:32），都柏林大学管理学学士（QS:118）。",
+    // 关于页面 - 我的经历
+    "My Journey": "我的经历",
+    "Hi There!": "你好！",
+    "about_welcome_text": "欢迎来到我的个人空间。在这里，你可以了解我的职业历程、对技术的思考，以及我正在投入的项目。我相信技术能够改变生活，创造积极的影响。",
+    // 通用CTA
+    "Let's Connect": "保持联系",
+    "Ready to Collaborate?": "期待与你合作",
+    "cta_collaborate_text": "我一直期待与志同道合的伙伴交流，探索新的合作机会，共同成长。",
+    "Get in Touch": "联系我",
     "Get Started": "开始",
     "Learn More": "了解更多",
     "Learn About Me": "了解我",
     "Contact Me": "联系我",
     "Download CV": "下载简历",
     "View My CV": "查看简历",
-    "Ready to Collaborate?": "准备合作了吗？",
-    "I'm always interested in innovative projects and meaningful collaborations": "我总是对创新项目和有意义的合作感兴趣",
-    "Get in Touch": "联系我"
+    // 联系页面
+    "contact_hero_subtitle": "期待收到你的消息",
+    "Email": "电子邮件",
+    "contact_email_desc": "商务咨询与合作洽谈",
+    "LinkedIn": "领英",
+    "contact_linkedin_desc": "职业社交，欢迎连接",
+    "GitHub": "GitHub",
+    "contact_github_desc": "查看我的代码和项目",
+    "WeChat": "微信",
+    "contact_wechat_desc": "通过微信联系我",
+    "Send a Message": "发送消息",
+    "Quick Response": "快速回复",
+    "contact_quick_response_text": "我通常会在24小时内回复消息。如有紧急事项，请通过邮件或领英联系我。",
+    "Quick Email": "快速邮件",
+    "LinkedIn Message": "领英私信",
+    // 履历页面
+    "Curriculum Vitae": "个人履历",
+    "cv_hero_subtitle": "职业经历与专业资质",
+    "Download My Resume": "下载我的简历",
+    "cv_download_desc": "获取最新版PDF格式简历",
+    "cv_btn_english": "📄 英文简历",
+    "cv_btn_chinese": "🇨🇳 中文简历",
+    "Last updated": "最后更新",
+    "Certifications": "专业认证",
+    "cert_pmi": "项目管理协会",
+    "cert_pmp": "项目管理专业人士认证",
+    "cert_anu": "澳大利亚国立大学",
+    "cert_anu_degree": "计算机硕士（数据科学方向）",
+    "cert_deeplearning": "Deeplearning.ai",
+    "cert_nn": "神经网络与深度学习",
+    "cert_pte": "培生PTE学术英语考试",
+    "cert_pte_desc": "英语语言能力测试",
+    "cert_ucd": "都柏林大学",
+    "cert_ucd_degree": "管理学商业研究学士（荣誉学位）",
+    "cert_accenture": "埃森哲",
+    "cert_accenture_desc": "技术咨询岗位模拟",
+    "cert_deloitte": "德勤",
+    "cert_deloitte_desc": "技术岗位模拟",
+    "cert_udemy": "Udemy",
+    "cert_finance": "全球衍生品合约、债券与共同基金入门",
+    "Professional Summary": "职业概述",
+    "cv_summary": "PMP认证项目经理，拥有2年以上亚太地区技术与安全项目管理经验。擅长将研发执行与业务战略对齐，交付可量化成果（如节省3万美元成本、提前1.5个月交付）。在人工智能、数据科学和合规框架（GDPR、NIST、AI Act）方面具有扎实基础。",
+    "Education": "教育背景",
+    "cv_master_degree": "计算机硕士（数据科学方向）",
+    "cv_anu": "澳大利亚国立大学（QS:32）",
+    "cv_anu_location": "澳大利亚首都领地",
+    "cv_bachelor_degree": "管理学商业研究学士（荣誉学位）",
+    "cv_ucd": "都柏林大学（QS:118）",
+    "cv_ucd_location": "爱尔兰都柏林",
+    "Research & Publications": "研究与发表",
+    "cv_llm_title": "大语言模型安全测试框架",
+    "Summary": "摘要：",
+    "cv_llm_summary": "提出了一个面向合规的大语言模型评估框架，涵盖鲁棒性、安全性和隐私保护。应用全球标准（AI Act、GDPR、NIST、TC260-003、WDTA）指导AI系统的安全部署。",
+    "Skills": "专业技能",
+    "AI/ML": "人工智能/机器学习",
+    "cv_pm_skills": "PMP认证、敏捷开发、瀑布模型、看板、Jira、Confluence、精益六西格玛、SWOT分析",
+    "cv_aiml_skills": "神经网络、自然语言处理、PyTorch、大语言模型、scikit-learn",
+    "Programming Languages and Tools": "编程语言与工具",
+    "Data Science": "数据科学",
+    "cv_ds_skills": "数据清洗、数据仓库、数据挖掘、统计分析、预测建模",
+    "Languages": "语言能力",
+    "cv_languages": "英语（精通）、普通话（母语）",
+    "Global Mobility": "全球流动性",
+    "cv_mobility_desc": "持有中国、新加坡和澳大利亚工作许可。具备跨文化团队领导经验，擅长管理亚太时区项目。",
+    // 文章页面
+    "Posts & Thoughts": "文章与随想",
+    "posts_hero_subtitle": "分享见解、经验与发现",
+    "Welcome to My Digital Journal": "欢迎来到我的数字日志",
+    "posts_journal_desc": "这里记录了我对技术的思考、职业感悟、项目动态和个人反思。把它当作一块现代公告板，分享我的所思所想。",
+    "Tech Insights": "技术洞察",
+    "posts_tech_desc": "深入探讨人工智能、数据科学、新兴技术和塑造数字未来的行业趋势。",
+    "Project Updates": "项目动态",
+    "posts_project_desc": "分享最新项目的幕后故事、开发进展和一路走来的经验教训。",
+    "Learning Notes": "学习笔记",
+    "posts_learning_desc": "来自课程、研究、认证和持续学习旅程的知识分享。",
+    "Life & Career": "生活与职业",
+    "posts_life_desc": "关于职业成长、工作生活平衡和科技行业探索的个人感悟。",
+    "Recent Posts": "最新文章",
+    "No Posts Yet?": "还没有文章？",
+    "posts_no_posts_desc": "我刚刚起步！请稍后回来查看新内容，也欢迎告诉我你感兴趣的话题。",
+    "Suggest a Topic": "推荐话题",
+    "Categories": "文章分类",
+    "Technology": "技术",
+    "Career": "职业",
+    "Projects": "项目",
+    "Learning": "学习",
+    "Life": "生活"
   }
 };
 
-// Function to toggle language
-function toggleLanguage() {
-  currentLang = currentLang === 'en' ? 'zh' : 'en';
+// Function to toggle dropdown
+function toggleLangDropdown(e) {
+  e.stopPropagation();
+  const dropdown = document.getElementById('lang-dropdown');
+  const btn = document.getElementById('lang-toggle');
+  dropdown.classList.toggle('show');
+  btn.classList.toggle('active');
+}
+
+// Close dropdown when clicking outside
+document.addEventListener('click', function(e) {
+  const dropdown = document.getElementById('lang-dropdown');
+  const toggle = document.querySelector('.language-toggle');
+  if (dropdown && toggle && !toggle.contains(e.target)) {
+    dropdown.classList.remove('show');
+    document.getElementById('lang-toggle').classList.remove('active');
+  }
+});
+
+// Switch between hand-crafted EN/ZH
+function switchLanguage(lang) {
+  // If Google Translate is active, reset it first
+  resetGoogleTranslate();
+  
+  currentLang = lang;
   localStorage.setItem('preferred-language', currentLang);
   updatePageLanguage();
   updateToggleButton();
+  
+  // Close dropdown
+  document.getElementById('lang-dropdown').classList.remove('show');
+  document.getElementById('lang-toggle').classList.remove('active');
+  
+  // Update active state
+  document.querySelectorAll('.lang-option[data-lang]').forEach(function(opt) {
+    opt.classList.toggle('active-lang', opt.getAttribute('data-lang') === lang);
+  });
+}
+
+// Legacy support
+function toggleLanguage() {
+  switchLanguage(currentLang === 'en' ? 'zh' : 'en');
 }
 
 // Function to update page content
@@ -107,11 +341,101 @@ function updatePageLanguage() {
   });
 }
 
-// Function to update toggle button
+// Function to update toggle button label
 function updateToggleButton() {
   const langText = document.getElementById('lang-text');
   if (langText) {
-    langText.textContent = currentLang === 'en' ? '中文' : 'English';
+    langText.textContent = currentLang === 'en' ? '🌐 EN' : '🌐 中文';
+  }
+  // Update active state in dropdown
+  document.querySelectorAll('.lang-option[data-lang]').forEach(function(opt) {
+    opt.classList.toggle('active-lang', opt.getAttribute('data-lang') === currentLang);
+  });
+}
+
+// Google Translate integration
+var googleTranslateLoaded = false;
+
+function openGoogleTranslate() {
+  // Close dropdown
+  document.getElementById('lang-dropdown').classList.remove('show');
+  document.getElementById('lang-toggle').classList.remove('active');
+  
+  if (!googleTranslateLoaded) {
+    // Load Google Translate script dynamically
+    var script = document.createElement('script');
+    script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    script.onerror = function() {
+      alert('Unable to load Google Translate. Please check your internet connection.');
+    };
+    document.head.appendChild(script);
+    googleTranslateLoaded = true;
+  } else {
+    // Already loaded, just show the widget
+    showGoogleTranslateWidget();
+  }
+}
+
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    includedLanguages: 'zh-CN,ja,ko,fr,de,es,pt,ru,ar,hi,th,vi,id,ms,it,nl,pl,tr,sv,da,fi,no,uk,cs,el,he,ro,hu,bg,hr,sk,sl,et,lv,lt,mt,ga,sq,mk,bs,sr,is,cy,gl,eu,ca,af,sw,zu,am,my,km,lo,mn,ne,si,ka,hy,az,uz,kk,tg,ky',
+    layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+    autoDisplay: false
+  }, 'google_translate_element');
+  
+  // Show the widget after init
+  setTimeout(showGoogleTranslateWidget, 300);
+}
+
+function showGoogleTranslateWidget() {
+  var el = document.getElementById('google_translate_element');
+  if (el) {
+    el.style.display = 'block';
+    el.style.position = 'fixed';
+    el.style.top = '60px';
+    el.style.right = '20px';
+    el.style.zIndex = '99999';
+    el.style.background = 'white';
+    el.style.padding = '1rem 1.25rem';
+    el.style.borderRadius = '12px';
+    el.style.boxShadow = '0 8px 30px rgba(0,0,0,0.15)';
+    
+    // Add a label above the select
+    if (!document.getElementById('gt-label')) {
+      var label = document.createElement('p');
+      label.id = 'gt-label';
+      label.textContent = 'Select a language:';
+      label.style.cssText = 'margin:0 0 0.5rem 0;font-size:0.85rem;color:#666;font-weight:500;';
+      el.insertBefore(label, el.firstChild);
+    }
+    
+    // Click outside to close
+    setTimeout(function() {
+      function hideGT(e) {
+        if (!el.contains(e.target) && !document.querySelector('.language-toggle').contains(e.target)) {
+          el.style.display = 'none';
+          document.removeEventListener('click', hideGT);
+        }
+      }
+      document.addEventListener('click', hideGT);
+    }, 200);
+  }
+}
+
+function resetGoogleTranslate() {
+  // Remove Google Translate cookie to restore original text
+  var el = document.getElementById('google_translate_element');
+  if (el) el.style.display = 'none';
+  
+  // Reset Google Translate by removing the cookie
+  document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+  document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.' + window.location.hostname;
+  
+  // If Google Translate has modified the page, reload to get clean state
+  var translated = document.querySelector('.translated-ltr, .translated-rtl');
+  if (translated) {
+    window.location.reload();
   }
 }
 
