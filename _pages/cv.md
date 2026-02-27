@@ -21,17 +21,17 @@ classes: wide
   <!-- 下载按钮容器 - 中英文简历 -->
   <div class="cv-buttons-container">
     <!-- 英文简历下载按钮 -->
-    <a href="/assets/files/CV_Intl.pdf" download="TaoXu_CV_EN.pdf" class="cv-download-btn cv-btn-english">
+    <a href="/assets/files/PM-TAO-Intl-Dec-12.pdf" download="TaoXu_CV_EN.pdf" class="cv-download-btn cv-btn-english">
       📄 English Resume
     </a>
     <!-- 中文简历下载按钮 -->
-    <a href="/assets/files/CV_CN.pdf" download="TaoXu_CV_CN.pdf" class="cv-download-btn cv-btn-chinese">
+    <a href="/assets/files/PM-TAO-中文-Dec-12.pdf" download="TaoXu_CV_CN.pdf" class="cv-download-btn cv-btn-chinese">
       🇨🇳 中文简历
     </a>
   </div>
   
   <!-- 更新日期 -->
-  <p style="color: #999; font-size: 0.9rem; margin-top: 1rem;">Last updated: <span id="lastUpdated">19 November 2025</span></p>
+  <p style="color: #999; font-size: 0.9rem; margin-top: 1rem;">Last updated: <span id="lastUpdated">27 February 2026</span></p>
 </div>
 
 <!-- ==================== 证书轮播组件 ==================== -->
