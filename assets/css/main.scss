@@ -686,23 +686,6 @@
   flex-wrap: wrap;
 }
 
-/* CV specific styles */
-.cv-download-btn {
-  display: inline-block;
-  background: linear-gradient(135deg, #00c9ff, #92fe9d);
-  color: white;
-  padding: 1rem 2rem;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 201, 255, 0.3);
-}
-
-.cv-section {
-  text-align: center;
-}
-
 /* Education cards */
 .education-card {
   display: flex;
@@ -962,212 +945,67 @@
    GLOBAL FIX: Author Profile Photo Overlay Issue
    ============================================================================ */
 
-/* Target all possible author avatar selectors with maximum specificity */
-.sidebar .author__avatar,
+/* Reset all avatar effects — covers normal, hover, active, focus states */
 .author__avatar,
-.page__sidebar .author__avatar,
-.layout--single .sidebar .author__avatar,
-.layout--home .sidebar .author__avatar,
-.layout--archive .sidebar .author__avatar {
-  position: relative !important;
-  overflow: visible !important;
-}
-
-.sidebar .author__avatar img,
+.author__avatar *,
 .author__avatar img,
-.page__sidebar .author__avatar img,
-.layout--single .sidebar .author__avatar img,
-.layout--home .sidebar .author__avatar img,
-.layout--archive .sidebar .author__avatar img {
-  opacity: 1 !important;
-  transition: none !important;
-  transform: none !important;
+.sidebar .author__avatar,
+.sidebar .author__avatar *,
+.sidebar .author__avatar img {
   filter: none !important;
-  background: none !important;
-  backdrop-filter: none !important;
   -webkit-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-}
-
-/* Remove all possible pseudo-elements that could create overlays */
-.sidebar .author__avatar::before,
-.sidebar .author__avatar::after,
-.author__avatar::before,
-.author__avatar::after,
-.page__sidebar .author__avatar::before,
-.page__sidebar .author__avatar::after,
-.layout--single .sidebar .author__avatar::before,
-.layout--single .sidebar .author__avatar::after,
-.layout--home .sidebar .author__avatar::before,
-.layout--home .sidebar .author__avatar::after,
-.layout--archive .sidebar .author__avatar::before,
-.layout--archive .author__avatar::after {
-  display: none !important;
-  content: none !important;
-  opacity: 0 !important;
-  visibility: hidden !important;
-}
-
-/* CRITICAL: Remove ALL hover effects completely */
-.sidebar .author__avatar:hover,
-.author__avatar:hover,
-.page__sidebar .author__avatar:hover,
-.layout--single .sidebar .author__avatar:hover,
-.layout--home .sidebar .author__avatar:hover,
-.layout--archive .sidebar .author__avatar:hover {
   opacity: 1 !important;
   transform: none !important;
-  filter: none !important;
-  background: none !important;
-  backdrop-filter: none !important;
-  -webkit-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  transition: none !important;
-  animation: none !important;
-  -webkit-animation: none !important;
-}
-
-/* Remove hover effects that cause transparency */
-.sidebar .author__avatar:hover img,
-.author__avatar:hover img,
-.page__sidebar .author__avatar:hover img,
-.layout--single .sidebar .author__avatar:hover img,
-.layout--home .sidebar .author__avatar:hover img,
-.layout--archive .sidebar .author__avatar:hover img {
-  opacity: 1 !important;
-  transform: none !important;
-  filter: none !important;
-  background: none !important;
-  backdrop-filter: none !important;
-  -webkit-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  transition: none !important;
-  animation: none !important;
-  -webkit-animation: none !important;
-  scale: 1 !important;
   -webkit-transform: none !important;
-  -moz-transform: none !important;
-  -ms-transform: none !important;
-  -o-transform: none !important;
-}
-
-/* Remove any overlay classes or effects */
-.sidebar .author__avatar .author__overlay,
-.author__avatar .author__overlay {
-  display: none !important;
-  opacity: 0 !important;
-  visibility: hidden !important;
-}
-
-/* Ensure no mask or clip-path effects */
-.sidebar .author__avatar img,
-.author__avatar img {
+  transition: none !important;
+  -webkit-transition: none !important;
+  animation: none !important;
+  -webkit-animation: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
   mask: none !important;
   -webkit-mask: none !important;
   clip-path: none !important;
   -webkit-clip-path: none !important;
 }
 
-/* Disable all transform and scale effects */
-.sidebar .author__avatar *,
-.author__avatar * {
-  transition: none !important;
-  transform: none !important;
-  -webkit-transform: none !important;
-  -moz-transform: none !important;
-  -ms-transform: none !important;
-  -o-transform: none !important;
-  animation: none !important;
-  -webkit-animation: none !important;
-}
-
-/* NUCLEAR OPTION: Remove ALL possible hover effects completely */
-.sidebar .author__avatar,
-.author__avatar,
-.sidebar .author__avatar *,
-.author__avatar *,
-.sidebar .author__avatar img,
-.author__avatar img {
-  pointer-events: auto !important;
-  -webkit-filter: none !important;
-  -moz-filter: none !important;
-  -ms-filter: none !important;
-  -o-filter: none !important;
-  filter: none !important;
-  opacity: 1 !important;
-  transform: none !important;
-  -webkit-transform: none !important;
-  -moz-transform: none !important;
-  -ms-transform: none !important;
-  -o-transform: none !important;
-  transition: none !important;
-  -webkit-transition: none !important;
-  -moz-transition: none !important;
-  -ms-transition: none !important;
-  -o-transition: none !important;
-  animation: none !important;
-  -webkit-animation: none !important;
-  -moz-animation: none !important;
-  -ms-animation: none !important;
-  -o-animation: none !important;
-}
-
-/* Force remove hover state */
-.sidebar .author__avatar:hover,
 .author__avatar:hover,
-.sidebar .author__avatar:hover *,
 .author__avatar:hover *,
-.sidebar .author__avatar:hover img,
 .author__avatar:hover img,
-.sidebar .author__avatar:active,
 .author__avatar:active,
-.sidebar .author__avatar:focus,
-.author__avatar:focus {
-  -webkit-filter: none !important;
-  -moz-filter: none !important;
-  -ms-filter: none !important;
-  -o-filter: none !important;
+.author__avatar:focus,
+.sidebar .author__avatar:hover,
+.sidebar .author__avatar:hover *,
+.sidebar .author__avatar:hover img,
+.sidebar .author__avatar:active,
+.sidebar .author__avatar:focus {
   filter: none !important;
+  -webkit-filter: none !important;
   opacity: 1 !important;
   transform: none !important;
   -webkit-transform: none !important;
-  -moz-transform: none !important;
-  -ms-transform: none !important;
-  -o-transform: none !important;
   transition: none !important;
   -webkit-transition: none !important;
-  -moz-transition: none !important;
-  -ms-transition: none !important;
-  -o-transition: none !important;
   animation: none !important;
   -webkit-animation: none !important;
-  -moz-animation: none !important;
-  -ms-animation: none !important;
-  -o-animation: none !important;
   background: none !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
   box-shadow: none !important;
-  -webkit-box-shadow: none !important;
-  -moz-box-shadow: none !important;
 }
 
-/* FINAL OVERRIDE: Target any possible theme classes */
-.author__avatar img:hover,
-.sidebar .author__avatar img:hover,
-.page__sidebar .author__avatar img:hover,
-img.u-photo:hover,
-.h-card .author__avatar img:hover {
-  filter: none !important;
-  -webkit-filter: none !important;
-  opacity: 1 !important;
-  transform: none !important;
-  -webkit-transform: none !important;
-  transition: none !important;
-  -webkit-transition: none !important;
-  background: transparent !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
+/* Remove pseudo-element overlays */
+.author__avatar::before,
+.author__avatar::after,
+.sidebar .author__avatar::before,
+.sidebar .author__avatar::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Remove overlay child elements */
+.author__avatar .author__overlay {
+  display: none !important;
 }
 
 /* ============================================================================
@@ -1458,6 +1296,32 @@ p, ul, ol, blockquote {
   text-decoration: none !important;
 }
 
+/* Language Toggle */
+.language-toggle {
+  margin-left: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.lang-btn {
+  background: #007AFF;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-height: 36px;
+}
+
+.lang-btn:hover {
+  background: #005FCC;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 122, 255, 0.3);
+}
+
 /* Navigation Button Consistency with Active State */
 .greedy-nav .visible-links a {
   border-radius: 6px !important;
@@ -1718,24 +1582,4 @@ textarea {
     padding: 0.5rem 1rem !important;
     font-size: 0.9rem !important;
   }
-}
-
-/* ============================================================================
-   HIDE DEFAULT JEKYLL TITLES (MAINTAINED FROM PREVIOUS VERSION)
-   ============================================================================ */
-
-.page__title {
-  display: none !important;
-}
-
-.page__meta {
-  display: none !important;
-}
-
-.archive__title {
-  display: none !important;
-}
-
-.archive__subtitle {
-  display: none !important;
 }
