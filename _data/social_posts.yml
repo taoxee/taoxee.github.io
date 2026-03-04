@@ -1,0 +1,45 @@
+# Social posts — ordered by date descending
+# Fields: id (required), date (required), title (optional), content (required), url (required), platform (required), tags (optional)
+# Platforms: linkedin, medium, twitter, etc.
+# Content supports Markdown: **bold**, _italic_, - lists, ## headings
+
+- id: "lp-20250304-001"
+  date: "2025-03-04"
+  platform: "linkedin"
+  title: "Project: VibeMeet2Notes 🎙️"
+  content: |
+    I've run more meetings than I've seen good meeting minutes.
+
+    As a PM, every sync, review, retro ends with: *"I'll send the minutes after this."*
+
+    But what we actually get is usually one of three things: raw transcripts, over-polished summaries that say nothing, or notes locked inside a SaaS tool you can't really control.
+
+    **So I built my own.**
+
+    Over the past 2 weeks, I turned a simple ASR → LLM demo into a full web app — **VibeMeet2Notes · 灵感纪要**.
+
+    This isn't about *"can we transcribe audio."* It's about building something I actually want to use after my 6th meeting of the day.
+
+    **1️⃣ Speaker diarization first — always**
+    Not just text, but structured `{speaker / timestamp / text}`. Supports 11 ASR vendors (Deepgram, Azure, Alibaba Cloud, Tencent Cloud, iFlytek, Volcengine, OpenAI Whisper…). Swappable, comparable, no single-vendor lock-in.
+
+    **2️⃣ Real meeting minutes, not fluffy summaries**
+    The LLM consumes structured JSON, not a giant text blob. Output is proper Markdown minutes: decisions, action items, risks — not *"The team had a productive discussion…"*
+
+    **3️⃣ Control > black-box convenience**
+    - Parallel task queue (up to 3 concurrent jobs)
+    - Token usage tracking saved to `meta.json`
+    - Full local logs (ASR + LLM)
+    - Credential import/export/clear
+    - Bilingual UI (EN / 中文)
+    - Local-first deployment (`python run.py`, port 8080)
+
+    I even refactored a 1500-line monolith into a modular structure (`config / services / routes / utils`), because *"it works"* is not the same as *"it's maintainable."*
+
+    Built by a PM who got tired of saying **"I'll sort out the notes later."** Happy to share. Feedback welcome.
+  url: "https://www.linkedin.com/pulse/project-vibemeet2notes-%E7%81%B5%E6%84%9F%E7%BA%AA%E8%A6%81-tao-xu-bncwc/"
+  tags:
+    - "AI"
+    - "Product Management"
+    - "Projects"
+    - "LLM"

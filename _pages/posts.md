@@ -7,73 +7,82 @@ entries_layout: list
 classes: wide
 ---
 
+<div style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); color: white; padding: 4rem 2rem 3rem; margin: 0 0 3rem 0; text-align: center; border-radius: 0 0 30px 30px; box-shadow: 0 10px 30px rgba(255, 154, 158, 0.3);">
+  <h1 style="font-size: 3.5rem; font-weight: 700; margin-bottom: 1rem; color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.1); letter-spacing: -0.02em;" data-translate="Posts & Thoughts">Posts & Thoughts</h1>
+  <p style="font-size: 1.5rem; font-weight: 400; opacity: 0.95; max-width: 600px; margin: 0 auto 2rem;" data-translate="posts_hero_subtitle">Sharing insights, experiences, and discoveries</p>
+  <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; opacity: 0.95;">
 
+    <span style="display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.95rem; font-weight: 500;">
+      <!-- chat bubble / tech -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      Tech
+    </span>
 
-<div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: white; padding: 5rem 2rem; margin: 0 0 4rem 0; text-align: center; border-radius: 0 0 30px 30px; box-shadow: 0 10px 30px rgba(250, 112, 154, 0.3);">
-  <h1 style="font-size: 4rem; font-weight: 700; margin-bottom: 1.5rem; color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.1); letter-spacing: -0.02em;" data-translate="Posts & Thoughts">Posts & Thoughts</h1>
-  <p style="font-size: 1.5rem; font-weight: 400; opacity: 0.95; max-width: 600px; margin: 0 auto;" data-translate="posts_hero_subtitle">Sharing insights, experiences, and discoveries</p>
+    <span style="display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.95rem; font-weight: 500;">
+      <!-- rocket / projects -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+      Projects
+    </span>
+
+    <span style="display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.95rem; font-weight: 500;">
+      <!-- book / learning -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+      Learning
+    </span>
+
+    <span style="display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.95rem; font-weight: 500;">
+      <!-- star / career -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      Career
+    </span>
+
+  </div>
 </div>
 
 <div style="max-width: 900px; margin: 0 auto; padding: 0 2rem;">
 
-<h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 3rem 0 2rem 0; text-align: center; position: relative;">
-  <span style="background: linear-gradient(135deg, #fa709a, #fee140); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;"><span class="icon">📖</span> <span data-translate="Welcome to My Digital Journal">Welcome to My Digital Journal</span></span>
-</h2>
+{% assign social_posts = site.data.social_posts | default: empty_array %}
+{% assign has_social = false %}
+{% if social_posts and social_posts.size > 0 %}
+  {% assign has_social = true %}
+{% endif %}
+{% assign has_jekyll = false %}
+{% if site.posts and site.posts.size > 0 %}
+  {% assign has_jekyll = true %}
+{% endif %}
 
-<div class="about-card" style="text-align: center ;">
-  <p style="color: #666; margin-bottom: 1rem; line-height: 1.6; font-size: 1.1rem;" data-translate="posts_journal_desc">Here you'll find my thoughts on technology, career insights, project updates, and personal reflections. Think of it as a modern bulletin board where I share what's on my mind.</p>
+<div id="posts-container" style="margin: 2rem 0;">
+  {% if has_social %}
+    {% assign sorted_posts = social_posts | sort: "date" | reverse %}
+    {% for li_post in sorted_posts %}
+      {% include linkedin-post-card.html post=li_post %}
+    {% endfor %}
+  {% endif %}
 </div>
 
-<div class="about-grid" style="margin-bottom: 3rem;">
-  <div class="about-card" style="text-align: center;">
-    <h3><span class="icon">💭</span> <span data-translate="Tech Insights">Tech Insights</span></h3>
-    <p data-translate="posts_tech_desc">Deep dives into AI, data science, emerging technologies, and industry trends that shape our digital future.</p>
-  </div>
-  <div class="about-card" style="text-align: center;">
-    <h3><span class="icon">🚀</span> <span data-translate="Project Updates">Project Updates</span></h3>
-    <p data-translate="posts_project_desc">Behind-the-scenes look at my latest projects, development progress, and lessons learned along the way.</p>
-  </div>
-  <div class="about-card" style="text-align: center;">
-    <h3><span class="icon">📚</span> <span data-translate="Learning Notes">Learning Notes</span></h3>
-    <p data-translate="posts_learning_desc">Knowledge sharing from courses, research, certifications, and continuous learning adventures.</p>
-  </div>
-  <div class="about-card" style="text-align: center;">
-    <h3><span class="icon">🌟</span> <span data-translate="Life & Career">Life & Career</span></h3>
-    <p data-translate="posts_life_desc">Personal reflections on career growth, work-life balance, and navigating the tech industry.</p>
-  </div>
-</div>
-
-<h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 3rem 0 2rem 0; text-align: center; position: relative;">
-  <span style="background: linear-gradient(135deg, #fa709a, #fee140); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;" data-translate="Recent Posts">Recent Posts</span>
-</h2>
-
-<div id="posts-container" style="margin: 3rem 0;">
-  <!-- Posts will be automatically populated here by Jekyll -->
-  <!-- Enhanced post styling is handled in the CSS section below -->
-</div>
-
+{% unless has_social or has_jekyll %}
 <div class="about-card" style="text-align: center; margin: 3rem 0;">
-  <h3><span class="icon">🎯</span> <span data-translate="No Posts Yet?">No Posts Yet?</span></h3>
-  <p style="margin-bottom: 2rem;" data-translate="posts_no_posts_desc">I'm just getting started! Check back soon for fresh content, or feel free to reach out with topics you'd like me to explore.</p>
-  <a href="/contact/" style="display: inline-block; background: linear-gradient(135deg, #fa709a, #fee140) !important; color: white !important; padding: 0.75rem 1.5rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 12px rgba(250, 112, 154, 0.3);" onmouseover="this.style.opacity='0.9'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(250, 112, 154, 0.5)'" onmouseout="this.style.opacity='1'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(250, 112, 154, 0.3)'" data-translate="Suggest a Topic">
-      Suggest a Topic
+  <p style="font-size: 2rem; margin-bottom: 0.5rem;">✍️</p>
+  <h3 style="color: #2d3748;" data-translate="No Posts Yet?">Nothing here yet</h3>
+  <p style="color: #666; margin-bottom: 2rem;" data-translate="posts_no_posts_desc">Check back soon — or suggest a topic you'd like me to write about.</p>
+  <a href="/contact/" style="display: inline-block; background: linear-gradient(135deg, #ff9a9e, #fecfef) !important; color: white !important; padding: 0.75rem 1.5rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(255,154,158,0.3);" onmouseover="this.style.opacity='0.9'; this.style.transform='translateY(-2px)'" onmouseout="this.style.opacity='1'; this.style.transform='translateY(0)'" data-translate="Suggest a Topic">
+    Suggest a Topic
   </a>
 </div>
+{% endunless %}
 
-<h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
-  <span style="background: linear-gradient(135deg, #fa709a, #fee140); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;" data-translate="Categories">Categories</span>
+<script src="/assets/js/linkedin-posts.js"></script>
+
+<h2 style="font-size: 1.75rem; font-weight: 600; color: #2d3748; margin: 4rem 0 1.5rem 0; text-align: center;">
+  <span style="background: linear-gradient(135deg, #ff9a9e, #fecfef); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;" data-translate="Categories">Browse by Topic</span>
 </h2>
 
-<div class="about-card" style="text-align: center;">
-  <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
-    <span style="background: #e3f2fd; color: #1976d2; padding: 0.75rem 1.5rem; border-radius: 25px; font-weight: 600; font-size: 1rem; transition: all 0.3s ease; cursor: pointer; border: 2px solid #bbdefb;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(25,118,210,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">💻 <span data-translate="Technology">Technology</span></span>
-    <span style="background: #e8f5e8; color: #2e7d32; padding: 0.75rem 1.5rem; border-radius: 25px; font-weight: 600; font-size: 1rem; transition: all 0.3s ease; cursor: pointer; border: 2px solid #c8e6c9;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(46,125,50,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">🚀 <span data-translate="Career">Career</span></span>
-    <span style="background: #fff3e0; color: #f57c00; padding: 0.75rem 1.5rem; border-radius: 25px; font-weight: 600; font-size: 1rem; transition: all 0.3s ease; cursor: pointer; border: 2px solid #ffcc80;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(245,124,0,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">🛠️ <span data-translate="Projects">Projects</span></span>
-    <span style="background: #fce4ec; color: #c2185b; padding: 0.75rem 1.5rem; border-radius: 25px; font-weight: 600; font-size: 1rem; transition: all 0.3s ease; cursor: pointer; border: 2px solid #f8bbd9;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(194,24,91,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">📚 <span data-translate="Learning">Learning</span></span>
-    <span style="background: #f3e5f5; color: #7b1fa2; padding: 0.75rem 1.5rem; border-radius: 25px; font-weight: 600; font-size: 1rem; transition: all 0.3s ease; cursor: pointer; border: 2px solid #ce93d8;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(123,31,162,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">🌟 <span data-translate="Life">Life</span></span>
-  </div>
+<div style="display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; margin-bottom: 4rem;">
+  <span style="background: #e3f2fd; color: #1976d2; padding: 0.6rem 1.25rem; border-radius: 25px; font-weight: 600; font-size: 0.95rem; cursor: pointer; border: 2px solid #bbdefb; transition: all 0.2s;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(25,118,210,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">💻 Technology</span>
+  <span style="background: #e8f5e8; color: #2e7d32; padding: 0.6rem 1.25rem; border-radius: 25px; font-weight: 600; font-size: 0.95rem; cursor: pointer; border: 2px solid #c8e6c9; transition: all 0.2s;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(46,125,50,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">🚀 Career</span>
+  <span style="background: #fff3e0; color: #f57c00; padding: 0.6rem 1.25rem; border-radius: 25px; font-weight: 600; font-size: 0.95rem; cursor: pointer; border: 2px solid #ffcc80; transition: all 0.2s;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(245,124,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">🛠️ Projects</span>
+  <span style="background: #fce4ec; color: #c2185b; padding: 0.6rem 1.25rem; border-radius: 25px; font-weight: 600; font-size: 0.95rem; cursor: pointer; border: 2px solid #f8bbd9; transition: all 0.2s;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(194,24,91,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">📚 Learning</span>
+  <span style="background: #f3e5f5; color: #7b1fa2; padding: 0.6rem 1.25rem; border-radius: 25px; font-weight: 600; font-size: 0.95rem; cursor: pointer; border: 2px solid #ce93d8; transition: all 0.2s;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(123,31,162,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">🌟 Life</span>
 </div>
 
 </div>
-
- 

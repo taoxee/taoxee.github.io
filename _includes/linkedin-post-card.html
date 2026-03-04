@@ -1,0 +1,95 @@
+{% comment %}
+  Social Post Card Include
+  Usage: {% include linkedin-post-card.html post=post %}
+  Props: post.id, post.date, post.title (optional), post.content (markdown),
+         post.url, post.platform, post.tags (optional)
+{% endcomment %}
+
+{% assign platform = include.post.platform | default: "linkedin" %}
+
+<div class="about-card social-post-card"
+     data-linkedin-card
+     data-post-id="{{ include.post.id }}"
+     style="margin-bottom: 2rem; padding: 0; overflow: hidden; position: relative; border: none; box-shadow: 0 2px 12px rgba(0,0,0,0.08);">
+
+  <!-- Accent bar top -->
+  <div style="height: 4px; background: linear-gradient(90deg, #ff9a9e, #fecfef);"></div>
+
+  <div style="padding: 1.75rem 1.75rem 1.25rem;">
+
+    <!-- Header row: date + platform button -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem; flex-wrap: wrap; gap: 0.5rem;">
+
+      <div style="display: flex; align-items: center; gap: 0.75rem;">
+        <!-- Platform icon -->
+        {% if platform == "linkedin" %}
+        <span style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #0077B5; border-radius: 8px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+        </span>
+        {% endif %}
+        <time datetime="{{ include.post.date }}"
+              style="color: #888; font-size: 0.85rem; font-weight: 500;">
+          {{ include.post.date | date: "%B %-d, %Y" }}
+        </time>
+      </div>
+
+      <a href="{{ include.post.url }}"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="View this post on LinkedIn"
+         style="display: inline-flex; align-items: center; gap: 0.4rem; background: #0077B5; color: white; padding: 0.4rem 0.9rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.8rem; min-height: 36px; box-sizing: border-box; transition: background 0.2s ease;"
+         onmouseover="this.style.background='#005885'"
+         onmouseout="this.style.background='#0077B5'">
+        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </svg>
+        View on LinkedIn
+      </a>
+
+    </div>
+
+    <!-- Title (if present) -->
+    {% if include.post.title %}
+    <h3 style="font-size: 1.2rem; font-weight: 700; color: #2d3748; margin: 0 0 1rem 0; line-height: 1.4;">{{ include.post.title }}</h3>
+    {% endif %}
+
+    <!-- Post content — markdownify renders bold, lists, code, etc. -->
+    <!-- data-linkedin-content used by JS for truncation; data-full-content stores raw for toggle -->
+    <div class="social-post-content" data-linkedin-content
+         style="color: #4a5568; line-height: 1.75; margin-bottom: 0.5rem;">
+      {{ include.post.content | markdownify }}
+    </div>
+
+    <!-- Read more / Show less toggle -->
+    <button data-linkedin-toggle
+            aria-label="Read more of this post"
+            aria-expanded="false"
+            style="display: none; background: none; border: none; cursor: pointer; color: #ff9a9e; font-weight: 600; font-size: 0.875rem; padding: 0.25rem 0 0.5rem; min-height: 36px; text-decoration: underline; transition: color 0.2s ease;"
+            onmouseover="this.style.color='#e57373'"
+            onmouseout="this.style.color='#ff9a9e'">
+      Read more
+    </button>
+
+  </div>
+
+  <!-- Tags footer -->
+  {% if include.post.tags %}
+  <div style="padding: 0.75rem 1.75rem 1.25rem; border-top: 1px solid #f7f7f7; display: flex; flex-wrap: wrap; gap: 0.5rem;">
+    {% for tag in include.post.tags %}
+    <span style="background: rgba(255,154,158,0.1); color: #c2185b; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.78rem; font-weight: 600; border: 1px solid rgba(255,154,158,0.25);">{{ tag }}</span>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+</div>
+
+<style>
+.social-post-content p { margin-bottom: 0.75rem; }
+.social-post-content p:last-child { margin-bottom: 0; }
+.social-post-content ul, .social-post-content ol { margin: 0.5rem 0 0.75rem 1.25rem; }
+.social-post-content li { margin-bottom: 0.25rem; }
+.social-post-content strong { color: #2d3748; }
+.social-post-content code { background: #f4f4f5; padding: 0.1em 0.4em; border-radius: 4px; font-size: 0.875em; color: #c2185b; }
+</style>
