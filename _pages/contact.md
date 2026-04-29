@@ -62,9 +62,42 @@ classes: wide
   <h3 class="contact-card__title" data-translate="WeChat">WeChat</h3>
   <p class="contact-card__description" data-translate="contact_wechat_desc">Connect via WeChat</p>
   <div class="contact-card__link">
-    <span class="iconify" data-icon="mingcute:wechat-line"></span> TaoXee
+    <!-- Clicking copies the WeChat ID to clipboard; tooltip confirms -->
+    <button class="wechat-id-btn" id="wechat-id-btn" aria-label="Copy WeChat ID: TaoXee">
+      <span class="iconify" data-icon="mingcute:wechat-line" aria-hidden="true"></span>
+      <span class="wechat-id-btn__text">TaoXee</span>
+      <span class="wechat-id-btn__tooltip" aria-live="polite">Click to copy</span>
+    </button>
   </div>
 </div>
+
+<script>
+/* Copy WeChat ID to clipboard on click; show green "Copied!" tooltip for 2s */
+(function () {
+  var btn = document.getElementById('wechat-id-btn');
+  if (!btn) return;
+  var tooltip = btn.querySelector('.wechat-id-btn__tooltip');
+  var timer;
+
+  btn.addEventListener('click', function () {
+    navigator.clipboard.writeText('TaoXee').then(function () {
+      /* Switch to copied state */
+      btn.classList.add('copied');
+      tooltip.textContent = 'Copied!';
+      clearTimeout(timer);
+
+      /* Revert after 2 seconds */
+      timer = setTimeout(function () {
+        btn.classList.remove('copied');
+        tooltip.textContent = 'Click to copy';
+      }, 2000);
+    }).catch(function () {
+      /* Fallback for browsers without clipboard API */
+      tooltip.textContent = 'TaoXee';
+    });
+  });
+})();
+</script>
 
 </div>
 
