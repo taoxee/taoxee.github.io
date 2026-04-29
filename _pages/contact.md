@@ -23,7 +23,7 @@ classes: wide
 
 <div class="about-card contact-card">
   <div class="contact-card__icon">
-    <img src="/assets/images/email-logo.svg" alt="Email" width="40" height="40">
+    <img src="/assets/images/email-logo.svg" alt="Email" width="48" height="48">
   </div>
   <h3 class="contact-card__title" data-translate="Email">Email</h3>
   <p class="contact-card__description" data-translate="contact_email_desc">For professional inquiries and collaborations</p>
