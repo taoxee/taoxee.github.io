@@ -1,19 +1,81 @@
 {% if page.author_profile or layout.author_profile or page.sidebar %}
-  <div class="sidebar sticky">
-  {% if page.author_profile or layout.author_profile %}{% include author-profile.html %}{% endif %}
-  {% if page.sidebar %}
-    {% for s in page.sidebar %}
-      {% if s.image %}
-        <img src="{{ s.image | relative_url }}"
-             alt="{% if s.image_alt %}{{ s.image_alt }}{% endif %}">
+  <!-- Sidebar wrapper; JS adds .sidebar--collapsed to shrink it -->
+  <div class="sidebar sticky" id="author-sidebar">
+
+    <!-- Toggle button: chevron arrow, full-width tap target -->
+    <button
+      class="sidebar__toggle"
+      id="sidebar-toggle-btn"
+      aria-label="Toggle sidebar"
+      aria-expanded="true"
+      aria-controls="sidebar-inner"
+    >
+      <!-- Left-pointing chevron; CSS rotates it 180° when collapsed -->
+      <svg class="sidebar__toggle-icon"
+           xmlns="http://www.w3.org/2000/svg"
+           width="16" height="16"
+           viewBox="0 0 24 24"
+           fill="none"
+           stroke="currentColor"
+           stroke-width="2.5"
+           stroke-linecap="round"
+           stroke-linejoin="round"
+           aria-hidden="true">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+    </button>
+
+    <!-- Collapsible content: hidden via display:none when sidebar--collapsed -->
+    <div class="sidebar__inner" id="sidebar-inner">
+      {% if page.author_profile or layout.author_profile %}{% include author-profile.html %}{% endif %}
+      {% if page.sidebar %}
+        {% for s in page.sidebar %}
+          {% if s.image %}
+            <img src="{{ s.image | relative_url }}"
+                 alt="{% if s.image_alt %}{{ s.image_alt }}{% endif %}">
+          {% endif %}
+          {% if s.title %}<h3>{{ s.title }}</h3>{% endif %}
+          {% if s.text %}{{ s.text | markdownify }}{% endif %}
+          {% if s.nav %}{% include nav_list nav=s.nav %}{% endif %}
+        {% endfor %}
+        {% if page.sidebar.nav %}
+          {% include nav_list nav=page.sidebar.nav %}
+        {% endif %}
       {% endif %}
-      {% if s.title %}<h3>{{ s.title }}</h3>{% endif %}
-      {% if s.text %}{{ s.text | markdownify }}{% endif %}
-      {% if s.nav %}{% include nav_list nav=s.nav %}{% endif %}
-    {% endfor %}
-    {% if page.sidebar.nav %}
-      {% include nav_list nav=page.sidebar.nav %}
-    {% endif %}
-  {% endif %}
-  </div>
+    </div><!-- /.sidebar__inner -->
+
+  </div><!-- /.sidebar.sticky -->
+
+  <script>
+  /* Sidebar collapse toggle — persists preference in localStorage */
+  (function () {
+    var sidebar = document.getElementById('author-sidebar');
+    var btn     = document.getElementById('sidebar-toggle-btn');
+    var KEY     = 'sidebar-collapsed'; /* localStorage key */
+
+    /* Apply or remove the collapsed state */
+    function setCollapsed(collapsed) {
+      if (collapsed) {
+        sidebar.classList.add('sidebar--collapsed');
+        btn.setAttribute('aria-expanded', 'false');
+      } else {
+        sidebar.classList.remove('sidebar--collapsed');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+      /* Save preference so every page remembers it */
+      localStorage.setItem(KEY, collapsed ? '1' : '0');
+    }
+
+    /* Restore saved state on page load */
+    if (localStorage.getItem(KEY) === '1') {
+      setCollapsed(true);
+    }
+
+    /* Toggle on button click */
+    btn.addEventListener('click', function () {
+      setCollapsed(!sidebar.classList.contains('sidebar--collapsed'));
+    });
+  })();
+  </script>
+
 {% endif %}

@@ -7,6 +7,7 @@ tags: [introduction, personal, journey]
 author_profile: true
 classes: wide
 excerpt: "Hello and welcome! I'm excited to share my thoughts, experiences, and discoveries with you in this modern take on a bulletin board system."
+hidden: true
 ---
 
 <div style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); color: white; padding: 3rem 2rem; margin: -2rem -2rem 3rem -2rem; text-align: center; border-radius: 0;">

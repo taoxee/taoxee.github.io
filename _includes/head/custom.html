@@ -59,4 +59,111 @@
       min-width: 44px;
     }
   }
+
+  /* ── Sidebar collapse toggle ──────────────────────────────────────── */
+
+  /* Full-width button at the top of the sidebar; no background, just border */
+  .sidebar__toggle {
+    display: block;
+    width: 100%;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #e8e8e8;
+    padding: 0.35rem 0;
+    margin-bottom: 0.75rem;
+    /* Arrow sits on the right so it reads as "collapse ←" */
+    text-align: right;
+    cursor: pointer;
+    color: #9aa0a6;
+    transition: color 0.2s;
+    line-height: 1;
+  }
+  .sidebar__toggle:hover { color: #007AFF; }
+  /* Override the global Apple focus style for this button only */
+  .sidebar__toggle:focus { outline: 2px solid #007AFF; outline-offset: 2px; }
+
+  /* Rotate chevron 180° (now points right = "expand →") when collapsed */
+  .sidebar--collapsed .sidebar__toggle-icon {
+    transform: rotate(180deg);
+    transition: transform 0.2s ease;
+  }
+  /* Smooth rotation back when expanded */
+  .sidebar__toggle-icon {
+    transition: transform 0.2s ease;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  /* Hide the author/nav content when collapsed; the toggle button stays visible */
+  .sidebar--collapsed .sidebar__inner {
+    display: none;
+  }
+
+  /* ── SVG icon alignment (replaces emoji in .icon spans) ───────────── */
+  /* Vertically center SVGs so they sit on the same baseline as heading text */
+  .icon svg {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    top: -0.08em;
+    margin-right: 0.15em;
+  }
+  /* Contact card icon: center the SVG inside its container div */
+  .contact-card__icon svg {
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* ── Sidebar collapse: layout reflow ──────────────────────────────── */
+  /* MM theme floats .sidebar left at a fixed px width, then floats        */
+  /* .page / .archive right with calc(100% - sidebar-width). We override   */
+  /* those widths when the sidebar is collapsed so content fills the gap.  */
+
+  /* [$large = 1024px] sidebar is 200px, content is calc(100% - 200px) */
+  @media (min-width: 1024px) {
+    /* Animate sidebar width and content width together */
+    .sidebar.sticky {
+      transition: width 0.25s ease;
+    }
+
+    /* Collapsed sidebar: shrink to a thin strip (just the arrow button) */
+    .sidebar--collapsed {
+      width: 2rem !important;
+    }
+
+    /* Center arrow in the narrow collapsed strip; drop the divider line */
+    .sidebar--collapsed .sidebar__toggle {
+      text-align: center;
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    /* Transition the sibling content elements back/forth smoothly */
+    #author-sidebar ~ article.page,
+    #author-sidebar ~ div.archive {
+      transition: width 0.25s ease, padding-right 0.25s ease;
+    }
+
+    /* Expand content to fill the freed sidebar space */
+    #author-sidebar.sidebar--collapsed ~ article.page,
+    #author-sidebar.sidebar--collapsed ~ div.archive {
+      width: calc(100% - 2rem) !important;
+      padding-right: 0 !important;
+    }
+  }
+
+  /* [$x-large = 1280px] sidebar is 300px, content is calc(100% - 300px) */
+  @media (min-width: 1280px) {
+    /* Same collapsed width override applies at wider breakpoint */
+    .sidebar--collapsed {
+      width: 2rem !important;
+    }
+
+    /* Same content expansion at wider breakpoint */
+    #author-sidebar.sidebar--collapsed ~ article.page,
+    #author-sidebar.sidebar--collapsed ~ div.archive {
+      width: calc(100% - 2rem) !important;
+      padding-right: 0 !important;
+    }
+  }
 </style>

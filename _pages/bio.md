@@ -76,27 +76,27 @@ published: false
 <div class="about-grid" style="gap: 14px;">
 
   <div class="about-card" style="margin-bottom: 0;">
-    <h3><span class="icon">📊</span> <span data-translate="Project Management">Project Management</span></h3>
+    <h3><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="12" width="4" height="8" rx="0.5"/><rect x="10" y="8" width="4" height="12" rx="0.5"/><rect x="17" y="4" width="4" height="16" rx="0.5"/></svg></span> <span data-translate="Project Management">Project Management</span></h3>
     <p>PMP Certification, Agile, Waterfall, Kanban, Jira, Confluence, Lean Six Sigma, SWOT Analysis</p>
   </div>
 
   <div class="about-card">
-    <h3><span class="icon">🤖</span> <span data-translate="AI/ML">AI/ML</span></h3>
+    <h3><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span> <span data-translate="AI/ML">AI/ML</span></h3>
     <p>Neural Networks, NLP, PyTorch, LLMs, scikit-learn, AI Safety, Compliance Frameworks</p>
   </div>
 
   <div class="about-card">
-    <h3><span class="icon">🔍</span> <span data-translate="Data Science">Data Science</span></h3>
+    <h3><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span> <span data-translate="Data Science">Data Science</span></h3>
     <p>Data Wrangling, Warehousing, Mining, Statistical Analysis, Predictive Modeling</p>
   </div>
 
   <div class="about-card">
-    <h3><span class="icon">💻</span> <span data-translate="Programming">Programming</span></h3>
+    <h3><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg></span> <span data-translate="Programming">Programming</span></h3>
     <p>Python, R, JavaScript, TypeScript, Java, PostgreSQL, React.js, JavaFX</p>
   </div>
 
   <div class="about-card">
-    <h3><span class="icon">🌏</span> <span data-translate="Global Mobility">Global Mobility</span></h3>
+    <h3><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span> <span data-translate="Global Mobility">Global Mobility</span></h3>
     <p>Work authorization in China, Singapore, and Australia. Experienced in leading cross-cultural teams and managing projects across APAC time zones.</p>
   </div>
 
