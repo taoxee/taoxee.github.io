@@ -19,7 +19,7 @@ classes: wide
 </h2>
 
 
-<div class="about-grid">
+<div class="about-grid reveal-stagger">
 
 <div class="about-card contact-card">
   <div class="contact-card__icon">
@@ -138,7 +138,7 @@ classes: wide
 </form>
 </div> -->
 
-<div class="cta-card cta-card--contact">
+<div class="cta-card cta-card--contact reveal">
   <h3 data-translate="Quick Response">Quick Response</h3>
   <p data-translate="contact_quick_response_text">I typically respond to messages within 24 hours. For urgent matters, please reach out via email or LinkedIn.</p>
   

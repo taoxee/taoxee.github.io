@@ -23,12 +23,12 @@ classes: wide # changes page width/layout
 
 <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
   
-<h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 3rem 0 2rem 0; text-align: center;">
+<h2 class="reveal" style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 3rem 0 2rem 0; text-align: center;">
   <span style="background: linear-gradient(135deg, #667eea, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;" data-translate="What I Do">What I Do</span>
 </h2>
 
   
-<div class="about-grid">
+<div class="about-grid reveal-stagger">
   <!-- CHANGED: Icons moved inside h3 tags -->
   <div class="about-card">
     <h3><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="12" width="4" height="8" rx="0.5"/><rect x="10" y="8" width="4" height="12" rx="0.5"/><rect x="17" y="4" width="4" height="16" rx="0.5"/></svg></span> <span data-translate="Project Management">Project Management</span></h3>
@@ -58,7 +58,7 @@ classes: wide # changes page width/layout
 
 </div>
 
-<h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
+<h2 class="reveal" style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
   <span style="background: linear-gradient(135deg, #667eea, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;" data-translate="My Journey">My Journey</span>
 </h2>
 
@@ -72,11 +72,11 @@ classes: wide # changes page width/layout
   </p>
 </div>
 
-<h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
+<h2 class="reveal" style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
   <span style="background: linear-gradient(135deg, #667eea, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;" data-translate="Let's Connect">Let's Connect</span>
 </h2>
 
-<div class="cta-card cta-card--about">
+<div class="cta-card cta-card--about reveal">
   <h3 data-translate="Ready to Collaborate?">Ready to Collaborate?</h3>
   <p data-translate="cta_collaborate_text">I'm always excited to connect with like-minded individuals and explore new opportunities for collaboration and growth.</p>
   <a href="/contact/" class="cta__button" data-translate="Get in Touch">Get in Touch</a>

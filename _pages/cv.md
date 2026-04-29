@@ -14,7 +14,7 @@ classes: wide
 <div class="cv-container" style="padding: 0 0rem;">
 
 <!-- ==================== 简历下载区域 ==================== -->
-<div class="cv-section" style="text-align: center;">
+<div class="cv-section reveal" style="text-align: center;">
   <h2 style="font-size: 2.2rem; font-weight: 600; color: #007AFF; margin-bottom: 1.5rem;" data-translate="Download My Resume">Download My Resume</h2>
   <p style="color: #666; margin-bottom: 2rem; font-size: 1.1rem;" data-translate="cv_download_desc">Get the latest version of my CV in PDF format</p>
   
@@ -39,7 +39,7 @@ classes: wide
 </div>
 
 <!-- ==================== 证书轮播组件 ==================== -->
-<h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
+<h2 class="reveal" style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
   <span style="background: linear-gradient(135deg, #00c9ff, #92fe9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;" data-translate="Certifications">Certifications</span>
 </h2>
 
@@ -187,21 +187,21 @@ classes: wide
 
 <!-- 以上为证书轮播组建 -->
 
-<h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
+<h2 class="reveal" style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
   <span style="background: linear-gradient(135deg, #00c9ff, #92fe9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;" data-translate="Professional Summary">Professional Summary</span>
 </h2>
 
-<div class="about-card" data-translate="cv_summary">
+<div class="about-card reveal" data-translate="cv_summary">
   PMP Certified, Results-driven Technical Program Manager with 2+ years leading AI SaaS/PaaS products and cross-border SDLC delivery across APAC. Skilled in aligning R&D execution with business strategy, delivering measurable impact (e.g., $30K cost savings, 1.5-month acceleration). Work authorization in Singapore, Australia, and China — no visa sponsorship required. Strong foundation in AI, data science, and compliance frameworks (GDPR, NIST, AI Act).
 </div>
 
-<h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
+<h2 class="reveal" style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
   <span style="background: linear-gradient(135deg, #00c9ff, #92fe9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;" data-translate="Education">Education</span>
 </h2>
 
 <div style="margin: 2rem 0;">
 
-<div class="about-card">
+<div class="about-card reveal">
   <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
     <div>
       <h3 style="color: #007AFF; margin-bottom: 0.5rem;" data-translate="cv_master_degree">Master of Computing (Data Science)</h3>
@@ -212,7 +212,7 @@ classes: wide
   </div>
 </div>
 
-<div class="about-card">
+<div class="about-card reveal">
   <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
     <div>
       <h3 style="color: #007AFF; margin-bottom: 0.5rem;" data-translate="cv_bachelor_degree">Bachelor of Business Studies in Management (Honours)</h3>
@@ -225,11 +225,11 @@ classes: wide
 
 </div>
 
-<h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
+<h2 class="reveal" style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
   <span style="background: linear-gradient(135deg, #00c9ff, #92fe9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;" data-translate="Research & Publications">Research & Publications</span>
 </h2>
 
-<div class="about-card">
+<div class="about-card reveal">
   <h3 style="color: #007AFF; margin-bottom: 1rem;" data-translate="cv_llm_title">Large Language Model Safety Testing Framework</h3>
   <p style="color: #666; font-style: italic; margin-bottom: 1rem;">(CCLD 2024)</p>
   <p style="color: #4a5568; line-height: 1.7;">
@@ -237,11 +237,11 @@ classes: wide
   </p>
 </div>
 
-<h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
+<h2 class="reveal" style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
   <span style="background: linear-gradient(135deg, #00c9ff, #92fe9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;" data-translate="Skills">Skills</span>
 </h2>
 
-<div class="about-grid">
+<div class="about-grid reveal-stagger">
 
 <div class="about-card">
   <h3><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="m9 14 2 2 4-4"/></svg></span> <span data-translate="Project Management">Project Management</span></h3>
@@ -285,11 +285,11 @@ classes: wide
 </div>
 
 
-<h2 style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
+<h2 class="reveal" style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">
   <span style="background: linear-gradient(135deg, #00c9ff, #92fe9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;" data-translate="Let's Connect">Let's Connect</span>
 </h2>
 
-<div class="cta-card cta-card--cv">
+<div class="cta-card cta-card--cv reveal">
   <h3 data-translate="Ready to Collaborate?">Ready to Collaborate?</h3>
   <p data-translate="cta_collaborate_text">I'm always excited to connect with like-minded individuals and explore new opportunities for collaboration and growth.</p>
   <a href="/contact/" class="cta__button" data-translate="Get in Touch">Get in Touch</a>
