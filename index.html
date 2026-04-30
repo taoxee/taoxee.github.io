@@ -1,264 +1,204 @@
 ---
-layout: home
-author_profile: true
+layout: single
+author_profile: false
 classes: wide
 ---
 
-<!-- REDIRECT: Automatically redirect to About page -->
-<script>
-  window.location.replace('/about/');
-</script>
-
-<!-- ORIGINAL HOME PAGE CONTENT - COMMENTED OUT -->
-<!--
-
 <style>
-  /* FORCE FIX: Author profile photo overlay issue */
-  .sidebar .author__avatar img,
-  .author__avatar img {
-    transition: none !important;
-    opacity: 1 !important;
-    filter: none !important;
-    transform: none !important;
-  }
-  
-  .sidebar .author__avatar::before,
-  .sidebar .author__avatar::after,
-  .author__avatar::before,
-  .author__avatar::after {
-    display: none !important;
-    content: none !important;
-  }
-  
-  .sidebar .author__avatar:hover img,
-  .author__avatar:hover img {
-    opacity: 1 !important;
-    filter: none !important;
-    transform: none !important;
-  }
-
-  /* FORCE FIX: Homepage feature grid responsive design */
-  .feature-grid {
-    display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
-    gap: 1.5rem !important;
-    margin: 2rem 0 !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 0 !important;
-  }
-  
-  .feature-card {
-    background: white !important;
-    padding: 1.5rem !important;
-    border-radius: 12px !important;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07) !important;
-    border: 1px solid #e9ecef !important;
-    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
-    min-height: 180px !important;
-    max-height: none !important;
-    display: flex !important;
-    flex-direction: column !important;
-    overflow: hidden !important;
-    word-wrap: break-word !important;
-    box-sizing: border-box !important;
-    text-align: center !important;
-  }
-  
-  .feature-card:hover {
-    transform: translateY(-3px) !important;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important;
-  }
-  
-  /* CHANGED: Icon styles modified for inline alignment */
-  .feature-card .icon {
-    font-size: 1.8rem !important;
-    display: inline-flex !important;
-    margin-right: 0.5rem !important;
-    vertical-align: middle !important;
-    line-height: 1 !important;
-  }
-  
-  /* CHANGED: Heading styles for inline alignment */
-  .feature-card h3 {
-    color: #007AFF !important;
-    margin: 0 0 1rem 0 !important;
-    font-size: 1.3rem !important;
-    font-weight: 600 !important;
-    line-height: 1.3 !important;
-    word-wrap: break-word !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 0.5rem !important;
-  }
-  
-  .feature-card p {
-    color: #666 !important;
-    line-height: 1.6 !important;
-    font-size: 1rem !important;
-    flex-grow: 1 !important;
-    margin: 0 !important;
-    overflow: hidden !important;
-    word-wrap: break-word !important;
-    hyphens: auto !important;
-  }
-
-  /* Homepage container */
-  .hero-section {
-    max-width: 100% !important;
-    overflow: hidden !important;
-  }
-
-  /* CTA section */
-  .cta-section {
-    background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%) !important;
-    color: white !important;
-    padding: 3rem 2rem !important;
-    border-radius: 20px !important;
-    text-align: center !important;
-    margin: 4rem 0 !important;
-  }
-  
-  .cta-section h2 {
-    font-size: 2rem !important;
-    font-weight: 600 !important;
-    margin-bottom: 1rem !important;
-    color: white !important;
-  }
-  
-  .cta-section p {
-    font-size: 1.1rem !important;
-    opacity: 0.9 !important;
-    margin-bottom: 2rem !important;
-    max-width: 500px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-  
-  .cta-button {
-    display: inline-block !important;
-    background: white !important;
-    color: #0984e3 !important;
-    padding: 1rem 2rem !important;
-    border-radius: 25px !important;
-    text-decoration: none !important;
-    font-weight: 600 !important;
-    transition: all 0.3s ease !important;
-  }
-  
-  .cta-button:hover {
-    transform: translateY(-2px) !important;
-    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3) !important;
-  }
-
-  /* Force mobile responsiveness */
-  @media (max-width: 768px) {
-    .feature-grid {
-      grid-template-columns: 1fr !important;
-      gap: 1rem !important;
-    }
-    
-    .feature-card {
-      padding: 1.2rem !important;
-    }
-
-    .hero-section h1 {
-      font-size: 2.5rem !important;
-    }
-    
-    .hero-section p {
-      font-size: 1.2rem !important;
-    }
-  }
-
-  /* Override any conflicting styles */
-  .page__content .feature-grid {
-    display: grid !important;
-  }
-  
-  /* Force container to be properly sized */
-  .page__content {
-    overflow-x: hidden !important;
-  }
-  
-  /* Hero buttons container styling */
-  .hero-buttons {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    gap: 1rem !important;
-    margin-top: 2rem !important;
-  }
-  
-  /* Mobile responsiveness for hero buttons */
-  @media (max-width: 600px) {
-    .hero-buttons {
-      flex-direction: column !important;
-      align-items: center !important;
-      gap: 0.75rem !important;
-    }
-    
-    .hero-buttons a {
-      width: 100% !important;
-      max-width: 280px !important;
-      margin: 0 !important;
-    }
-  }
+/* MM floats article.page right for the absent sidebar — reset it on the home page */
+article.page { float: none !important; width: 100% !important; }
+/* Allow WeChat tooltip to overflow above the contact card */
+.bento-card--contact { overflow: visible; }
+.bento-card--contact .wechat-id-btn { z-index: 1; width: 100%; text-align: left; }
 </style>
 
-<div class="hero-section">
-  <h1><span data-translate="Hello, I'm">Hello, I'm</span> <span class="hero-name">Tao Xu</span></h1>
-  <p data-translate="PMP Certified project manager leading tech and security projects across APAC, passionate about AI, data science, and creating meaningful digital experiences">PMP Certified project manager leading tech and security projects across APAC, passionate about AI, data science, and creating meaningful digital experiences</p>
-  <div class="hero-buttons">
-    <a href="/bio/" class="hero-btn-primary">
-      <span data-translate="Learn About Me">Learn About Me</span>
-    </a>
-    <a href="/cv/" class="hero-btn-primary">
-      <span data-translate="View My CV">View My CV</span>
-    </a>
+<div class="bento-grid reveal-stagger">
+
+  <!-- ── Hero Bio ─────────────────────────────────────────────────────────── -->
+  <div class="bento-item--hero">
+    <div class="bento-card bento-card--hero bento-card--tilt">
+      <div>
+        <p class="bento-section-label" data-translate="bento_hello">Hello, I'm</p>
+        <h1 class="bento-hero-name">Tao Xu</h1>
+        <p class="bento-hero-title" data-translate="bento_hero_title">Technical Program Manager · AI/SaaS · APAC</p>
+        <p class="bento-hero-bio" data-translate="bento_hero_bio">PMP Certified. 2+ years leading AI SaaS/PaaS products and cross-border SDLC delivery across APAC. Focused on LLM safety, compliance frameworks, and bridging R&amp;D with business strategy.</p>
+        <div class="bento-hero-location">
+          <span>🇨🇳 China</span>
+          <span>🇸🇬 Singapore</span>
+          <span>🇦🇺 Australia</span>
+          <span>Remote</span>
+        </div>
+      </div>
+      <div class="bento-hero-btns">
+        <a href="/cv/" class="bento-btn--primary" data-translate="View CV">View CV</a>
+        <a href="/contact/" class="bento-btn--outline" data-translate="Contact">Contact</a>
+        <a href="https://www.linkedin.com/in/tao-xee" target="_blank" rel="noopener" class="bento-btn--outline">LinkedIn</a>
+      </div>
+    </div>
   </div>
+
+  <!-- ── Key Metrics ───────────────────────────────────────────────────────── -->
+  <div class="bento-item--medium">
+    <div class="bento-card bento-card--metrics">
+      <p class="bento-section-label" data-translate="bento_metrics_label">Key Metrics</p>
+      <div class="bento-metrics-grid">
+        <div>
+          <div class="bento-metric-value">$<span data-bento-count="30">0</span>K</div>
+          <div class="bento-metric-label" data-translate="bento_metric_savings">Cost Savings Delivered</div>
+        </div>
+        <div>
+          <div class="bento-metric-value"><span data-bento-count="1.5">0</span>mo</div>
+          <div class="bento-metric-label" data-translate="bento_metric_accel">Schedule Acceleration</div>
+        </div>
+        <div>
+          <div class="bento-metric-value"><span data-bento-count="2">0</span>+</div>
+          <div class="bento-metric-label" data-translate="bento_metric_years">Years PM Experience</div>
+        </div>
+        <div>
+          <div class="bento-metric-value"><span data-bento-count="8">0</span></div>
+          <div class="bento-metric-label" data-translate="bento_metric_certs">Certifications</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── LLM Safety Research ───────────────────────────────────────────────── -->
+  <div class="bento-item--medium">
+    <div class="bento-card bento-card--research">
+      <p class="bento-section-label" data-translate="bento_research_label">Research &amp; Publication</p>
+      <h3 data-translate="bento_research_title">LLM Safety Testing Framework</h3>
+      <p class="bento-conf">CCLD 2024</p>
+      <p data-translate="bento_research_desc">Compliance-focused evaluation framework for LLMs addressing robustness, security, and privacy using global standards.</p>
+      <div>
+        <span class="bento-tag">AI Act</span>
+        <span class="bento-tag">GDPR</span>
+        <span class="bento-tag">NIST</span>
+        <span class="bento-tag">TC260-003</span>
+        <span class="bento-tag">WDTA</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Experience ────────────────────────────────────────────────────────── -->
+  <div class="bento-item--third">
+    <div class="bento-card">
+      <p class="bento-section-label" data-translate="bento_exp_label">Experience</p>
+      <h3 class="bento-card-title" data-translate="bento_exp_role">Technical Program Manager</h3>
+      <p class="bento-card-sub" data-translate="bento_exp_desc">AI SaaS/PaaS products · Cross-border SDLC · APAC delivery · Agile · Waterfall · Kanban · Jira · Confluence</p>
+      <a href="/cv/" class="bento-card-link" data-translate="bento_view_cv">
+        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        Full CV
+      </a>
+    </div>
+  </div>
+
+  <!-- ── Education ─────────────────────────────────────────────────────────── -->
+  <div class="bento-item--third">
+    <div class="bento-card">
+      <p class="bento-section-label" data-translate="bento_edu_label">Education</p>
+      <div class="bento-edu-row">
+        <div>
+          <div class="bento-edu-school" data-translate="bento_edu_anu">Australian National University</div>
+          <div class="bento-edu-degree" data-translate="bento_edu_anu_degree">M.Computing · Data Science · QS:32</div>
+        </div>
+        <span class="bento-edu-year">2022–24</span>
+      </div>
+      <div class="bento-edu-row">
+        <div>
+          <div class="bento-edu-school" data-translate="bento_edu_ucd">University College Dublin</div>
+          <div class="bento-edu-degree" data-translate="bento_edu_ucd_degree">B.Business Studies · Management · QS:118</div>
+        </div>
+        <span class="bento-edu-year">2019–22</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Featured Project ──────────────────────────────────────────────────── -->
+  <div class="bento-item--third">
+    <div class="bento-card bento-card--project">
+      <p class="bento-section-label" data-translate="bento_project_label">Featured Project</p>
+      <h3 class="bento-card-title">VibeMeet2Notes</h3>
+      <p class="bento-card-sub" data-translate="bento_project_desc">AI-powered meeting transcription tool with 11 ASR vendors, modular architecture, and bilingual UI.</p>
+      <div style="margin-top: 0.6rem;">
+        <span class="bento-tag">Python</span>
+        <span class="bento-tag">LLM</span>
+        <span class="bento-tag">ASR</span>
+        <span class="bento-tag" data-translate="bento_tag_bilingual">Bilingual</span>
+      </div>
+      <a href="/posts/" class="bento-card-link" data-translate="bento_view_post">
+        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        Read Post
+      </a>
+    </div>
+  </div>
+
+  <!-- ── Tech Stack ────────────────────────────────────────────────────────── -->
+  <div class="bento-item--wide">
+    <div class="bento-card">
+      <p class="bento-section-label" data-translate="bento_tech_label">Tech Stack</p>
+      <div class="bento-tech-icons">
+        <span class="bento-tech-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 32 32" aria-hidden="true"><path fill="#6366f1" d="M17 11h3v10h-3v2h8v-2h-3V11h3V9h-8zm-4-2H9c-1.103 0-2 .897-2 2v12h2v-5h4v5h2V11c0-1.103-.897-2-2-2m-4 7v-5h4v5z"/></svg> AI Native</span>
+        <span class="bento-tech-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="#0288d1" d="M9.86 2A2.86 2.86 0 0 0 7 4.86v1.68h4.29c.39 0 .71.57.71.96H4.86A2.86 2.86 0 0 0 2 10.36v3.781a2.86 2.86 0 0 0 2.86 2.86h1.18v-2.68a2.85 2.85 0 0 1 2.85-2.86h5.25c1.58 0 2.86-1.271 2.86-2.851V4.86A2.86 2.86 0 0 0 14.14 2zm-.72 1.61c.4 0 .72.12.72.71s-.32.891-.72.891c-.39 0-.71-.3-.71-.89s.32-.711.71-.711"/><path fill="#fdd835" d="M17.959 7v2.68a2.85 2.85 0 0 1-2.85 2.859H9.86A2.85 2.85 0 0 0 7 15.389v3.75a2.86 2.86 0 0 0 2.86 2.86h4.28A2.86 2.86 0 0 0 17 19.14v-1.68h-4.291c-.39 0-.709-.57-.709-.96h7.14A2.86 2.86 0 0 0 22 13.64V9.86A2.86 2.86 0 0 0 19.14 7zM8.32 11.513l-.004.004l.038-.004zm6.54 7.276c.39 0 .71.3.71.89a.71.71 0 0 1-.71.71c-.4 0-.72-.12-.72-.71s.32-.89.72-.89"/></svg> Python</span>
+        <span class="bento-tech-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><g fill="#ff7043"><path d="m14.375 6.48.49.28v.209l-.14.489-5.937 1.397-.558-1.387z"/><path d="m12.155 2.373.683.143.182.224.173.535-.072.342-3.983 5.447-1.328-.827z"/><path d="m8.719 1.522.419-.28.349.14.349.49-.957 5.748-.65-.441-.279-.769z"/><path d="m4.239 1.614.43-.55.281-.064.558.081.275.216 2.004 4.442.724 2.11-.848.471z"/><path d="m2.154 4.665-.14-.56.42-.488.488.07h.14l2.933 2.165.908.698 1.257.978-.698 1.187-.629-.489-.419-.419z"/><path d="M1.316 8.296 1 7.946v-.31l.316-.108 3.562.21 3.491.279-.113.695z"/><path d="M3.411 11.931h-.698l-.278-.32v-.382l1.186-.838 4.82-3.068.487.833z"/><path d="m4.738 13.883-.28.07-.418-.21.07-.35 4.12-5.446.558.768z"/><path d="m8.23 14.581-.21.28-.419.14-.349-.28-.21-.42.048-5.935.629.07z"/><path d="M11.791 13.045v.558l-.07.21-.279.14-.489-.066-3.356-4.996 1.331-1.014 1.117 2.025z"/><path d="m13.398 12.207.07.349-.21.279-.21-.07-1.187-.838-1.815-1.606-1.397-.978.419-1.326.698.419z"/><path d="m12.49 8.645 1.746.14.419.28.279.418v.302l-.768.327-3.911-.978-1.606-.07.419-1.466z"/></g></svg> Claude Code</span>
+        <span class="bento-tech-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#1d6fb2"/><text x="12" y="16.5" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="bold" fill="white">R</text></svg> R</span>
+        <span class="bento-tech-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="#F7DF1E" rx="2"/><text x="3" y="18" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="bold" fill="#323330">JS</text></svg> JavaScript</span>
+        <span class="bento-tech-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="#3178C6" rx="2"/><text x="2.5" y="18" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="bold" fill="white">TS</text></svg> TypeScript</span>
+        <span class="bento-tech-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="#EE4C2C" d="M12.005 0L4.952 7.053a9.865 9.865 0 0 0 0 14.022 9.865 9.865 0 0 0 14.022 0 9.865 9.865 0 0 0 0-14.022L16.9 9.129c1.597 1.597 1.597 4.186 0 5.783s-4.186 1.597-5.783 0-1.597-4.186 0-5.783l.888-.888zm3.504 5.362a1.313 1.313 0 1 1-1.857 1.856 1.313 1.313 0 0 1 1.857-1.856z"/></svg> PyTorch</span>
+        <span class="bento-tech-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 128 128" aria-hidden="true"><path fill="#336791" fill-rule="evenodd" d="M123.258 76.784c-.45-2.918-2.901-4.829-5.752-4.958c-1.032-.047-2.08.061-3.109.192c-1.243.158-2.471.438-3.711.623c-.857.128-1.726.187-2.582.275l-.021-.111c1.598-3.018 3.263-6.003 4.775-9.064c1.159-2.348 2.151-4.781 3.176-7.194c1.696-3.998 3.051-8.12 4.173-12.309c1.075-4.011 1.995-8.066 2.284-12.227c.116-1.662.196-3.331.187-4.995c-.008-1.327-.151-2.656-.284-3.979c-.15-1.516-.608-2.953-1.242-4.336c-.836-1.822-2.132-3.317-3.496-4.737c-1.092-1.137-2.293-2.173-3.484-3.208c-1.698-1.477-3.607-2.656-5.59-3.703a32.2 32.2 0 0 0-7.09-2.75c-1.493-.381-3.02-.664-4.532-.966c-.544-.11-1.089-.337-1.633-.337H85.086c-.37 0-.737.191-1.11.233c-2.452.273-4.875.735-7.228 1.464c-.88.273-1.684.101-2.52.024c-.641-.059-1.271-.231-1.912-.263c-2.442-.122-4.887-.301-7.328-.275c-2.339.024-4.654.409-6.918 1.052c-1.895.538-3.749 1.195-5.447 2.191c-.727.426-1.303.346-2.055.129c-2.527-.729-5.072-1.414-7.639-1.989c-1.6-.358-3.245-.536-4.879-.707a57 57 0 0 0-4.718-.294c-1.538-.033-3.087-.032-4.618.104a30.2 30.2 0 0 0-7.158 1.513a23.8 23.8 0 0 0-7.086 3.865c-2.167 1.715-3.905 3.809-5.303 6.2c-1.473 2.523-2.483 5.224-3.111 8.061c-.34 1.537-.555 3.117-.788 4.678c-.073.486.732.972-.268 1.456v6.794c1 .452.208.903.266 1.356c.139 1.089.262 2.187.446 3.268c.291 1.711.636 3.417.988 5.117a325 325 0 0 0 1.546 7.111c.396 1.72.847 3.43 1.319 5.131c.721 2.598 1.431 5.201 2.246 7.77c.757 2.387 1.624 4.74 2.484 7.093c1.191 3.255 2.617 6.405 4.327 9.424c1.479 2.614 3.169 5.062 5.436 7.076c1.494 1.327 3.157 2.347 5.093 2.857c1.521.4 3.067.448 4.624.129a11 11 0 0 0 4.824-2.311c.163-.134.342-.236.535.01c.735.931 1.719 1.552 2.748 2.089c2.777 1.448 5.803 1.882 8.877 2.059c.744.043 1.496-.064 2.246-.085c1.461-.04 2.881-.325 4.278-.729c.732-.212 1.447-.481 2.192-.732c.039.793.089 1.557.112 2.321l.104 4.166c.019.634.044 1.27.103 1.901c.151 1.627.299 3.255.493 4.877c.135 1.118.275 2.245.538 3.336a38 38 0 0 0 2.158 6.428a13.8 13.8 0 0 0 3.9 5.185c2.22 1.836 4.822 2.619 7.632 2.764c1.162.061 2.357.004 3.501-.204a49 49 0 0 0 5.387-1.275c3.591-1.084 6.695-2.956 9.014-5.981c1.32-1.724 2.404-3.589 3.1-5.648c.574-1.701 1.115-3.419 1.545-5.16c.34-1.372.508-2.787.715-4.188c.137-.927.219-1.863.305-2.797c.14-1.517.283-3.033.384-4.553c.07-1.058.067-2.121.109-3.181c.013-.323.065-.644.095-.966c.028-.298.178-.401.482-.396c1.071.016 2.144.044 3.212-.004c1.197-.054 2.405-.105 3.583-.303a57 57 0 0 0 4.99-1.067c1.943-.508 3.725-1.418 5.44-2.455c1.998-1.207 3.819-2.623 5.297-4.447c1.285-1.591 1.894-3.43 1.584-5.438m-3.412.982c-.066.915-.485 1.699-1.093 2.369c-2.869 3.163-6.468 5.082-10.585 6.027c-1.564.358-3.178.544-4.779.692a32 32 0 0 1-4.114.097c-1.006-.038-2.004-.268-3.032-.416c-.103.94-.201 1.919-.32 2.896l-.479 3.745c-.145 1.187-.258 2.378-.407 3.564c-.146 1.151-.328 2.298-.481 3.449c-.143 1.072-.248 2.149-.407 3.219c-.245 1.64-.479 3.284-.799 4.911c-.384 1.945-.973 3.829-1.934 5.583c-1.172 2.141-2.834 3.772-4.949 4.98c-2.18 1.246-4.563 1.894-6.979 2.436c-1.71.384-3.472.447-5.204.291c-3.004-.272-5.568-1.557-7.506-3.886c-1.85-2.223-3.102-4.771-3.55-7.655a63 63 0 0 1-.491-4.136a108 108 0 0 1-.299-4.62a250 250 0 0 1-.197-5.871c-.053-2.406-.07-4.812-.104-7.218l-.006-.092c-1.224.734-2.427 1.538-3.703 2.2a12.4 12.4 0 0 1-4.798 1.353c-1.318.1-2.653.191-3.965.086c-2.151-.173-4.3-.51-6.226-1.569c-.781-.43-1.596-.953-2.134-1.64c-1.29-1.646-.672-3.726 1.273-4.727c1.344-.693 2.811-.982 4.268-1.319a44 44 0 0 0 3.761-1.029c1.222-.4 1.993-1.391 2.754-2.363l1.206-1.551c-.503-.053-.977-.107-1.451-.151c-1.439-.136-2.812-.532-4.125-1.114c-1.124-.497-1.141-.551-1.965.343c-1.376 1.494-2.714 3.023-4.062 4.542c-.992 1.117-1.978 2.241-2.965 3.361c-.978 1.108-1.894 2.279-2.947 3.31c-1.564 1.531-3.449 2.452-5.698 2.348c-1.443-.066-2.764-.572-3.952-1.399c-2.452-1.708-4.104-4.097-5.608-6.606c-1.927-3.215-3.406-6.64-4.672-10.159c-.876-2.432-1.756-4.866-2.521-7.333c-.831-2.681-1.56-5.396-2.277-8.11a157 157 0 0 1-1.482-6.182a216 216 0 0 1-1.464-7.079c-.298-1.599-.471-3.221-.712-4.831c-.325-2.17-.385-4.36-.267-6.539c.105-1.963.387-3.921.667-5.871c.388-2.698 1.277-5.244 2.556-7.648c.783-1.473 1.755-2.812 2.879-4.056c1.845-2.042 4.078-3.518 6.562-4.626c1.736-.774 3.57-1.24 5.439-1.604c2.774-.54 5.573-.519 8.373-.461c1.224.025 2.443.248 3.666.369c2.633.262 5.214.816 7.762 1.5c1.857.498 3.676 1.143 5.518 1.703c.185.056.456.051.607-.048c2.496-1.629 5.224-2.704 8.125-3.319c1.101-.233 2.237-.335 3.363-.407c1.369-.087 2.749-.167 4.115-.088c1.642.094 3.276.336 4.908.56c.792.108 1.565.383 2.359.458c.38.036.783-.242 1.185-.335c2.049-.473 4.089-1 6.156-1.374c1.539-.278 3.111-.409 4.676-.499c1.745-.1 3.503-.173 5.247-.089a36.7 36.7 0 0 1 6.555.923c2.677.623 5.245 1.528 7.686 2.784c1.824.938 3.558 2.026 5.119 3.364c1.023.878 2.07 1.745 2.994 2.723c1.14 1.206 2.303 2.413 3.018 3.958c.538 1.165.922 2.371 1.028 3.647c.132 1.586.292 3.178.277 4.766c-.014 1.519-.221 3.037-.368 4.552c-.334 3.454-1.085 6.833-1.997 10.167a117 117 0 0 1-2.589 8.17c-.879 2.481-1.893 4.917-2.918 7.343a80 80 0 0 1-2.458 5.303c-1.677 3.286-3.421 6.538-5.438 9.633c-.348.535-.678 1.083-1.018 1.629c.88.594 1.877.803 2.881.911c.955.104 1.929.166 2.883.095c1.527-.113 3.049-.331 4.567-.544c1.504-.21 2.978-.638 4.522-.525c1.542.112 2.645 1.284 2.54 2.729m-22.013-3.353c-.655-.846-1.323-1.682-1.964-2.538c-1.006-1.344-1.729-2.845-2.455-4.353c-.688-1.429-1.532-2.782-2.257-4.195c-1.265-2.465-2.553-4.922-3.718-7.435c-1.465-3.157-2.62-6.426-2.984-9.923c-.154-1.48-.193-2.958.106-4.424c.479-2.341 1.702-4.172 3.758-5.428c1.907-1.165 4.032-1.541 6.209-1.659c1.351-.073 2.708-.013 4.11-.013l-.047-.237c-.872-1.823-1.687-3.677-2.641-5.457c-1.346-2.512-3.068-4.777-4.986-6.877c-1.421-1.555-2.96-2.998-4.646-4.273c-1.658-1.255-3.405-2.376-5.269-3.293c-2.223-1.093-4.538-1.938-6.967-2.477c-2.334-.518-4.683-.835-7.077-.861c-2.042-.022-4.071.07-6.06.531c-3.002.695-5.748 1.931-8.137 3.933a21 21 0 0 0-3.517 3.77c-1.196 1.643-2.161 3.417-2.986 5.277c-1.132 2.552-1.909 5.208-2.44 7.938c-.266 1.361-.474 2.734-.686 4.106c-.074.48-.08.971-.123 1.521c.369-.192.635-.34.907-.472l.885-.397c2.993-1.369 6.094-2.25 9.427-2.149c1.416.043 2.771.323 4.03.943c2.415 1.191 3.828 3.216 4.442 5.779c.424 1.769.714 3.573.996 5.372c.221 1.405.447 2.825.473 4.242c.037 2.071-.068 4.146-.181 6.216a17.4 17.4 0 0 1-1.08 5.146c-1.12 2.993-2.368 5.937-3.534 8.913c-.385.983-.681 2.001-1.045 3.082c.562 0 1.018-.004 1.474.002c.178.003.36.008.532.049c1.34.316 2.502.923 3.455 1.954c1.271 1.372 1.938 2.973 1.972 4.826c.019 1.027-.089 2.057-.084 3.084c.021 4.786.057 9.572.097 14.357c.007.782.046 1.565.102 2.346c.117 1.635.235 3.271.395 4.902c.112 1.157.268 2.312.451 3.461c.259 1.628 1 3.077 1.841 4.462c.724 1.191 1.665 2.203 2.905 2.901c2.107 1.186 4.376 1.285 6.663.848c1.545-.295 3.062-.769 4.562-1.258a10.1 10.1 0 0 0 3.937-2.354c1.051-1.019 1.797-2.261 2.3-3.632c.976-2.659 1.28-5.459 1.684-8.237c.151-1.04.282-2.083.42-3.125c.157-1.186.316-2.371.468-3.556c.112-.883.214-1.768.322-2.651c.154-1.268.317-2.535.464-3.804c.113-.981.209-1.966.309-2.949c.129-1.256.268-2.512.379-3.77c.086-.955.051-1.927.22-2.864c.311-1.718 1.123-3.18 2.646-4.125c.637-.395 1.356-.655 2.063-.989zm-57.597-7.052a17.5 17.5 0 0 1-1.354-5.622c-.128-1.825.089-3.643.276-5.46c.182-1.76.333-3.528.386-5.296c.088-2.906-.108-5.808-.247-8.712c-.084-1.729.117-3.479.271-5.212c.139-1.561.312-3.126.607-4.664c.495-2.581 1.152-5.125 2.086-7.591c.887-2.338 1.906-4.615 3.345-6.665c.986-1.406 2.105-2.72 3.18-4.094l-.319-.113c-3.498-1.111-7.053-1.979-10.709-2.358c-1.729-.179-3.464-.284-5.198-.387c-.532-.032-1.072.04-1.606.091c-1.322.126-2.66.176-3.961.424c-2.214.421-4.338 1.129-6.305 2.282c-1.766 1.035-3.249 2.373-4.491 3.978c-1.372 1.772-2.295 3.776-2.958 5.913c-.783 2.521-1.156 5.115-1.257 7.733c-.088 2.295-.132 4.603.264 6.889c.295 1.702.492 3.422.817 5.117c.443 2.311.918 4.617 1.467 6.904c.785 3.274 1.569 6.553 2.499 9.787c.89 3.099 1.894 6.17 2.982 9.204c.89 2.476 1.919 4.906 3.003 7.304c.706 1.562 1.561 3.065 2.457 4.528c.953 1.553 2.037 3.027 3.508 4.154c1.856 1.423 3.293 1.644 5.179.083c.808-.669 1.491-1.495 2.194-2.282c1.117-1.25 2.195-2.534 3.307-3.788c1.416-1.598 2.85-3.179 4.273-4.769c.301-.336.59-.682.883-1.022l-.484-.425a17.7 17.7 0 0 1-4.095-5.931m53.688-47.569a62 62 0 0 1 3.309 4.204c2 2.809 3.598 5.842 4.775 9.087c.521 1.43.937 2.874.751 4.439c-.129 1.096-.118 2.208-.215 3.31c-.081.917-.226 1.829-.345 2.743c-.178 1.378-.436 2.752-.513 4.136c-.073 1.317.003 2.648.086 3.968c.084 1.341.265 2.676.388 4.015c.139 1.518.326 3.036.369 4.557c.035 1.249-.076 2.506-.185 3.753c-.13 1.502-.511 2.956-1.079 4.351c-.399.982-.876 1.934-1.327 2.917l.181.192l.275.213l.277-.496a94 94 0 0 0 6.222-11.493a186 186 0 0 0 3.287-7.766c1.624-4.064 2.909-8.242 3.903-12.503c.446-1.913.787-3.855 1.09-5.797c.236-1.518.433-3.054.477-4.586c.047-1.625-.043-3.263-.193-4.884c-.112-1.224-.414-2.456-1.181-3.451c-1.233-1.602-2.564-3.134-4.201-4.346c-1.378-1.021-2.751-2.068-4.23-2.927c-2.345-1.36-4.883-2.266-7.535-2.883c-2.588-.603-5.21-.863-7.849-.918c-1.556-.033-3.119.134-4.672.28c-1.407.132-2.805.357-4.222.543c1.52.855 3.019 1.615 4.433 2.511c2.973 1.883 5.637 4.149 7.924 6.831M55.299 72.514c.961-3.073 2.27-6.007 3.538-8.959c1.028-2.394 1.59-4.916 1.777-7.506c.093-1.277.067-2.57.004-3.851a45 45 0 0 0-.392-4.259c-.266-1.801-.569-3.603-.995-5.371c-.462-1.913-1.627-3.245-3.623-3.736c-1.216-.299-2.424-.287-3.653-.093c-3.002.473-5.75 1.579-8.31 3.199c-.515.326-.798.589-.709 1.328c.188 1.565.229 3.155.222 4.735c-.01 2.236-.105 4.472-.19 6.707c-.028.728-.133 1.452-.211 2.177c-.12 1.11-.351 2.219-.344 3.327c.007 1.142.124 2.311.401 3.417c.88 3.507 2.744 6.377 5.799 8.402c1.879 1.245 3.958 1.873 6.24 1.992c.155-.524.293-1.019.446-1.509m-3.586-30.087c-.402-.844-.172-1.543.76-1.867c.227-.08.461-.165.697-.188c.324-.032.654-.008.982-.008c1.182.006 2.319.171 3.295.923c.626.482.794 1.122.389 1.779c-.575.932-1.452 1.4-2.529 1.49c-1.697.141-2.888-.65-3.594-2.129m47.04-.308c.136-1.124.245-2.251.384-3.375c.056-.452-.182-.574-.561-.585c-1.192-.033-2.384-.075-3.576-.097c-1.344-.024-2.652.192-3.896.703c-1.38.568-2.431 1.478-2.86 2.98a9 9 0 0 0-.293 3.41a20 20 0 0 0 1.193 5.176c.834 2.221 1.707 4.441 2.75 6.569c1.413 2.881 3.012 5.67 4.513 8.507c.401.757.738 1.547 1.156 2.431a13.8 13.8 0 0 0 1.351-5.622c.041-1.61-.088-3.227-.182-4.838c-.059-.986-.198-1.966-.294-2.95c-.134-1.371-.337-2.741-.368-4.115c-.031-1.397.068-2.802.188-4.197c.113-1.338.334-2.665.495-3.997m-2.689-1.082c-.443 1.223-1.39 1.913-2.618 2.116c-1.145.188-2.148-.235-2.894-1.148c-.531-.65-.328-1.42.468-1.859c.914-.506 1.919-.634 3.104-.711c.322.059.807.108 1.268.24c.669.189.916.692.672 1.362m-35.422 37.66c-.655-.535-1.521-.566-2.144.021c-.773.73-1.453 1.565-2.133 2.388c-.785.951-1.521 1.94-2.534 2.677c-1.474 1.071-3.192 1.515-4.919 1.935c-1.373.334-2.752.644-4.129.965l-.017.178c.409.189.805.425 1.231.56c2.1.665 4.236.996 6.455.808c1.602-.136 3.128-.485 4.574-1.171c1.99-.943 3.521-2.437 4.823-4.175c.218-.29.317-.719.343-1.093c.089-1.321-.582-2.303-1.55-3.093m51.751.526c-1.69.181-3.382.373-5.077.47c-.818.047-1.648-.109-2.474-.176c-1.385-.112-2.737-.42-3.908-1.16c-.678-.427-1.241-.475-1.961-.233c-1.028.346-1.867.872-2.115 1.986c-.169.753-.23 1.533-.298 2.304c-.013.136.157.386.287.42c.793.209 1.59.456 2.401.529c.996.09 2.01.061 3.013.011c1.083-.054 2.173-.124 3.24-.304c2.515-.422 4.948-1.11 7.109-2.536c.779-.515 1.551-1.041 2.325-1.562l-.064-.11c-.826.123-1.648.273-2.478.361" clip-rule="evenodd"/></svg> PostgreSQL</span>
+        <span class="bento-tech-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="13" height="11" rx="2" fill="#5382a1"/><path d="M16 11h1.5a2 2 0 0 1 0 4H16" fill="none" stroke="#5382a1" stroke-width="2" stroke-linecap="round"/><path d="M7 6c0-1.2.4-2 1-2.8M10 5c0-1.2.4-2 1-2.8" stroke="#ED8B00" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg> Java</span>
+        <span class="bento-tech-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="#F05032" d="M23.546 10.93L13.067.452c-.604-.603-1.582-.603-2.188 0L8.708 2.627l2.76 2.76c.645-.215 1.379-.07 1.889.441.516.515.658 1.258.438 1.9l2.658 2.66c.645-.223 1.387-.078 1.9.435.721.72.721 1.884 0 2.604-.719.719-1.881.719-2.6 0-.539-.541-.674-1.337-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348.713.721.713 1.883 0 2.6-.719.721-1.889.721-2.609 0-.719-.719-.719-1.879 0-2.598.182-.18.387-.316.605-.406V8.835c-.217-.091-.424-.222-.6-.401-.545-.545-.676-1.342-.396-2.009L7.636 3.7.45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477c.604.604 1.582.604 2.186 0l10.43-10.43c.605-.603.605-1.582 0-2.187"/></svg> Git</span>
+        <span class="bento-tech-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="2.2" fill="#61DAFB"/><ellipse cx="12" cy="12" rx="11" ry="4" stroke="#61DAFB" stroke-width="1.2"/><ellipse cx="12" cy="12" rx="11" ry="4" stroke="#61DAFB" stroke-width="1.2" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="11" ry="4" stroke="#61DAFB" stroke-width="1.2" transform="rotate(-60 12 12)"/></svg> React</span>
+        <span class="bento-tech-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="#0052CC" d="M11.53 2c0 2.4 1.97 4.35 4.35 4.35H17.7v1.78c0 2.38 1.92 4.31 4.3 4.35V2.84A.84.84 0 0 0 21.16 2H11.53zM6.77 6.8a4.362 4.362 0 0 0 4.34 4.34h1.83v1.79a4.355 4.355 0 0 0 4.3 4.34V7.63a.83.83 0 0 0-.83-.83H6.77zM2 11.6c0 2.4 1.95 4.34 4.35 4.34h1.82v1.8A4.353 4.353 0 0 0 12.5 22V12.43a.83.83 0 0 0-.83-.83H2z"/></svg> Jira</span>
+        <span class="bento-tech-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><rect x="10" y="2" width="4" height="20" fill="#E97627"/><rect x="2" y="10" width="20" height="4" fill="#E97627"/><rect x="10" y="2" width="4" height="4" fill="#1F77B4"/><rect x="10" y="18" width="4" height="4" fill="#1F77B4"/><rect x="2" y="10" width="4" height="4" fill="#1F77B4"/><rect x="18" y="10" width="4" height="4" fill="#1F77B4"/><rect x="10" y="10" width="4" height="4" fill="#E97627"/></svg> Tableau</span>
+        <span class="bento-tech-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 256 246" aria-hidden="true"><defs><linearGradient id="cf-a" x1="99.14%" x2="33.859%" y1="112.708%" y2="37.755%"><stop offset="18%" stop-color="#0052cc"/><stop offset="100%" stop-color="#2684ff"/></linearGradient><linearGradient id="cf-b" x1=".926%" x2="66.18%" y1="-12.582%" y2="62.306%"><stop offset="18%" stop-color="#0052cc"/><stop offset="100%" stop-color="#2684ff"/></linearGradient></defs><path fill="url(#cf-a)" d="M9.26 187.33c-2.64 4.307-5.607 9.305-8.126 13.287a8.127 8.127 0 0 0 2.722 11.052l52.823 32.507a8.127 8.127 0 0 0 11.256-2.763c2.113-3.536 4.835-8.127 7.801-13.044c20.926-34.538 41.974-30.312 79.925-12.19l52.376 24.908a8.127 8.127 0 0 0 10.93-4.063l25.152-56.886a8.127 8.127 0 0 0-4.063-10.646c-11.052-5.201-33.034-15.562-52.823-25.111c-71.189-34.579-131.691-32.344-177.972 42.949"/><path fill="url(#cf-b)" d="M246.115 58.232c2.641-4.307 5.607-9.305 8.127-13.287a8.127 8.127 0 0 0-2.723-11.052L198.696 1.386a8.127 8.127 0 0 0-11.58 2.682c-2.113 3.535-4.835 8.127-7.802 13.043c-20.926 34.538-41.974 30.313-79.925 12.19L47.176 4.515a8.127 8.127 0 0 0-10.93 4.063L11.093 65.465a8.127 8.127 0 0 0 4.063 10.645c11.052 5.202 33.035 15.563 52.823 25.112c71.351 34.538 131.854 32.222 178.135-42.99"/></svg> Confluence</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Contact ───────────────────────────────────────────────────────────── -->
+  <div class="bento-item--cta">
+    <div class="bento-card bento-card--contact">
+      <h3 data-translate="bento_contact_title">Get in Touch</h3>
+      <a href="mailto:xutao1486@gmail.com" class="bento-contact-row">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        xutao1486@gmail.com
+      </a>
+      <a href="https://www.linkedin.com/in/tao-xee" target="_blank" rel="noopener" class="bento-contact-row">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        linkedin.com/in/tao-xee
+      </a>
+      <a href="https://github.com/taoxee" target="_blank" rel="noopener" class="bento-contact-row">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        github.com/taoxee
+      </a>
+      <button type="button" class="bento-contact-row wechat-id-btn" id="bento-wechat-btn" aria-label="Copy WeChat ID: TaoXee">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-7.062-6.122zm-3.518 3.064c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982z"/></svg>
+        <span class="wechat-id-btn__text" data-translate="bento_wechat">WeChat: TaoXee</span>
+        <span class="wechat-id-btn__tooltip" aria-live="polite">Click to copy</span>
+      </button>
+    </div>
+  </div>
+
 </div>
 
-<div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
-
-<h2 data-translate="What I Do">What I Do</h2>
-
-<div class="feature-grid">
-  <!-- CHANGED: Icons moved inside h3 tags -->
-  <div class="feature-card">
-    <h3><span class="icon">📊</span> <span data-translate="Project Management">Project Management</span></h3>
-    <p>Leading tech and security projects across APAC with PMP certification, delivering measurable impact through agile methodologies.</p>
-  </div>
-  <div class="feature-card">
-    <h3><span class="icon">🤖</span> <span data-translate="AI & Data Science">AI & Data Science</span></h3>
-    <p>Specialized in Large Language Models, neural networks, and compliance frameworks. Research published in CCLD 2024.</p>
-  </div>
-  <div class="feature-card">
-    <h3><span class="icon">🔒</span> <span data-translate="Security & Compliance">Security & Compliance</span></h3>
-    <p>Expert in compliance frameworks including GDPR, NIST, AI Act, TC260-003, and WDTA for safe AI deployment.</p>
-  </div>
-  <div class="feature-card">
-    <h3><span class="icon">💻</span> <span data-translate="Technical Expertise">Technical Expertise</span></h3>
-    <p>Full-stack development with Python, R, JavaScript, TypeScript, and modern frameworks. Data science with PyTorch.</p>
-  </div>
-  <div class="feature-card">
-    <h3><span class="icon">🌏</span> <span data-translate="APAC Leadership">APAC Leadership</span></h3>
-    <p>Cross-cultural project leadership across Australia, China, and Singapore. Fluent in English and Mandarin.</p>
-  </div>
-  <div class="feature-card">
-    <h3><span class="icon">🎓</span> <span data-translate="Research & Education">Research & Education</span></h3>
-    <p>Master's in Data Science from Australian National University (QS:32), Bachelor's in Management from UCD (QS:118).</p>
-  </div>
-</div>
-
-<div class="cta-section">
-  <h2 data-translate="Ready to Collaborate?">Ready to Collaborate?</h2>
-  <p data-translate="I'm always interested in innovative projects and meaningful collaborations">I'm always interested in innovative projects and meaningful collaborations</p>
-  <a href="/contact/" class="cta-button" data-translate="Get in Touch">Get in Touch</a>
-</div>
-
-</div>
-
-<!-- END ORIGINAL HOME PAGE CONTENT -->
--->
+<script>
+(function () {
+  var btn = document.getElementById('bento-wechat-btn');
+  if (!btn) return;
+  var tooltip = btn.querySelector('.wechat-id-btn__tooltip');
+  var timer;
+  btn.addEventListener('click', function () {
+    navigator.clipboard.writeText('TaoXee').then(function () {
+      btn.classList.add('copied');
+      tooltip.textContent = 'Copied!';
+      clearTimeout(timer);
+      timer = setTimeout(function () {
+        btn.classList.remove('copied');
+        tooltip.textContent = 'Click to copy';
+      }, 2000);
+    }).catch(function () {
+      tooltip.textContent = 'TaoXee';
+    });
+  });
+})();
+</script>

@@ -68,6 +68,36 @@ const translations = {
     "Contact Me": "Contact Me",
     "Download CV": "Download CV",
     "View My CV": "View My CV",
+    // Bento landing page
+    "bento_hello": "Hello, I'm",
+    "bento_hero_title": "Technical Program Manager · AI/SaaS · APAC",
+    "bento_hero_bio": "PMP Certified. 2+ years leading AI SaaS/PaaS products and cross-border SDLC delivery across APAC. Focused on LLM safety, compliance frameworks, and bridging R&D with business strategy.",
+    "bento_metrics_label": "Key Metrics",
+    "bento_metric_savings": "Cost Savings Delivered",
+    "bento_metric_accel": "Schedule Acceleration",
+    "bento_metric_years": "Years PM Experience",
+    "bento_metric_certs": "Certifications",
+    "bento_research_label": "Research & Publication",
+    "bento_research_title": "LLM Safety Testing Framework",
+    "bento_research_desc": "Compliance-focused evaluation framework for LLMs addressing robustness, security, and privacy using global standards.",
+    "bento_exp_label": "Experience",
+    "bento_exp_role": "Technical Program Manager",
+    "bento_exp_desc": "AI SaaS/PaaS products · Cross-border SDLC · APAC delivery · Agile · Waterfall · Kanban · Jira · Confluence",
+    "bento_view_cv": "Full CV",
+    "bento_edu_label": "Education",
+    "bento_edu_anu": "Australian National University",
+    "bento_edu_anu_degree": "M.Computing · Data Science · QS:32",
+    "bento_edu_ucd": "University College Dublin",
+    "bento_edu_ucd_degree": "B.Business Studies · Management · QS:118",
+    "bento_project_label": "Featured Project",
+    "bento_project_desc": "AI-powered meeting transcription tool with 11 ASR vendors, modular architecture, and bilingual UI.",
+    "bento_tag_bilingual": "Bilingual",
+    "bento_view_post": "Read Post",
+    "bento_tech_label": "Tech Stack",
+    "bento_contact_title": "Get in Touch",
+    "bento_wechat": "WeChat: TaoXee",
+    "View CV": "View CV",
+    "Contact": "Contact",
     // Contact page
     "contact_hero_subtitle": "I'd love to hear from you",
     "Email": "Email",
@@ -196,6 +226,36 @@ const translations = {
     "Contact Me": "联系我",
     "Download CV": "下载简历",
     "View My CV": "查看简历",
+    // Bento 落地页
+    "bento_hello": "你好，我是",
+    "bento_hero_title": "技术项目经理 · AI/SaaS · 亚太区",
+    "bento_hero_bio": "PMP认证。2年以上带领AI SaaS/PaaS产品及跨境SDLC交付的经验，专注于大模型安全、合规框架，以及连接研发与商业策略。",
+    "bento_metrics_label": "核心数据",
+    "bento_metric_savings": "成本节约",
+    "bento_metric_accel": "工期加速",
+    "bento_metric_years": "项目管理年限",
+    "bento_metric_certs": "专业认证",
+    "bento_research_label": "研究 & 发表",
+    "bento_research_title": "大语言模型安全测试框架",
+    "bento_research_desc": "面向LLM的合规评估框架，聚焦鲁棒性、安全性与隐私保护，采用全球主流标准。",
+    "bento_exp_label": "工作经历",
+    "bento_exp_role": "技术项目经理",
+    "bento_exp_desc": "AI SaaS/PaaS产品 · 跨境SDLC交付 · 亚太区 · 敏捷/瀑布/看板 · Jira · Confluence",
+    "bento_view_cv": "查看完整简历",
+    "bento_edu_label": "教育背景",
+    "bento_edu_anu": "澳大利亚国立大学",
+    "bento_edu_anu_degree": "计算机硕士 · 数据科学 · QS:32",
+    "bento_edu_ucd": "都柏林大学",
+    "bento_edu_ucd_degree": "商业管理学士（荣誉）· QS:118",
+    "bento_project_label": "特色项目",
+    "bento_project_desc": "AI会议转录工具，集成11个ASR供应商，模块化架构，支持中英双语UI。",
+    "bento_tag_bilingual": "中英双语",
+    "bento_view_post": "查看文章",
+    "bento_tech_label": "技术栈",
+    "bento_contact_title": "联系我",
+    "bento_wechat": "微信: TaoXee",
+    "View CV": "查看简历",
+    "Contact": "联系",
     // 联系页面
     "contact_hero_subtitle": "期待收到你的消息",
     "Email": "电子邮件",
@@ -501,6 +561,51 @@ if (!localStorage.getItem('preferred-language')) {
     });
   }, { threshold: 0.1 });
   document.querySelectorAll(selectors).forEach(function (el) { io.observe(el); });
+})();
+</script>
+
+<script>
+/* Bento — Hero card 3D tilt */
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var tiltCards = document.querySelectorAll('.bento-card--tilt');
+  if (!tiltCards.length) return;
+  tiltCards.forEach(function (card) {
+    card.addEventListener('mousemove', function (e) {
+      var r = card.getBoundingClientRect();
+      var x = (e.clientX - r.left) / r.width - 0.5;
+      var y = (e.clientY - r.top) / r.height - 0.5;
+      card.style.transform = 'perspective(700px) rotateX(' + (-y * 6) + 'deg) rotateY(' + (x * 6) + 'deg) translateY(-5px)';
+    });
+    card.addEventListener('mouseleave', function () { card.style.transform = ''; });
+  });
+})();
+
+/* Bento — metric counter tick-up on viewport entry */
+(function () {
+  var counters = document.querySelectorAll('[data-bento-count]');
+  if (!counters.length || !('IntersectionObserver' in window)) return;
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      var el = entry.target;
+      var target = parseFloat(el.getAttribute('data-bento-count'));
+      var isFloat = (target % 1) !== 0;
+      var steps = 30;
+      var i = 0;
+      var interval = setInterval(function () {
+        i++;
+        var val = target * (i / steps);
+        el.textContent = isFloat ? val.toFixed(1) : Math.round(val);
+        if (i >= steps) {
+          el.textContent = isFloat ? target.toFixed(1) : target;
+          clearInterval(interval);
+        }
+      }, 40);
+      io.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+  counters.forEach(function (el) { io.observe(el); });
 })();
 </script>
 
