@@ -1902,6 +1902,7 @@ textarea {
   text-decoration: none;
   margin-top: 0.75rem;
   font-weight: 500;
+
 }
 .bento-card .bento-card-link:hover { text-decoration: underline; }
 .bento-edu-row {
@@ -2018,3 +2019,146 @@ textarea {
 
 /* Suppress page__title h1 when bento grid is on page */
 .page__content:has(.bento-grid) .page__title { display: none; }
+
+/* ============================================================================
+   GLOBAL FLOAT NAV — replaces MM masthead on every page
+   ============================================================================ */
+
+/* Hide the original Minimal Mistakes masthead */
+.masthead { display: none !important; }
+
+/* Remove inherited top spacing that was sized for the masthead */
+article.page,
+.page__inner-wrap,
+.page__content { padding-top: 0 !important; margin-top: 0 !important; }
+
+/* ── Floating nav pill ──────────────────────────────────────── */
+.home-float-nav {
+  position: relative;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  margin: 14px auto 14px;
+  padding: 5px 5px 5px 8px;
+  background: rgba(255,255,255,0.82);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(0,0,0,0.07);
+  border-radius: 100px;
+  box-shadow: 0 4px 28px rgba(0,0,0,0.07), 0 1px 4px rgba(0,0,0,0.04);
+}
+.home-float-nav__link {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 15px;
+  border-radius: 100px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #444;
+  text-decoration: none !important;
+  letter-spacing: 0.01em;
+  transition: color 0.15s, background 0.15s, transform 0.12s;
+  white-space: nowrap;
+}
+.home-float-nav__link:hover {
+  color: #007AFF;
+  background: rgba(0,122,255,0.07);
+  text-decoration: none !important;
+}
+.home-float-nav__link:active { transform: scale(0.96); }
+.home-float-nav__link.active {
+  color: #007AFF;
+  background: rgba(0,122,255,0.10);
+  font-weight: 600;
+}
+.home-float-nav__divider {
+  width: 1px;
+  height: 18px;
+  background: rgba(0,0,0,0.1);
+  margin: 0 2px;
+  flex-shrink: 0;
+}
+
+/* Lang dropdown */
+.home-float-nav__lang {
+  position: relative;
+  margin-left: 2px;
+}
+.home-float-nav__lang-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 7px 13px;
+  border-radius: 100px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #555;
+  background: rgba(0,0,0,0.04);
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  letter-spacing: 0.01em;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+}
+.home-float-nav__lang-btn:hover {
+  color: #007AFF;
+  background: rgba(0,122,255,0.08);
+}
+.home-float-nav__lang-arrow {
+  font-size: 0.65rem;
+  opacity: 0.65;
+  transition: transform 0.18s;
+}
+.home-float-nav__lang.open .home-float-nav__lang-arrow { transform: rotate(180deg); }
+.home-float-nav__lang-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  min-width: 152px;
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.11), 0 1px 4px rgba(0,0,0,0.05);
+  padding: 5px;
+  display: none;
+  flex-direction: column;
+  z-index: 200;
+}
+.home-float-nav__lang-dropdown.open { display: flex; }
+.home-float-nav__lang-opt {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 12px;
+  border-radius: 9px;
+  font-size: 0.82rem;
+  color: #333;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  font-family: inherit;
+  transition: background 0.12s, color 0.12s;
+}
+.home-float-nav__lang-opt:hover {
+  background: rgba(0,122,255,0.07);
+  color: #007AFF;
+}
+.home-float-nav__lang-opt--more { color: #666; }
+.home-float-nav__lang-opt--more:hover { color: #007AFF; }
+.home-float-nav__lang-divider {
+  height: 1px;
+  background: rgba(0,0,0,0.07);
+  margin: 4px 6px;
+}
+
+@media (max-width: 500px) {
+  .home-float-nav { margin: 14px auto 12px; padding: 4px 4px 4px 6px; }
+  .home-float-nav__link { padding: 6px 11px; font-size: 0.78rem; }
+  .home-float-nav__lang-btn { padding: 6px 10px; font-size: 0.74rem; }
+}

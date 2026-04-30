@@ -1,3 +1,8 @@
+<!--
+  Original Minimal Mistakes masthead — commented out.
+  Replaced by the custom float nav pill below.
+  CSS lives in assets/css/main.scss (.home-float-nav).
+
 {% capture logo_path %}{{ site.logo }}{% endcapture %}
 
 <div class="masthead">
@@ -5,12 +10,8 @@
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         {% unless logo_path == empty %}
-          <!-- ORIGINAL: Redirected from Home to About page -->
-          <!-- <a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title }}"></a> -->
           <a class="site-logo" href="{{ '/about/' | relative_url }}"><img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title }}"></a>
         {% endunless %}
-        <!-- ORIGINAL: Redirected from Home to About page -->
-        <!-- <a class="site-title" href="{{ '/' | relative_url }}"> -->
         <a class="site-title" href="{{ '/about/' | relative_url }}">
           {{ site.masthead_title | default: site.title }}
           {% if site.subtitle %}<span class="site-subtitle">{{ site.subtitle }}</span>{% endif %}
@@ -22,30 +23,19 @@
             </li>
           {%- endfor -%}
         </ul>
-        
-        <!-- Language Toggle Dropdown -->
         <div class="language-toggle">
           <button id="lang-toggle" class="lang-btn" onclick="toggleLangDropdown(event)">
             <span id="lang-text">🌐 EN</span>
             <span class="lang-arrow">▾</span>
           </button>
           <div id="lang-dropdown" class="lang-dropdown">
-            <button class="lang-option" data-lang="en" onclick="switchLanguage('en')">
-              🇬🇧 English
-            </button>
-            <button class="lang-option" data-lang="zh" onclick="switchLanguage('zh')">
-              🇨🇳 中文
-            </button>
+            <button class="lang-option" data-lang="en" onclick="switchLanguage('en')">🇬🇧 English</button>
+            <button class="lang-option" data-lang="zh" onclick="switchLanguage('zh')">🇨🇳 中文</button>
             <div class="lang-divider"></div>
-            <button class="lang-option lang-option--more" onclick="openGoogleTranslate()">
-              🌐 More Languages...
-            </button>
+            <button class="lang-option lang-option--more" onclick="openGoogleTranslate()">🌐 More Languages...</button>
           </div>
         </div>
-        
-        <!-- Hidden Google Translate Element -->
         <div id="google_translate_element" style="display:none;"></div>
-        
         {% if site.search == true %}
         <button class="search__toggle" type="button">
           <span class="visually-hidden">{{ site.data.ui-text[site.locale].search_label | default: "Toggle search" }}</span>
@@ -61,30 +51,82 @@
     </div>
   </div>
 </div>
+-->
+
+<!-- Google Translate target (hidden; shown by showGoogleTranslateWidget()) -->
+<div id="google_translate_element" style="display:none;"></div>
+
+<!-- ── Global floating nav pill ──────────────────────────────── -->
+<nav class="home-float-nav" aria-label="Site navigation">
+  <a href="/" class="home-float-nav__link" data-translate="Home">Home</a>
+  <a href="/cv/" class="home-float-nav__link" data-translate="CV">CV</a>
+  <a href="/posts/" class="home-float-nav__link" data-translate="Posts">Posts</a>
+  <a href="/contact/" class="home-float-nav__link" data-translate="Contact">Contact</a>
+  <div class="home-float-nav__divider" aria-hidden="true"></div>
+  <div class="home-float-nav__lang" id="home-float-lang">
+    <button class="home-float-nav__lang-btn" id="home-lang-btn" aria-haspopup="true" aria-expanded="false">
+      <span id="home-lang-text">🌐 EN</span>
+      <span class="home-float-nav__lang-arrow">▾</span>
+    </button>
+    <div class="home-float-nav__lang-dropdown" id="home-lang-dropdown" role="menu">
+      <button class="home-float-nav__lang-opt" data-lang="en" role="menuitem">🇬🇧 English</button>
+      <button class="home-float-nav__lang-opt" data-lang="zh" role="menuitem">🇨🇳 中文</button>
+      <div class="home-float-nav__lang-divider" aria-hidden="true"></div>
+      <button class="home-float-nav__lang-opt home-float-nav__lang-opt--more" id="home-more-lang-btn" role="menuitem">🌐 More Languages...</button>
+    </div>
+  </div>
+</nav>
 
 <script>
-// Navigation active state handler - RESTORED
-document.addEventListener('DOMContentLoaded', function() {
-  // Get current page URL
-  const currentPath = window.location.pathname;
-  
-  // Get all navigation links
-  const navLinks = document.querySelectorAll('.greedy-nav .visible-links a');
-  
-  // Remove any existing current classes
-  navLinks.forEach(link => {
-    link.classList.remove('current');
-  });
-  
-  // Add current class to matching link
-  navLinks.forEach(link => {
-    const linkPath = link.getAttribute('href');
-    
-    // Handle exact matches and home page
-    if (linkPath === currentPath || 
-        (currentPath === '/' && linkPath === '/') ||
-        (currentPath.startsWith(linkPath) && linkPath !== '/' && linkPath.length > 1)) {
-      link.classList.add('current');
+document.addEventListener('DOMContentLoaded', function () {
+  /* ── Lang label sync ── */
+  var homeLangText  = document.getElementById('home-lang-text');
+  var homeFloatLang = document.getElementById('home-float-lang');
+  var homeDropdown  = document.getElementById('home-lang-dropdown');
+  var homeLangBtn   = document.getElementById('home-lang-btn');
+
+  function getLang() { return localStorage.getItem('preferred-language') || 'en'; }
+  function setNavLangText(lang) {
+    if (homeLangText) homeLangText.textContent = lang === 'zh' ? '🇨🇳 中文' : '🌐 EN';
+  }
+  setNavLangText(getLang());
+
+  if (homeLangBtn && homeDropdown && homeFloatLang) {
+    function openDropdown() {
+      homeDropdown.classList.add('open');
+      homeFloatLang.classList.add('open');
+      homeLangBtn.setAttribute('aria-expanded', 'true');
+    }
+    function closeDropdown() {
+      homeDropdown.classList.remove('open');
+      homeFloatLang.classList.remove('open');
+      homeLangBtn.setAttribute('aria-expanded', 'false');
+    }
+    homeLangBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      homeDropdown.classList.contains('open') ? closeDropdown() : openDropdown();
+    });
+    homeDropdown.querySelectorAll('.home-float-nav__lang-opt').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var lang = btn.getAttribute('data-lang');
+        if (lang) {
+          if (typeof switchLanguage === 'function') switchLanguage(lang);
+          setNavLangText(lang);
+        } else if (btn.id === 'home-more-lang-btn') {
+          if (typeof openGoogleTranslate === 'function') openGoogleTranslate();
+        }
+        closeDropdown();
+      });
+    });
+    document.addEventListener('click', closeDropdown);
+  }
+
+  /* ── Active link highlight ── */
+  var currentPath = window.location.pathname;
+  document.querySelectorAll('.home-float-nav__link').forEach(function (link) {
+    var href = link.getAttribute('href');
+    if (href === '/' ? currentPath === '/' : currentPath.startsWith(href)) {
+      link.classList.add('active');
     }
   });
 });

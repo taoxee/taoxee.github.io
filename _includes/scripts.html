@@ -379,18 +379,22 @@ document.addEventListener('click', function(e) {
 
 // Switch between hand-crafted EN/ZH
 function switchLanguage(lang) {
-  // If Google Translate is active, reset it first
-  resetGoogleTranslate();
-  
+  // Persist FIRST so any reload triggered by resetGoogleTranslate picks up the new lang
   currentLang = lang;
   localStorage.setItem('preferred-language', currentLang);
+
+  // If Google Translate is active, reset it (may trigger page reload)
+  resetGoogleTranslate();
+
   updatePageLanguage();
   updateToggleButton();
-  
-  // Close dropdown
-  document.getElementById('lang-dropdown').classList.remove('show');
-  document.getElementById('lang-toggle').classList.remove('active');
-  
+
+  // Close old masthead dropdown (may not exist — guard for null)
+  var oldDropdown = document.getElementById('lang-dropdown');
+  if (oldDropdown) oldDropdown.classList.remove('show');
+  var oldToggle = document.getElementById('lang-toggle');
+  if (oldToggle) oldToggle.classList.remove('active');
+
   // Update active state
   document.querySelectorAll('.lang-option[data-lang]').forEach(function(opt) {
     opt.classList.toggle('active-lang', opt.getAttribute('data-lang') === lang);
@@ -499,7 +503,8 @@ function showGoogleTranslateWidget() {
     // Click outside to close
     setTimeout(function() {
       function hideGT(e) {
-        if (!el.contains(e.target) && !document.querySelector('.language-toggle').contains(e.target)) {
+        var navEl = document.querySelector('.home-float-nav__lang') || document.querySelector('.language-toggle');
+        if (!el.contains(e.target) && (!navEl || !navEl.contains(e.target))) {
           el.style.display = 'none';
           document.removeEventListener('click', hideGT);
         }
