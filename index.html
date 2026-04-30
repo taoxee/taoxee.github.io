@@ -151,7 +151,35 @@ article.page,
   .home-float-nav__link { padding: 6px 11px; font-size: 0.78rem; }
   .home-float-nav__lang-btn { padding: 6px 10px; font-size: 0.74rem; }
 }
+
+/* ── Orb scroll background ──────────────────────────────────── */
+body { background: #0a0a0f !important; }
+#backgroundCanvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100vh;
+  z-index: -2;
+}
+#filmGrainOverlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+}
 </style>
+
+<canvas id="backgroundCanvas"></canvas>
+<canvas id="filmGrainOverlay"></canvas>
+
+<!--
+<div id="scrollContent">
+  <h1>Scroll to Transform</h1>
+  <p>The luminous orb responds to your scroll position and velocity.</p>
+  <section>...</section>
+</div>
+-->
 
 <!-- ── Floating nav pill (home page only) ───────────────────── -->
 <nav class="home-float-nav" aria-label="Site navigation">
@@ -415,4 +443,88 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.addEventListener('click', closeDropdown);
 });
+</script>
+
+<script>
+(function () {
+  var canvas = document.getElementById('backgroundCanvas');
+  var grainCanvas = document.getElementById('filmGrainOverlay');
+  var ctx = canvas.getContext('2d');
+  var grainCtx = grainCanvas.getContext('2d');
+
+  function resizeCanvases() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    grainCanvas.width = window.innerWidth;
+    grainCanvas.height = window.innerHeight;
+    generateFilmGrain();
+  }
+  resizeCanvases();
+  window.addEventListener('resize', resizeCanvases);
+
+  function generateFilmGrain() {
+    var imageData = grainCtx.createImageData(grainCanvas.width, grainCanvas.height);
+    var data = imageData.data;
+    for (var i = 0; i < data.length; i += 4) {
+      var noise = Math.random() * 255;
+      data[i] = noise; data[i + 1] = noise; data[i + 2] = noise;
+      data[i + 3] = Math.random() * 52;
+    }
+    grainCtx.putImageData(imageData, 0, 0);
+  }
+
+  var targetScrollRatio = 0;
+  var currentScrollRatio = 0;
+  var scrollVelocity = 0;
+  var lastScrollY = 0;
+  var lastScrollTime = Date.now();
+  var lastVelocityTime = Date.now();
+
+  window.addEventListener('scroll', function () {
+    var maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    targetScrollRatio = maxScroll > 0 ? Math.min(1, window.scrollY / maxScroll) : 0;
+    var now = Date.now();
+    var dt = Math.max(now - lastScrollTime, 1);
+    scrollVelocity = (window.scrollY - lastScrollY) / dt;
+    lastScrollY = window.scrollY;
+    lastScrollTime = now;
+    lastVelocityTime = now;
+  }, { passive: true });
+
+  setInterval(function () {
+    if (Date.now() - lastVelocityTime > 100) scrollVelocity *= 0.9;
+  }, 16);
+
+  function animate() {
+    var speed = Math.min(0.14, Math.abs(scrollVelocity) * 0.08 + 0.04);
+    currentScrollRatio += (targetScrollRatio - currentScrollRatio) * speed;
+
+    var t = currentScrollRatio;
+    var centerX = canvas.width / 2;
+    /* SHAPE: vertical position (0.05 = top 5%, 0.9 = 90% of height when fully scrolled) */
+    var orbY = canvas.height * (0.05 + t * 0.9);
+    /* COLOR: hue range (220° blue → 275° violet; change these numbers to shift color palette) */
+    var hue = 220 + t * 55;
+    /* SIZE: gradient radius multiplier (1.15 = 15% larger than viewport; increase for bigger orb) */
+    var r = Math.max(canvas.width, canvas.height) * 1.15;
+    /* SHAPE: radial gradient centered at orbY, radiating outward to radius r */
+    var grad = ctx.createRadialGradient(centerX, orbY, 0, centerX, orbY, r);
+
+    /* SHAPE & COLOR: gradient color stops control falloff and hue shifts (0 = center, 1 = edge) */
+    grad.addColorStop(0,    'hsl(' + (hue - 20) + ', 45%, 92%)');  /* bright center */
+    grad.addColorStop(0.06, 'hsl(' + (hue - 10) + ', 62%, 78%)');
+    grad.addColorStop(0.18, 'hsl(' + hue        + ', 78%, 62%)');
+    grad.addColorStop(0.35, 'hsl(' + (hue + 5)  + ', 84%, 48%)');
+    grad.addColorStop(0.55, 'hsl(' + (hue + 8)  + ', 82%, 34%)');
+    grad.addColorStop(0.75, 'hsl(' + (hue + 10) + ', 78%, 22%)');
+    grad.addColorStop(0.90, 'hsl(' + (hue + 12) + ', 74%, 15%)');
+    grad.addColorStop(1,    'hsl(' + (hue + 12) + ', 72%, 12%)');  /* dark edges */
+
+    ctx.fillStyle = grad;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+})();
 </script>
