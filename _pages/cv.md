@@ -192,7 +192,7 @@ classes: wide
 </h2>
 
 <div class="about-card reveal" data-translate="cv_summary">
-  PMP Certified, Results-driven Technical Program Manager with 2+ years leading AI SaaS/PaaS products and cross-border SDLC delivery across APAC. Skilled in aligning R&D execution with business strategy, delivering measurable impact (e.g., $30K cost savings, 1.5-month acceleration). Work authorization in Singapore, Australia, and China — no visa sponsorship required. Strong foundation in AI, data science, and compliance frameworks (GDPR, NIST, AI Act).
+  PMP certified AI Product Manager with 2+ years across AI SaaS/PaaS delivery. Currently in an FDE-style embedded product role at a global fintech group, owning an AIGC content platform end-to-end: requirements, hands-on POCs, and production delivery. Proven measurable impact such as $30K cost savings and 1.5-month schedule acceleration. Work authorization in Singapore, Australia, and China, no visa sponsorship required. Strong foundation in LLM safety and compliance frameworks (GDPR, NIST, AI Act).
 </div>
 
 <h2 class="reveal" style="font-size: 2.5rem; font-weight: 600; color: #2d3748; margin: 4rem 0 2rem 0; text-align: center;">

@@ -10,7 +10,7 @@ classes: wide # changes page width/layout
 
 <div class="hero-section hero-section--about">
   <h1 class="hero__title"><span data-translate="Hello, I'm">Hello, I'm</span> Tao Xu</h1>
-  <p class="hero__subtitle" data-translate="about_hero_subtitle">Passionate about technology, innovation, and creating meaningful digital experiences</p>
+  <p class="hero__subtitle" data-translate="about_hero_subtitle">AI Product Manager focused on AIGC content platforms, SEO/GEO automation, and enterprise AI governance</p>
   <div class="hero-buttons">
     <a href="/contact/" class="hero-btn">
       <span data-translate="Contact Me">Contact Me</span>
@@ -32,7 +32,7 @@ classes: wide # changes page width/layout
   <!-- CHANGED: Icons moved inside h3 tags -->
   <div class="about-card">
     <h3><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="12" width="4" height="8" rx="0.5"/><rect x="10" y="8" width="4" height="12" rx="0.5"/><rect x="17" y="4" width="4" height="16" rx="0.5"/></svg></span> <span data-translate="Project Management">Project Management</span></h3>
-    <p data-translate="about_pm_desc">Leading tech and security projects across APAC with PMP certification, delivering measurable impact through agile methodologies.</p>
+    <p data-translate="about_pm_desc">FDE-style embedded delivery across 3 brands: requirements elicitation, hands-on POC development, and production rollout. PMP certified, fluent in Agile and Waterfall.</p>
   </div>
   <div class="about-card">
     <h3><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span> <span data-translate="AI & Data Science">AI & Data Science</span></h3>
